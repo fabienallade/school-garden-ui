@@ -8,10 +8,10 @@ import com.slack.circuit.runtime.screen.Screen
 
 class LoginPresenter(
     val navigator: Navigator,
-) : Presenter<LoginScreen.State> {
+) : Presenter<LoginState> {
     @Composable
-    override fun present(): LoginScreen.State =
-        LoginScreen.State { event ->
+    override fun present(): LoginState =
+        LoginState { event ->
             when (event) {
                 LoginScreen.Event.LoginEvent -> navigator.pop()
             }

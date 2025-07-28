@@ -15,3 +15,11 @@ data object LoginScreen : Screen {
         data object LoginEvent : Event()
     }
 }
+
+data class LoginState(
+    val eventSink: (CircuitUiEvent) -> Unit,
+) : CircuitUiState
+
+sealed interface LoginEvent : CircuitUiEvent {
+    data object LoginButton : LoginEvent
+}

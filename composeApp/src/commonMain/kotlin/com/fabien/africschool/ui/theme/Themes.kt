@@ -12,8 +12,8 @@ import com.materialkolor.rememberDynamicMaterialThemeState
 
 @Composable
 fun AppTheme(
-    isDarkTheme: Boolean = isSystemInDarkTheme(),
-//    isDarkTheme: Boolean = false,
+//    isDarkTheme: Boolean = isSystemInDarkTheme(),
+    isDarkTheme: Boolean = false,
     content: @Composable () -> Unit,
 ) {
     val dynamicThemeState =

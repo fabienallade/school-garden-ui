@@ -17,10 +17,9 @@ import org.koin.ksp.generated.module
 
 @Composable
 @Preview
-fun App(windowSizeClass: WindowSizeClass = currentWindowAdaptiveInfo().windowSizeClass) {
+fun App() {
     val backStack = rememberSaveableBackStack(root = LoginScreen)
-    val navigator =
-        rememberCircuitNavigator(backStack) {
+    val navigator = rememberCircuitNavigator(backStack) {
         }
 
     KoinApplication(application = {

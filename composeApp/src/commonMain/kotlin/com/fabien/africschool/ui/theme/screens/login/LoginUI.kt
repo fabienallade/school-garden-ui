@@ -3,46 +3,30 @@ package com.fabien.africschool.ui.theme.screens.login
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Close
+import androidx.compose.material.icons.outlined.Email
+import androidx.compose.material.icons.outlined.Password
 import androidx.compose.material.icons.outlined.RemoveRedEye
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import org.jetbrains.compose.ui.tooling.preview.Preview
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginUi(
-    state: LoginScreen.State,
+    state: LoginState,
     modifier: Modifier,
 ) {
     var username by remember { mutableStateOf("") }
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text("Login")
-                },
-            )
-        },
-        bottomBar = {
-            BottomAppBar {
-                Text("Login")
-            }
-        },
-        floatingActionButton = {
-            FloatingActionButton(onClick = {}) {
-                Icon(Icons.Outlined.RemoveRedEye, contentDescription = "")
-            }
-        },
-    ) {
+    Scaffold {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Column(
-                modifier = Modifier,
+                modifier = Modifier.padding(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center,
             ) {
-                BoxWithConstraints(modifier = Modifier.fillMaxWidth(fraction = 0.7f)) {
+                BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
                     OutlinedCard(
                         modifier = Modifier,
                         elevation = CardDefaults.elevatedCardElevation(8.dp),
@@ -65,27 +49,23 @@ fun LoginUi(
                                 value = username,
                                 onValueChange = { username = it },
                                 label = { Text("Username") },
+                                maxLines = 1,
                                 leadingIcon = {
-                                    Icon(imageVector = Icons.Outlined.RemoveRedEye, contentDescription = "")
-                                },
-                                trailingIcon = {
-                                    Icon(imageVector = Icons.Outlined.Close, contentDescription = "")
+                                    Icon(imageVector = Icons.Outlined.Email, contentDescription = "")
                                 },
                             )
-                            Spacer(modifier = Modifier.height(10.dp))
+                            Spacer(modifier = Modifier.height(16.dp))
                             OutlinedTextField(
                                 modifier = Modifier.fillMaxWidth(),
                                 value = username,
                                 onValueChange = { username = it },
                                 label = { Text("Password") },
+                                maxLines = 1,
                                 leadingIcon = {
-                                    Icon(imageVector = Icons.Outlined.RemoveRedEye, contentDescription = "")
-                                },
-                                trailingIcon = {
-                                    Icon(imageVector = Icons.Outlined.Close, contentDescription = "")
+                                    Icon(imageVector = Icons.Outlined.Password, contentDescription = "")
                                 },
                             )
-                            Spacer(modifier = Modifier.height(10.dp))
+                            Spacer(modifier = Modifier.height(16.dp))
                             Button(modifier = Modifier.fillMaxWidth(), onClick = {}) {
                                 Text("Se connecter", style = MaterialTheme.typography.headlineSmall)
                             }
@@ -95,4 +75,13 @@ fun LoginUi(
             }
         }
     }
+}
+
+@Composable
+@Preview
+fun LoginUiPreview() {
+    LoginUi(
+        state = LoginState({}),
+        modifier = Modifier,
+    )
 }
