@@ -1,0 +1,35 @@
+package com.fabien.africschool
+
+import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
+import androidx.compose.runtime.Composable
+import androidx.window.core.layout.WindowSizeClass
+import com.fabien.africschool.di.AppModule
+import com.fabien.africschool.ui.theme.AppTheme
+import com.fabien.africschool.ui.theme.screens.login.LoginScreen
+import com.slack.circuit.backstack.rememberSaveableBackStack
+import com.slack.circuit.foundation.CircuitCompositionLocals
+import com.slack.circuit.foundation.NavigableCircuitContent
+import com.slack.circuit.foundation.rememberCircuitNavigator
+import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.compose.KoinApplication
+import org.koin.compose.koinInject
+import org.koin.ksp.generated.module
+
+@Composable
+@Preview
+fun App(windowSizeClass: WindowSizeClass = currentWindowAdaptiveInfo().windowSizeClass) {
+    val backStack = rememberSaveableBackStack(root = LoginScreen)
+    val navigator =
+        rememberCircuitNavigator(backStack) {
+        }
+
+    KoinApplication(application = {
+        modules(AppModule().module)
+    }) {
+        AppTheme {
+            CircuitCompositionLocals(circuit = koinInject()) {
+                NavigableCircuitContent(navigator = navigator, backStack = backStack)
+            }
+        }
+    }
+}
