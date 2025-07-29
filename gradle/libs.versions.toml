@@ -28,6 +28,11 @@ koinAnnotations = "2.0.0"
 circuit = "0.29.1"
 datastore = "1.1.7"
 arrow = "2.1.0"
+napier="2.7.1"
+material-icons="1.7.3"
+material-adaptive="1.1.2"
+
+
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -62,15 +67,20 @@ circuit-annotations-codegen = { group = "com.slack.circuit", name = "circuit-cod
 
 ktorfit = { module = "de.jensklingenberg.ktorfit:ktorfit-lib", version.ref = "ktorfit" }
 ktorfit-compiler = { module = "de.jensklingenberg.ktorfit:ktorfit-ksp", version.ref = "ktorfit" }
+
 serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization-json" }
 content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
-
+client-logging={ module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
 datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
 
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
+
+napier = { module = "io.github.aakira:napier", version.ref = "napier" }
+
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
