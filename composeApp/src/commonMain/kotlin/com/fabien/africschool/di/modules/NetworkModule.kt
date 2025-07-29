@@ -4,6 +4,7 @@ import de.jensklingenberg.ktorfit.Ktorfit
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.serialization.kotlinx.json.json
+import kotlinx.serialization.json.Json
 import org.koin.core.annotation.Module
 import org.koin.core.annotation.Single
 
@@ -13,7 +14,12 @@ class NetworkModule {
     fun provideHttpClient(): HttpClient =
         HttpClient {
             install(ContentNegotiation) {
-                json()
+                json(
+                    Json {
+                        prettyPrint = true
+                        isLenient = true
+                    },
+                )
             }
         }
 

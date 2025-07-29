@@ -17,7 +17,7 @@ data object LoginScreen : Screen {
 }
 
 data class LoginState(
-    val eventSink: (CircuitUiEvent) -> Unit,
+    val eventSink: (LoginEvent) -> Unit,
 ) : CircuitUiState
 
 sealed interface LoginEvent : CircuitUiEvent {

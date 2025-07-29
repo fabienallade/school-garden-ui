@@ -13,7 +13,7 @@ class LoginPresenter(
     override fun present(): LoginState =
         LoginState { event ->
             when (event) {
-                LoginScreen.Event.LoginEvent -> navigator.pop()
+                LoginEvent.LoginButton -> navigator.pop()
             }
         }
 

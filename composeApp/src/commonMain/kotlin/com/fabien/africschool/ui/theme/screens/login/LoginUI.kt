@@ -2,10 +2,8 @@ package com.fabien.africschool.ui.theme.screens.login
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material.icons.outlined.Password
-import androidx.compose.material.icons.outlined.RemoveRedEye
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -26,6 +24,9 @@ fun LoginUi(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center,
             ) {
+                LinearProgressIndicator(
+                    modifier = Modifier.fillMaxWidth(),
+                )
                 BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
                     OutlinedCard(
                         modifier = Modifier,

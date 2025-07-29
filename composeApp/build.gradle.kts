@@ -94,6 +94,8 @@ kotlin {
             implementation(libs.content.negotiation)
             implementation(libs.kotlinx.json)
             api(libs.circuit.annotations)
+            implementation(libs.arrow.core)
+            implementation(libs.arrow.fx.coroutines)
 //            implementation(libs.datastore)
 //            implementation(libs.datastore.preferences)
             implementation("org.jetbrains.compose.material:material-icons-extended:1.7.3")

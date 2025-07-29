@@ -1,14 +1,26 @@
 package com.fabien.africschool.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
+import androidx.compose.runtime.*
+import com.fabien.africschool.utils.AdaptiveLayout
+import com.fabien.africschool.utils.AdaptiveLayoutType
+import com.fabien.africschool.utils.ContentType
 import com.materialkolor.DynamicMaterialTheme
 import com.materialkolor.PaletteStyle
 import com.materialkolor.dynamiccolor.ColorSpec
 import com.materialkolor.rememberDynamicMaterialThemeState
+
+private val localAdaptiveLayoutType = compositionLocalOf { mutableStateOf(AdaptiveLayoutType.Compact) }
+private val localContentType = compositionLocalOf { mutableStateOf(ContentType.Single) }
+
+object Themes {
+    val adaptiveLayoutType: AdaptiveLayoutType
+        @Composable @ReadOnlyComposable
+        get() = localAdaptiveLayoutType.current.value
+
+    val contentType: ContentType
+        @Composable @ReadOnlyComposable
+        get() = localContentType.current.value
+}
 
 @Composable
 fun AppTheme(
@@ -16,6 +28,8 @@ fun AppTheme(
     isDarkTheme: Boolean = false,
     content: @Composable () -> Unit,
 ) {
+    val adaptiveLayoutType = remember { mutableStateOf(AdaptiveLayoutType.Compact) }
+    val contentType = remember { mutableStateOf(ContentType.Single) }
     val dynamicThemeState =
         rememberDynamicMaterialThemeState(
             isDark = isDarkTheme,
@@ -24,27 +38,16 @@ fun AppTheme(
             seedColor = SeedColor,
         )
 
-    CompositionLocalProvider {
+    AdaptiveLayout(adaptiveLayoutType, contentType)
+
+    CompositionLocalProvider(
+        localAdaptiveLayoutType provides adaptiveLayoutType,
+        localContentType provides contentType,
+    ) {
         DynamicMaterialTheme(
             state = dynamicThemeState,
             animate = true,
             content = content,
         )
-    }
-}
-
-enum class WindowSize {
-    COMPACT,
-    MEDIUM,
-    EXPANDED,
-    ;
-
-    companion object {
-        fun basedOnWidth(size: Dp): WindowSize =
-            when {
-                size < 600.dp -> COMPACT
-                size < 840.dp -> MEDIUM
-                else -> EXPANDED
-            }
     }
 }

@@ -1,11 +1,10 @@
 package com.fabien.africschool
 
-import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.runtime.Composable
-import androidx.window.core.layout.WindowSizeClass
 import com.fabien.africschool.di.AppModule
 import com.fabien.africschool.ui.theme.AppTheme
 import com.fabien.africschool.ui.theme.screens.login.LoginScreen
+import com.fabien.africschool.ui.theme.screens.onboard.OnBoardScreen
 import com.slack.circuit.backstack.rememberSaveableBackStack
 import com.slack.circuit.foundation.CircuitCompositionLocals
 import com.slack.circuit.foundation.NavigableCircuitContent
@@ -18,8 +17,9 @@ import org.koin.ksp.generated.module
 @Composable
 @Preview
 fun App() {
-    val backStack = rememberSaveableBackStack(root = LoginScreen)
-    val navigator = rememberCircuitNavigator(backStack) {
+    val backStack = rememberSaveableBackStack(root = OnBoardScreen)
+    val navigator =
+        rememberCircuitNavigator(backStack) {
         }
 
     KoinApplication(application = {
