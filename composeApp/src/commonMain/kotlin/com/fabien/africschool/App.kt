@@ -9,6 +9,7 @@ import com.slack.circuit.backstack.rememberSaveableBackStack
 import com.slack.circuit.foundation.CircuitCompositionLocals
 import com.slack.circuit.foundation.NavigableCircuitContent
 import com.slack.circuit.foundation.rememberCircuitNavigator
+import io.github.aakira.napier.Napier
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.KoinApplication
 import org.koin.compose.koinInject
@@ -20,6 +21,7 @@ fun App() {
     val backStack = rememberSaveableBackStack(root = OnBoardScreen)
     val navigator =
         rememberCircuitNavigator(backStack) {
+            Napier.d { "fabien" }
         }
 
     KoinApplication(application = {

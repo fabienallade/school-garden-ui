@@ -2,6 +2,7 @@ package com.fabien.africschool.di
 
 import com.fabien.africschool.di.modules.NetworkModule
 import com.fabien.africschool.di.modules.PlatformModule
+import com.fabien.africschool.di.modules.RepositoryModule
 import com.fabien.africschool.di.modules.ServiceModule
 import com.fabien.africschool.di.modules.UiModule
 import com.fabien.africschool.ui.theme.screens.login.LoginPresenter
@@ -25,6 +26,7 @@ fun initApplication(appDeclaration: KoinAppDeclaration = {}): KoinApplication =
 
 @Module(
     includes = [
+        RepositoryModule::class,
         PlatformModule::class,
         ServiceModule::class,
         NetworkModule::class,
@@ -33,4 +35,4 @@ fun initApplication(appDeclaration: KoinAppDeclaration = {}): KoinApplication =
 )
 class AppModule
 
-fun initkoin() = initApplication {}
+abstract class AppScope private constructor()

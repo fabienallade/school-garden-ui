@@ -31,7 +31,7 @@ arrow = "2.1.0"
 napier="2.7.1"
 material-icons="1.7.3"
 material-adaptive="1.1.2"
-
+anvil="0.4.1"
 
 
 [libraries]
@@ -94,3 +94,4 @@ ktorfit = { id = "de.jensklingenberg.ktorfit", version.ref = "ktorfit" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref="kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+anvil = { id = "dev.zacsweers.anvil", version.ref = "anvil" }

@@ -1,4 +1,5 @@
 import com.google.devtools.ksp.gradle.KspAATask
+import com.google.devtools.ksp.gradle.KspExtension
 import de.jensklingenberg.ktorfit.gradle.ErrorCheckingMode
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
@@ -17,6 +18,7 @@ plugins {
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.anvil)
 }
 
 kotlin {
@@ -88,6 +90,9 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.composeVM)
             implementation(libs.circuit)
+            api(libs.circuit.annotations)
+            implementation(libs.circuit.annotations.codegen)
+//            ksp("com.slack.circuit:circuit-codegen:0.29.1")
             api(libs.koin.annotations)
             implementation(libs.ktorfit)
             implementation(libs.serialization.json)
@@ -182,11 +187,19 @@ kotlin {
     }
 }
 
+anvil {
+    generateDaggerFactories = true
+    useKsp(
+        contributesAndFactoryGeneration = true,
+        componentMerging = true,
+    )
+}
 ksp {
     arg("KOIN_CONFIG_CHECK", "true")
+    arg("anvil-ksp-extraContributingAnnotations", "com.slack.circuit.codegen.annotations.CircuitInject")
 }
 ktorfit {
-    errorCheckingMode = ErrorCheckingMode.ERROR
+    errorCheckingMode = ErrorCheckingMode.WARNING
 }
 
 project.tasks.withType<KspAATask>().configureEach {

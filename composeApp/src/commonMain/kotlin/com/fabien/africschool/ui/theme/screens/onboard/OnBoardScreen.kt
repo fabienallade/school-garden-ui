@@ -1,5 +1,7 @@
 package com.fabien.africschool.ui.theme.screens.onboard
 
+import com.fabien.africschool.data.model.User
+import com.fabien.africschool.domain.state.ResponseState
 import com.fabien.africschool.utils.Parcelize
 import com.slack.circuit.runtime.CircuitUiEvent
 import com.slack.circuit.runtime.CircuitUiState
@@ -10,6 +12,7 @@ data object OnBoardScreen : Screen
 
 data class OnBoardState(
     val count: Int,
+    val user: ResponseState<User>,
     val eventSink: (OnBoardEvent) -> Unit,
 ) : CircuitUiState
 

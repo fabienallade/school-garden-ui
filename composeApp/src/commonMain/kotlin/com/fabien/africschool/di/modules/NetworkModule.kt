@@ -1,5 +1,7 @@
 package com.fabien.africschool.di.modules
 
+import com.fabien.africschool.data.network.ApiService
+import com.fabien.africschool.data.network.createApiService
 import de.jensklingenberg.ktorfit.Ktorfit
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -35,7 +37,10 @@ class NetworkModule {
     fun provideKtorfit(client: HttpClient): Ktorfit =
         Ktorfit
             .Builder()
-            .baseUrl("https://www.facebook.com")
+            .baseUrl("http://localhost:8080/api")
             .httpClient(client)
             .build()
+
+    @Single
+    fun provideApiService(ktorfit: Ktorfit): ApiService = ktorfit.createApiService()
 }
