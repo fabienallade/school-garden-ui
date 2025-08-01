@@ -9,11 +9,13 @@ import com.slack.circuit.backstack.rememberSaveableBackStack
 import com.slack.circuit.foundation.CircuitCompositionLocals
 import com.slack.circuit.foundation.NavigableCircuitContent
 import com.slack.circuit.foundation.rememberCircuitNavigator
+import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.KoinApplication
 import org.koin.compose.koinInject
 import org.koin.ksp.generated.module
+import kotlin.RequiresOptIn.Level
 
 @Composable
 @Preview
@@ -25,6 +27,8 @@ fun App() {
         }
 
     KoinApplication(application = {
+        printLogger()
+        Napier.base(DebugAntilog())
         modules(AppModule().module)
     }) {
         AppTheme {

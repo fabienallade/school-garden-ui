@@ -18,7 +18,6 @@ class AuthRepository(
 ) {
     fun getUser(id: String): Flow<ResponseState<User>> =
         flow {
-            Napier.d { "Fetching user $id" }
             emit(ResponseState.Loading)
             val user = apiService.getUser(id)
             emit(ResponseState.Success(user))

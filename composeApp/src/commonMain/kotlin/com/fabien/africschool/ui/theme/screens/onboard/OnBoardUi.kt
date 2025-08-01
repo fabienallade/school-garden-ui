@@ -8,8 +8,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.fabien.africschool.domain.state.ResponseState
 import com.slack.circuit.codegen.annotations.CircuitInject
 import com.slack.circuit.runtime.CircuitUiEvent
+import io.github.aakira.napier.Napier
 
 @Composable
 fun OnBoardUi(
@@ -21,6 +23,16 @@ fun OnBoardUi(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
+        when (state.user) {
+            ResponseState.Loading -> Text("Loading...")
+            is ResponseState.Success -> {
+                Text("Hello world!")
+            }
+            is ResponseState.Error -> {
+                Text("Something went wrong")
+            }
+        }
+
         Text("Count: ${state.count}")
         Button(onClick = { state.eventSink(OnBoardEvent.Increment) }) {
             Text("+")

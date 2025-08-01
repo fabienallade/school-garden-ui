@@ -26,13 +26,11 @@ fun initApplication(appDeclaration: KoinAppDeclaration = {}): KoinApplication =
 
 @Module(
     includes = [
+        NetworkModule::class,
         RepositoryModule::class,
         PlatformModule::class,
         ServiceModule::class,
-        NetworkModule::class,
         UiModule::class,
     ],
 )
 class AppModule
-
-abstract class AppScope private constructor()
