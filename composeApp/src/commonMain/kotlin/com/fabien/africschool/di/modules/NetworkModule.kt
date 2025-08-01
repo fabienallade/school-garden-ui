@@ -37,7 +37,7 @@ class NetworkModule {
     fun provideKtorfit(client: HttpClient): Ktorfit =
         Ktorfit
             .Builder()
-            .baseUrl("http://localhost:8080/api")
+            .baseUrl("http://localhost:8080/api/")
             .httpClient(client)
             .build()
 

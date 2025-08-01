@@ -18,7 +18,7 @@ plugins {
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.parcelize)
-    alias(libs.plugins.anvil)
+//    alias(libs.plugins.anvil)
 }
 
 kotlin {
@@ -90,8 +90,8 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.composeVM)
             implementation(libs.circuit)
-            api(libs.circuit.annotations)
-            implementation(libs.circuit.annotations.codegen)
+//            api(libs.circuit.annotations)
+//            implementation(libs.circuit.annotations.codegen)
 //            ksp("com.slack.circuit:circuit-codegen:0.29.1")
             api(libs.koin.annotations)
             implementation(libs.ktorfit)
@@ -187,13 +187,13 @@ kotlin {
     }
 }
 
-anvil {
-    generateDaggerFactories = true
-    useKsp(
-        contributesAndFactoryGeneration = true,
-        componentMerging = true,
-    )
-}
+// anvil {
+//    generateDaggerFactories = true
+//    useKsp(
+//        contributesAndFactoryGeneration = true,
+//        componentMerging = true,
+//    )
+// }
 ksp {
     arg("KOIN_CONFIG_CHECK", "true")
     arg("anvil-ksp-extraContributingAnnotations", "com.slack.circuit.codegen.annotations.CircuitInject")

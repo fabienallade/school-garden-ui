@@ -15,13 +15,15 @@ import org.koin.compose.koinInject
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.InjectedParam
 import org.koin.core.annotation.Module
+import org.koin.core.annotation.Provided
 import org.koin.core.annotation.Single
+import org.koin.dsl.module
+import org.koin.ksp.generated.module
 
 @Module
-@ComponentScan("com.fabien.africschool.data.repository")
 class UiModule {
     @Single
-    fun providesCircuit(authRepository: AuthRepository): Circuit =
+    fun provideCircuit(authRepository: AuthRepository): Circuit =
         Circuit
             .Builder()
             .addUi<LoginScreen, LoginState> { state, modifier ->
