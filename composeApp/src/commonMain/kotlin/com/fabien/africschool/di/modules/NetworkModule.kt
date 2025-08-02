@@ -3,12 +3,14 @@ package com.fabien.africschool.di.modules
 import com.fabien.africschool.data.network.ApiService
 import com.fabien.africschool.data.network.createApiService
 import de.jensklingenberg.ktorfit.Ktorfit
+import io.github.aakira.napier.Napier
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.DEFAULT
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
+import io.ktor.http.HttpHeaders
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 import org.koin.core.annotation.Module
@@ -28,8 +30,14 @@ class NetworkModule {
                 )
             }
             install(Logging) {
-                logger = Logger.DEFAULT
+                logger =
+                    object : Logger {
+                        override fun log(message: String) {
+                            Napier.v("HTTP Client", null, message)
+                        }
+                    }
                 level = LogLevel.HEADERS
+                sanitizeHeader { header -> header == HttpHeaders.Authorization }
             }
         }
 
