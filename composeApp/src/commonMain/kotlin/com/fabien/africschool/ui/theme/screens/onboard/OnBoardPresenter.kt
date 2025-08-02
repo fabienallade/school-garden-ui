@@ -5,8 +5,13 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.repeatOnLifecycle
+import com.fabien.africschool.data.model.User
 import com.fabien.africschool.data.repository.AuthRepository
 import com.fabien.africschool.domain.state.ResponseState
 import com.fabien.africschool.ui.theme.screens.login.LoginScreen
@@ -18,6 +23,7 @@ import io.github.aakira.napier.Napier
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.job
+import kotlinx.coroutines.launch
 import org.koin.core.annotation.InjectedParam
 import org.koin.core.annotation.Single
 
@@ -30,11 +36,21 @@ class OnBoardPresenter(
     override fun present(): OnBoardState {
         var counter by rememberSaveable { mutableStateOf(0) }
 
-        val user by authRepository.getUser("596461fb-1210-4a70-a555-bf13106f9674").collectAsState(initial = ResponseState.Loading)
+        var user: ResponseState<User> by mutableStateOf(ResponseState.Loading)
+
+        val lifecycleOwner = LocalLifecycleOwner.current
+        val coroutineScope = rememberCoroutineScope()
+
+        coroutineScope.launch {
+            Napier.d { "couroutineScope" }
+        }
 
         LaunchedEffect(Unit) {
             Napier.d("Napier started")
-            this.coroutineContext.job.invokeOnCompletion {
+            lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                coroutineScope.launch {
+//                    user = authRepository.getUser("596461fb-1210-4a70-a555-bf13106f9674")
+                }
             }
         }
 
