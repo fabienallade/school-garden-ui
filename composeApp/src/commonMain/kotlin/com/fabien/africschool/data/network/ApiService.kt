@@ -10,7 +10,7 @@ interface ApiService {
     @GET("users/{id}/")
     suspend fun signUp(): String
 
-    @GET("users/{id}/")
+    @GET("users/{id}")
     suspend fun getUser(
         @Path("id") id: String,
     ): User

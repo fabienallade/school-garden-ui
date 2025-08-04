@@ -2,19 +2,24 @@ package com.fabien.africschool.ui.theme.screens.onboard
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.repeatOnLifecycle
 import com.fabien.africschool.data.model.User
 import com.fabien.africschool.data.repository.AuthRepository
 import com.fabien.africschool.domain.state.ResponseState
 import com.fabien.africschool.ui.theme.screens.login.LoginScreen
+import com.slack.circuit.retained.collectAsRetainedState
+import com.slack.circuit.retained.rememberRetainedSaveable
 import com.slack.circuit.runtime.CircuitContext
 import com.slack.circuit.runtime.Navigator
 import com.slack.circuit.runtime.presenter.Presenter
@@ -22,6 +27,8 @@ import com.slack.circuit.runtime.screen.Screen
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.job
 import kotlinx.coroutines.launch
 import org.koin.core.annotation.InjectedParam
@@ -36,20 +43,15 @@ class OnBoardPresenter(
     override fun present(): OnBoardState {
         var counter by rememberSaveable { mutableStateOf(0) }
 
-        var user: ResponseState<User> by mutableStateOf(ResponseState.Loading)
-
         val lifecycleOwner = LocalLifecycleOwner.current
         val coroutineScope = rememberCoroutineScope()
-
-        coroutineScope.launch {
-            Napier.d { "couroutineScope" }
-        }
+        var user: Flow<ResponseState<User>> by rememberRetainedSaveable { mutableStateOf(flowOf()) }
 
         LaunchedEffect(Unit) {
             Napier.d("Napier started")
             lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 coroutineScope.launch {
-//                    user = authRepository.getUser("596461fb-1210-4a70-a555-bf13106f9674")
+                    authRepository.getUser("a17e34cd-23e2-4a68-ab06-6f08527b3f11").let { response -> user = response }
                 }
             }
         }

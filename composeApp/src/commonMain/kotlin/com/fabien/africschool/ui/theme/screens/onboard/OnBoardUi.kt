@@ -4,10 +4,14 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.fabien.africschool.domain.state.ResponseState
 import com.slack.circuit.codegen.annotations.CircuitInject
 import com.slack.circuit.runtime.CircuitUiEvent
@@ -18,15 +22,19 @@ fun OnBoardUi(
     state: OnBoardState,
     modifier: Modifier,
 ) {
+    val user = state.user.collectAsState(ResponseState.Loading).value
     Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        when (state.user) {
+        when (user) {
             ResponseState.Loading -> Text("Loading...")
             is ResponseState.Success -> {
-                Text("Hello world!")
+                Text("fabien")
+                Text(user.data.lastName, color = MaterialTheme.colorScheme.error)
+                Text(user.data.id, color = MaterialTheme.colorScheme.error)
+                Text(user.data.firstName, color = MaterialTheme.colorScheme.error)
             }
             is ResponseState.Error -> {
                 Text("Something went wrong")

@@ -6,13 +6,14 @@ import com.fabien.africschool.utils.Parcelize
 import com.slack.circuit.runtime.CircuitUiEvent
 import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen
+import kotlinx.coroutines.flow.Flow
 
 @Parcelize
 data object OnBoardScreen : Screen
 
 data class OnBoardState(
     val count: Int,
-    val user: ResponseState<User>,
+    val user: Flow<ResponseState<User>>,
     val eventSink: (OnBoardEvent) -> Unit,
 ) : CircuitUiState
 
