@@ -13,7 +13,7 @@ data object OnBoardScreen : Screen
 
 data class OnBoardState(
     val count: Int,
-    val user: Flow<ResponseState<User>>,
+    val user: Flow<ResponseState<List<User>>>,
     val eventSink: (OnBoardEvent) -> Unit,
 ) : CircuitUiState
 

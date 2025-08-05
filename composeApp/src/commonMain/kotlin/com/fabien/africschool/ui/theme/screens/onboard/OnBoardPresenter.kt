@@ -26,7 +26,9 @@ import com.slack.circuit.runtime.presenter.Presenter
 import com.slack.circuit.runtime.screen.Screen
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.job
@@ -45,13 +47,13 @@ class OnBoardPresenter(
 
         val lifecycleOwner = LocalLifecycleOwner.current
         val coroutineScope = rememberCoroutineScope()
-        var user: Flow<ResponseState<User>> by rememberRetainedSaveable { mutableStateOf(flowOf()) }
+        var user: Flow<ResponseState<List<User>>> by rememberSaveable { mutableStateOf(flowOf()) }
 
         LaunchedEffect(Unit) {
             Napier.d("Napier started")
             lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 coroutineScope.launch {
-                    authRepository.getUser("a17e34cd-23e2-4a68-ab06-6f08527b3f11").let { response -> user = response }
+                    authRepository.getUsers().let { response -> user = response }
                 }
             }
         }

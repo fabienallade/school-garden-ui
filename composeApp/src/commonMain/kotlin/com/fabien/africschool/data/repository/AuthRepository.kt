@@ -28,4 +28,15 @@ class AuthRepository(
                 emit(ResponseState.Error(it.message ?: "Unknown error"))
             }
         }
+
+    suspend fun getUsers(): Flow<ResponseState<List<User>>> =
+        withContext(Dispatchers.Main) {
+            flow {
+                emit(ResponseState.Loading)
+                val user = apiService.getUsers()
+                emit(ResponseState.Success(user))
+            }.catch {
+                emit(ResponseState.Error(it.message ?: "Unknown error"))
+            }
+        }
 }

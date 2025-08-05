@@ -20,6 +20,9 @@ object Themes {
     val contentType: ContentType
         @Composable @ReadOnlyComposable
         get() = localContentType.current.value
+
+    @Composable
+    fun Themes.isCompact(): Boolean = localAdaptiveLayoutType.current.value === AdaptiveLayoutType.Compact
 }
 
 @Composable

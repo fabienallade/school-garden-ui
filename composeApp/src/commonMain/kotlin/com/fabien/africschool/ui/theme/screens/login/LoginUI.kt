@@ -70,6 +70,11 @@ fun LoginUi(
                             Button(modifier = Modifier.fillMaxWidth(), onClick = {}) {
                                 Text("Se connecter", style = MaterialTheme.typography.headlineSmall)
                             }
+                            Button(modifier = Modifier.fillMaxWidth(), onClick = {
+                                state.eventSink(LoginEvent.LoginButton)
+                            }) {
+                                Text("Go back")
+                            }
                         }
                     }
                 }

@@ -1,0 +1,2515 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffce7d55c15, pid=36388, tid=46428
+#
+# JRE version: OpenJDK Runtime Environment (21.0.6) (build 21.0.6+-13391695-b895.109)
+# Java VM: OpenJDK 64-Bit Server VM (21.0.6+-13391695-b895.109, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [skiko-windows-x64.dll+0x5c15]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://youtrack.jetbrains.com/issues/JBR
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dcompose.reload.argfile=C:\laragon\www\AfricSchool\composeApp\build\run\desktopMain\desktopMain.argfile -Dcompose.reload.build.continuous=true -Dcompose.reload.buildSystem=Gradle -Dcompose.reload.devToolsClasspath=C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-devtools\1.0.0-alpha11\7271425ca174e47a07c9c9e548f740368134ca61\hot-reload-devtools-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-runtime-api-jvm\1.0.0-alpha11\e784fec47791cba1a21f056aed2408a90bb72576\hot-reload-runtime-api-jvm-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-runtime-jvm\1.0.0-alpha11\f62217e3b4ce58047ec1412be4ef66c2ae91edb4\hot-reload-runtime-jvm-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.desktop\desktop-jvm\1.8.1\7a5516c08efe9fef2e6aa38a10e5fc17fb556148\desktop-jvm-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material3\material3-desktop\1.8.1\763803ef38c846a60dadabe187bd402c5a52222e\material3-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.components\components-resources-desktop\1.8.1\10110d785f486bc13235f40e1d0b91a48b5f3ee6\library-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.sellmair\evas-compose-jvm\1.3.0\1214dcce9040d1b9f856b02b443cf8c2ebe1573a\evas-compose-jvm-1.3.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-desktop\1.8.1\ef0aa2ceffba36f64a1ba916c1d0116fd3c383c6\material-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-ripple-desktop\1.8.1\5364a917218879742c9f08f55791adb3a7c26c8a\material-ripple-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.foundation\foundation-desktop\1.8.1\43f4d514df27ef16c4fbe77807c2a7e12e18b6fd\foundation-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-icons-core-desktop\1.7.3\414b3096050fe647b0638832eace80f-Dcompose.reload.devToolsEnabled=true -Dcompose.reload.devToolsHeadless=false -Dcompose.reload.devToolsTransparencyEnabled=true -Dcompose.reload.dirtyResolveDepthLimit=5 -Dcompose.reload.launchMode=GradleBlocking -Dcompose.reload.mainClass=com.fabien.africschool.MainKt -Dcompose.reload.pidFile=C:\laragon\www\AfricSchool\composeApp\build\run\desktopMain\desktopMain.pid -Dcompose.reload.virtualMethodResolveEnabled=true -Dgradle.build.project=:composeApp -Dgradle.build.root=C:\laragon\www\AfricSchool -Dgradle.build.task=hotReloadDesktopMain -Dorg.gradle.java.home=C:\Program Files\Android\Android Studio\jbr -XX:+IgnoreUnrecognizedVMOptions -XX:+AllowEnhancedClassRedefinition -javaagent:C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-agent\1.0.0-alpha11\c4ee8ce7bac236244150134658fff9a6f21443ad\hot-reload-agent-1.0.0-alpha11.jar -Dfile.encoding=UTF-8 -Duser.country=FR -Duser.language=fr -Duser.variant com.fabien.africschool.MainKt
+
+Host: 12th Gen Intel(R) Core(TM) i7-12700H, 20 cores, 15G,  Windows 11 , 64 bit Build 26100 (10.0.26100.4768)
+Time: Tue Aug  5 19:09:00 2025 Europe de l , 64 bit Build 26100 (10.0.26100.4768) elapsed time: 1720.812365 seconds (0d 0h 28m 40s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000220f48086b0):  JavaThread "AWT-EventQueue-0"        [_thread_in_native, id=46428, stack(0x0000002da1000000,0x0000002da1100000) (1024K)]
+
+Stack: [0x0000002da1000000,0x0000002da1100000],  sp=0x0000002da10fe110,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [skiko-windows-x64.dll+0x5c15]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 100674  org.jetbrains.skiko.redrawer.Direct3DRedrawer.makeDirectXSurface(JJIILjava/lang/Object;I)J (0 bytes) @ 0x00000220df1f04a3 [0x00000220df1f0420+0x0000000000000083]
+J 118044 c1 org.jetbrains.skiko.redrawer.Direct3DRedrawer.makeSurface(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface; (55 bytes) @ 0x00000220d71bf72c [0x00000220d71bf120+0x000000000000060c]
+J 117034 c2 org.jetbrains.skiko.context.Direct3DContextHandler.initCanvas()V (220 bytes) @ 0x00000220dfe1cbd8 [0x00000220dfe1c680+0x0000000000000558]
+J 117032 c2 org.jetbrains.skiko.context.ContextHandler.draw()V (76 bytes) @ 0x00000220df98f2f4 [0x00000220df98f2a0+0x0000000000000054]
+J 117039 c2 org.jetbrains.skiko.redrawer.Direct3DRedrawer.drawAndSwap(Z)V (49 bytes) @ 0x00000220dfe1a2b4 [0x00000220dfe1a1c0+0x00000000000000f4]
+j  org.jetbrains.skiko.redrawer.Direct3DRedrawer.redrawImmediately()V+202
+j  org.jetbrains.skiko.SkiaLayer.tryRedrawImmediately()V+35
+j  org.jetbrains.skiko.SkiaLayer.setBounds(IIII)V+44
+j  java.awt.Component.resize(II)V+23 java.desktop@21.0.6
+j  java.awt.Component.setSize(II)V+3 java.desktop@21.0.6
+j  androidx.compose.ui.scene.ComposeContainer.setBounds(IIII)V+10
+j  androidx.compose.ui.awt.ComposeWindowPanel.setBounds(IIII)V+18
+J 118183 c1 java.awt.BorderLayout.layoutContainer(Ljava/awt/Container;)V java.desktop@21.0.6 (396 bytes) @ 0x00000220d87142bc [0x00000220d8713240+0x000000000000107c]
+J 118092 c1 java.awt.Container.doLayout()V java.desktop@21.0.6 (5 bytes) @ 0x00000220d86ba1cc [0x00000220d86ba140+0x000000000000008c]
+J 118050 c1 java.awt.Container.validateTree()V java.desktop@21.0.6 (153 bytes) @ 0x00000220d7eed7ac [0x00000220d7eecfa0+0x000000000000080c]
+J 118050 c1 java.awt.Container.validateTree()V java.desktop@21.0.6 (153 bytes) @ 0x00000220d7eee0ac [0x00000220d7eecfa0+0x000000000000110c]
+J 118050 c1 java.awt.Container.validateTree()V java.desktop@21.0.6 (153 bytes) @ 0x00000220d7eee0ac [0x00000220d7eecfa0+0x000000000000110c]
+J 118050 c1 java.awt.Container.validateTree()V java.desktop@21.0.6 (153 bytes) @ 0x00000220d7eee0ac [0x00000220d7eecfa0+0x000000000000110c]
+J 118088 c1 java.awt.Container.validate()V java.desktop@21.0.6 (105 bytes) @ 0x00000220d70bde2c [0x00000220d70bdc00+0x000000000000022c]
+j  sun.awt.windows.WComponentPeer$1.run()V+11 java.desktop@21.0.6
+J 110776 c1 java.awt.event.InvocationEvent.dispatch()V java.desktop@21.0.6 (69 bytes) @ 0x00000220d977a48c [0x00000220d977a2e0+0x00000000000001ac]
+J 110752 c2 java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V java.desktop@21.0.6 (139 bytes) @ 0x00000220dfef1a74 [0x00000220dfef1520+0x0000000000000554]
+J 114415 c2 java.awt.EventQueue$4.run()Ljava/lang/Object; java.desktop@21.0.6 (5 bytes) @ 0x00000220dee7c404 [0x00000220dee7c3a0+0x0000000000000064]
+J 112813 c2 java.awt.EventDispatchThread.pumpOneEventForFilters(I)V java.desktop@21.0.6 (106 bytes) @ 0x00000220df74a698 [0x00000220df749ce0+0x00000000000009b8]
+J 113296% c2 java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V java.desktop@21.0.6 (47 bytes) @ 0x00000220deea61dc [0x00000220deea6140+0x000000000000009c]
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+11 java.desktop@21.0.6
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4 java.desktop@21.0.6
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3 java.desktop@21.0.6
+j  java.awt.EventDispatchThread.run()V+18 java.desktop@21.0.6
+v  ~StubRoutines::call_stub 0x00000220de49100d
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000002da10fe1f8, RBX=0x00000220f8cc3e48, RCX=0x0000000000000000, RDX=0x0000000000000000
+RSP=0x0000002da10fe110, RBP=0x0000002da10fe400, RSI=0x00000220fdfd8c30, RDI=0x00000220f4808a68
+R8 =0x0000000000000000, R9 =0x00000000000004e3, R10=0x0000000000000000, R11=0x0000002da10fe030
+R12=0x0000000000000000, R13=0x0000002da10fe6a8, R14=0x0000002da10fe3e8, R15=0x0000000000000000
+RIP=0x00007ffce7d55c15, EFLAGS=0x0000000000010202
+
+XMM[0]=0x0000000000000000 0x000000003f000000
+XMM[1]=0x0000000000000000 0x00045aec00c21000
+XMM[2]=0x0000002da10fb1a0 0x00007ffd0ef45d51
+XMM[3]=0x00007ffd0f13bce8 0x00007ffd0f064ee8
+XMM[4]=0x0000000000000002 0x0000002da10fc3b0
+XMM[5]=0x0000000000000000 0x0000000000000000
+XMM[6]=0x0000000000000000 0x0000000000000000
+XMM[7]=0x0000000000000000 0x000000ce000002ac
+XMM[8]=0x0000000000000000 0x0000000000000000
+XMM[9]=0x0000000000000000 0x00000000e0b2d72e
+XMM[10]=0x0000000000000000 0x000000070596ba38
+XMM[11]=0x0000000000000000 0x000000070596b988
+XMM[12]=0x0000000000000000 0x000000070596ba08
+XMM[13]=0x0000000000000000 0x000000070596b9c0
+XMM[14]=0x0000000000000000 0x40447cb000000000
+XMM[15]=0x0000000000000000 0x0000000000000000
+  MXCSR=0x00001fa7
+
+
+Register to memory mapping:
+
+RAX=0x0000002da10fe1f8 is pointing into the stack for thread: 0x00000220f48086b0
+RBX=0x00000220f8cc3e48 points into unknown readable memory: 0x0000000000000000 | 00 00 00 00 00 00 00 00
+RCX=0x0 is null
+RDX=0x0 is null
+RSP=0x0000002da10fe110 is pointing into the stack for thread: 0x00000220f48086b0
+RBP=0x0000002da10fe400 is pointing into the stack for thread: 0x00000220f48086b0
+RSI=0x00000220fdfd8c30 points into unknown readable memory: 0x00007ffce8788700 | 00 87 78 e8 fc 7f 00 00
+RDI=0x00000220f4808a68 points into unknown readable memory: 0x00007ffc88004500 | 00 45 00 88 fc 7f 00 00
+R8 =0x0 is null
+R9 =0x00000000000004e3 is an unknown value
+R10=0x0 is null
+R11=0x0000002da10fe030 is pointing into the stack for thread: 0x00000220f48086b0
+R12=0x0 is null
+R13=0x0000002da10fe6a8 is pointing into the stack for thread: 0x00000220f48086b0
+R14=0x0000002da10fe3e8 is pointing into the stack for thread: 0x00000220f48086b0
+R15=0x0 is null
+
+Top of Stack: (sp=0x0000002da10fe110)
+0x0000002da10fe110:   0000000000000000 0000000000000000
+0x0000002da10fe120:   0000000000000000 0000000000000000
+0x0000002da10fe130:   0000000000000000 0000000000000000
+0x0000002da10fe140:   0000000000000001 0000000000000000
+0x0000002da10fe150:   0000000000000000 0000000000000001
+0x0000002da10fe160:   00000220ef7d32f0 0000000000000002
+0x0000002da10fe170:   000000000000001c 0000000000000000
+0x0000002da10fe180:   0000000000000003 00007ffd7fe5594b
+0x0000002da10fe190:   00007ffd7fedde68 0000002da10fe380
+0x0000002da10fe1a0:   0000000000000001 0000000000000000
+0x0000002da10fe1b0:   0000002da10fe1f0 0000000000000001
+0x0000002da10fe1c0:   00000220ef7d32f0 00007ffd7fe2b56c
+0x0000002da10fe1d0:   00000000000002bf 00000000000001cc
+0x0000002da10fe1e0:   0000000000000000 0000000000000000
+0x0000002da10fe1f0:   0000000200000000 00000220fcb17cf0
+0x0000002da10fe200:   0000000000000000 0000000000000000
+0x0000002da10fe210:   0000001c00000000 0000000100000001
+0x0000002da10fe220:   0000000000000000 0000000000000047
+0x0000002da10fe230:   0000022000000002 0000000000000000
+0x0000002da10fe240:   0000002da10fe314 000000000000001c
+0x0000002da10fe250:   0000002d00000000 0000000000000000
+0x0000002da10fe260:   0000000000000000 00000220fe3e5e68
+0x0000002da10fe270:   0000000000000000 0000000000000000
+0x0000002da10fe280:   0000002da10fe6a8 0000000000000000
+0x0000002da10fe290:   00000220f8cc3e58 00000220f8cc3e00
+0x0000002da10fe2a0:   00000220f8cc3e48 00000220fc156900
+0x0000002da10fe2b0:   00007ffd863371c0 00007ffd7fe05434
+0x0000002da10fe2c0:   0000022000060000 0000000000000000
+0x0000002da10fe2d0:   0000002da10fe3f0 00000000e0c4b500
+0x0000002da10fe2e0:   00000220fc156900 00007ffd0ef98d37
+0x0000002da10fe2f0:   0000000000000000 00007ffd863371c0
+0x0000002da10fe300:   0000002d8007000e 000000008007000e 
+
+Instructions: (pc=0x00007ffce7d55c15)
+0x00007ffce7d55b15:   48 83 c4 58 5f 5e c3 e8 9f d5 93 00 cc cc cc cc
+0x00007ffce7d55b25:   cc cc cc cc cc cc cc cc cc cc cc 41 57 41 56 56
+0x00007ffce7d55b35:   57 53 48 81 ec 40 02 00 00 0f 29 b4 24 30 02 00
+0x00007ffce7d55b45:   00 4c 89 ce 48 89 cf 48 63 94 24 a8 02 00 00 4c
+0x00007ffce7d55b55:   8b b4 24 a0 02 00 00 48 8b 05 65 46 bb 00 48 31
+0x00007ffce7d55b65:   e0 48 89 84 24 28 02 00 00 0f 57 f6 0f 29 b4 24
+0x00007ffce7d55b75:   f0 00 00 00 c7 84 24 00 01 00 00 00 00 00 00 0f
+0x00007ffce7d55b85:   28 05 45 95 9f 00 0f 11 84 24 04 01 00 00 c6 84
+0x00007ffce7d55b95:   24 14 01 00 00 00 49 8b 48 38 49 8d 5c d0 48 48
+0x00007ffce7d55ba5:   8b 01 4c 8d 05 02 97 9f 00 49 89 d9 ff 50 48 48
+0x00007ffce7d55bb5:   8d 84 24 f0 00 00 00 48 39 d8 74 36 4c 8b 3b 4d
+0x00007ffce7d55bc5:   85 ff 74 26 49 8b 07 4c 89 f9 ff 50 08 48 8b 8c
+0x00007ffce7d55bd5:   24 f0 00 00 00 4c 89 bc 24 f0 00 00 00 48 85 c9
+0x00007ffce7d55be5:   74 10 48 8b 01 ff 50 10 eb 08 4c 89 bc 24 f0 00
+0x00007ffce7d55bf5:   00 00 48 8d 8c 24 e8 00 00 00 48 89 fa 4d 89 f0
+0x00007ffce7d55c05:   e8 16 dc 00 00 0f 29 b4 24 d0 00 00 00 48 8b 0b
+0x00007ffce7d55c15:   48 8b 01 48 8d 94 24 98 00 00 00 ff 50 50 8b bc
+0x00007ffce7d55c25:   24 b0 00 00 00 48 8b 0b 48 8b 01 48 8d 54 24 60
+0x00007ffce7d55c35:   ff 50 50 8b 54 24 70 48 8d 84 24 d0 00 00 00 48
+0x00007ffce7d55c45:   89 44 24 20 48 8d 9c 24 20 01 00 00 4c 8d 8c 24
+0x00007ffce7d55c55:   f0 00 00 00 48 89 d9 41 89 f8 e8 7c 5a 04 00 4c
+0x00007ffce7d55c65:   8b b4 24 e8 00 00 00 48 8d 7c 24 58 48 89 f9 e8
+0x00007ffce7d55c75:   37 56 08 00 0f 11 74 24 40 4c 89 74 24 38 48 89
+0x00007ffce7d55c85:   7c 24 30 c7 44 24 28 04 00 00 00 c7 44 24 20 00
+0x00007ffce7d55c95:   00 00 00 48 8d 8c 24 98 00 00 00 48 89 f2 49 89
+0x00007ffce7d55ca5:   d8 45 31 c9 e8 22 50 0a 00 48 8b b4 24 98 00 00
+0x00007ffce7d55cb5:   00 48 89 d9 e8 72 5c 04 00 48 8b 8c 24 e8 00 00
+0x00007ffce7d55cc5:   00 48 85 c9 74 0a ba 10 00 00 00 e8 ab cf 93 00
+0x00007ffce7d55cd5:   48 8b 8c 24 f8 00 00 00 48 85 c9 74 0c f0 ff 49
+0x00007ffce7d55ce5:   08 75 06 48 8b 01 ff 50 08 48 8b 8c 24 f0 00 00
+0x00007ffce7d55cf5:   00 48 85 c9 74 06 48 8b 01 ff 50 10 48 8b 8c 24
+0x00007ffce7d55d05:   28 02 00 00 48 31 e1 48 3b 0d b5 44 bb 00 75 1a 
+
+
+Stack slot to memory mapping:
+
+stack at sp + 0 slots: 0x0 is null
+stack at sp + 1 slots: 0x0 is null
+stack at sp + 2 slots: 0x0 is null
+stack at sp + 3 slots: 0x0 is null
+stack at sp + 4 slots: 0x0 is null
+stack at sp + 5 slots: 0x0 is null
+stack at sp + 6 slots: 0x0000000000000001 is an unknown value
+stack at sp + 7 slots: 0x0 is null
+
+
+Compiled method (n/a) 1720976 100674     n 0       org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeDirectXSurface (native)
+ total in heap  [0x00000220df1f0290,0x00000220df1f0688] = 1016
+ relocation     [0x00000220df1f03f0,0x00000220df1f0420] = 48
+ main code      [0x00000220df1f0420,0x00000220df1f067a] = 602
+ stub code      [0x00000220df1f067a,0x00000220df1f0680] = 6
+ oops           [0x00000220df1f0680,0x00000220df1f0688] = 8
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Entry Point]
+  # {method} {0x00000220f1c097f8} 'makeDirectXSurface' '(JJIILjava/lang/Object;I)J' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer'
+  # this:     rdx:rdx   = 'org/jetbrains/skiko/redrawer/Direct3DRedrawer'
+  # parm0:    r8:r8     = long
+  # parm1:    r9:r9     = long
+  # parm2:    rdi       = int
+  # parm3:    rsi       = int
+  # parm4:    rcx:rcx   = 'java/lang/Object'
+  # parm5:    [sp+0x90]   = int  (sp of caller)
+  0x00000220df1f0420: 448b 5208 | 49bb 0000 | 0000 0800 | 0000 4d03 | d349 3bc2 | 0f84 0600 
+
+  0x00000220df1f0438: ;   {runtime_call ic_miss_stub}
+  0x00000220df1f0438: 0000 e941 | e32e ff90 
+[Verified Entry Point]
+  0x00000220df1f0440: 8984 2400 | 80ff ff55 | 488b ec48 | 81ec 8000 | 0000 6690 | 4181 7f20 | 1a00 0000 
+
+  0x00000220df1f045c: ;   {runtime_call StubRoutines (final stubs)}
+  0x00000220df1f045c: 7405 e8fd | 962d ff48 | 6345 1048 | 8944 2438 | 4889 4c24 | 6848 83f9 | 0048 8d44 | 2468 480f 
+  0x00000220df1f047c: 4444 2468 | 4889 4424 | 3048 8974 | 2428 4889 | 7c24 2048 | 8954 2440 | 4883 fa00 | 488d 5424 
+  0x00000220df1f049c: 4048 0f44 | 5424 40c5 
+
+  0x00000220df1f04a4: ;   {internal_word}
+  0x00000220df1f04a4: f877 49ba | a304 1fdf | 2002 0000 | 4d89 97a0 | 0300 0049 | 89a7 9803 
+
+  0x00000220df1f04bc: ;   {external_word}
+  0x00000220df1f04bc: 0000 49ba | 8057 0688 | fc7f 0000 | 4180 3a00 | 0f84 4e00 | 0000 5241 
+
+  0x00000220df1f04d4: ;   {metadata({method} {0x00000220f1c097f8} 'makeDirectXSurface' '(JJIILjava/lang/Object;I)J' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220df1f04d4: 5041 5148 | baf0 97c0 | f120 0200 | 0049 8bcf | 4883 ec20 | 40f6 c40f | 0f84 1900 | 0000 4883 
+  0x00000220df1f04f4: ;   {runtime_call}
+  0x00000220df1f04f4: ec08 48b8 | 5077 c087 | fc7f 0000 | ffd0 4883 | c408 e90c 
+
+  0x00000220df1f0508: ;   {runtime_call}
+  0x00000220df1f0508: 0000 0048 | b850 77c0 | 87fc 7f00 | 00ff d048 | 83c4 2041 | 5941 585a | 498d 8fb8 | 0300 0041 
+  0x00000220df1f0528: c787 4404 | 0000 0400 
+
+  0x00000220df1f0530: ;   {runtime_call}
+  0x00000220df1f0530: 0000 48b8 | 305b d5e7 | fc7f 0000 | ffd0 c5f8 | 7741 c787 | 4404 0000 | 0500 0000 | f083 4424 
+  0x00000220df1f0550: c000 493b | af48 0400 | 000f 870e | 0000 0041 | 83bf 4004 | 0000 000f | 842b 0000 | 00c5 f877 
+  0x00000220df1f0570: 4889 45f8 | 498b cf4c | 8be4 4883 | ec20 4883 
+
+  0x00000220df1f0580: ;   {runtime_call}
+  0x00000220df1f0580: e4f0 48b8 | 20dc 8b87 | fc7f 0000 | ffd0 498b | e44d 33e4 | 488b 45f8 | 41c7 8744 | 0400 0008 
+  0x00000220df1f05a0: 0000 0041 | 83bf c004 | 0000 020f | 849c 0000 
+
+  0x00000220df1f05b0: ;   {external_word}
+  0x00000220df1f05b0: 0049 ba80 | 5706 88fc | 7f00 0041 | 803a 000f | 844c 0000 | 0048 8945 
+
+  0x00000220df1f05c8: ;   {metadata({method} {0x00000220f1c097f8} 'makeDirectXSurface' '(JJIILjava/lang/Object;I)J' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220df1f05c8: f848 baf0 | 97c0 f120 | 0200 0049 | 8bcf 4883 | ec20 40f6 | c40f 0f84 | 1900 0000 | 4883 ec08 
+  0x00000220df1f05e8: ;   {runtime_call}
+  0x00000220df1f05e8: 48b8 5077 | c087 fc7f | 0000 ffd0 | 4883 c408 | e90c 0000 
+
+  0x00000220df1f05fc: ;   {runtime_call}
+  0x00000220df1f05fc: 0048 b850 | 77c0 87fc | 7f00 00ff | d048 83c4 | 2048 8b45 | f849 c787 | 9803 0000 | 0000 0000 
+  0x00000220df1f061c: 49c7 87a0 | 0300 0000 | 0000 00c5 | f877 498b | 8f28 0400 | 00c7 8100 | 0100 0000 | 0000 00c9 
+  0x00000220df1f063c: 4983 7f08 | 000f 8501 | 0000 00c3 
+
+  0x00000220df1f0648: ;   {runtime_call StubRoutines (initial stubs)}
+  0x00000220df1f0648: e9b3 082a | ffc5 f877 | 4889 45f8 | 4c8b e448 | 83ec 2048 
+
+  0x00000220df1f065c: ;   {runtime_call}
+  0x00000220df1f065c: 83e4 f048 | b8f0 aec0 | 87fc 7f00 | 00ff d049 | 8be4 4d33 | e448 8b45 | f8e9 37ff | ffff f4f4 
+  0x00000220df1f067c: f4f4 f4f4 
+[/MachCode]
+
+
+Compiled method (c1) 1720984 118044       3       org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface (55 bytes)
+ total in heap  [0x00000220d71bee90,0x00000220d71c00c0] = 4656
+ relocation     [0x00000220d71beff0,0x00000220d71bf110] = 288
+ main code      [0x00000220d71bf120,0x00000220d71bfb60] = 2624
+ stub code      [0x00000220d71bfb60,0x00000220d71bfc00] = 160
+ oops           [0x00000220d71bfc00,0x00000220d71bfc20] = 32
+ metadata       [0x00000220d71bfc20,0x00000220d71bfc78] = 88
+ scopes data    [0x00000220d71bfc78,0x00000220d71bfec0] = 584
+ scopes pcs     [0x00000220d71bfec0,0x00000220d71c0080] = 448
+ dependencies   [0x00000220d71c0080,0x00000220d71c0098] = 24
+ nul chk table  [0x00000220d71c0098,0x00000220d71c00c0] = 40
+
+[Constant Pool (empty)]
+
+[MachCode]
+[Entry Point]
+  # {method} {0x00000220f1c090b8} 'makeSurface' '(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface;' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer'
+  # this:     rdx:rdx   = 'org/jetbrains/skiko/redrawer/Direct3DRedrawer'
+  # parm0:    r8:r8     = long
+  # parm1:    r9        = int
+  # parm2:    rdi       = int
+  # parm3:    rsi:rsi   = 'org/jetbrains/skia/SurfaceProps'
+  # parm4:    rcx       = int
+  #           [sp+0x110]  (sp of caller)
+  0x00000220d71bf120: 448b 5208 | 49bb 0000 | 0000 0800 | 0000 4d03 | d34c 3bd0 
+
+  0x00000220d71bf134: ;   {runtime_call ic_miss_stub}
+  0x00000220d71bf134: 0f85 46f6 | 3107 660f | 1f44 0000 
+[Verified Entry Point]
+  0x00000220d71bf140: 8984 2400 | 80ff ff55 | 4881 ec00 | 0100 0090 | 4181 7f20 | 1a00 0000 
+
+  0x00000220d71bf158: ;   {runtime_call StubRoutines (final stubs)}
+  0x00000220d71bf158: 7405 e801 | aa30 0748 | 89b4 24c8 | 0000 0089 | 8c24 e000 
+
+  0x00000220d71bf16c: ;   {metadata(method data for {method} {0x00000220f1c090b8} 'makeSurface' '(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface;' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220d71bf16c: 0000 48b8 | 682d fbf2 | 2002 0000 | 8b98 cc00 | 0000 83c3 | 0289 98cc | 0000 0081 | e3fe 0700 
+  0x00000220d71bf18c: 0085 db0f | 84a8 0700 
+
+  0x00000220d71bf194: ;   {metadata(method data for {method} {0x00000220f1c090b8} 'makeSurface' '(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface;' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220d71bf194: 0048 b868 | 2dfb f220 | 0200 0048 | 8380 1001 
+
+  0x00000220d71bf1a4: ;   {metadata(method data for {method} {0x00000220f0701e00} 'checkNotNullParameter' '(Ljava/lang/Object;Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf1a4: 0000 0148 | b850 4eb6 | f020 0200 | 008b 98cc | 0000 0083 | c302 8998 | cc00 0000 | 81e3 feff 
+  0x00000220d71bf1c4: 1f00 85db | 0f84 9007 | 0000 4885 
+
+  0x00000220d71bf1d0: ;   {metadata(method data for {method} {0x00000220f0701e00} 'checkNotNullParameter' '(Ljava/lang/Object;Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf1d0: f648 b850 | 4eb6 f020 | 0200 0048 | c7c3 1001 | 0000 7507 | 48c7 c320 | 0100 004c | 8b1c 184d 
+  0x00000220d71bf1f0: 8d5b 014c | 891c 1889 | bc24 dc00 | 0000 4489 | 8c24 d800 | 0000 4c89 | 8424 d000 | 0000 4889 
+  0x00000220d71bf210: 9424 c000 | 0000 0f85 | 1802 0000 
+
+  0x00000220d71bf21c: ;   {metadata(method data for {method} {0x00000220f0701e00} 'checkNotNullParameter' '(Ljava/lang/Object;Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf21c: 48b8 504e | b6f0 2002 | 0000 4883 | 8030 0100 
+
+  0x00000220d71bf22c: ;   {metadata(method data for {method} {0x00000220f0702008} 'throwParameterIsNullNPE' '(Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf22c: 0001 48b8 | d84f b6f0 | 2002 0000 | 8b98 cc00 | 0000 83c3 | 0289 98cc | 0000 0081 | e3fe ff1f 
+  0x00000220d71bf24c: 0085 db0f | 842a 0700 | 0066 6690 
+
+  0x00000220d71bf258: ;   {no_reloc}
+  0x00000220d71bf258: e952 0700 | 0000 0000 | 0000 498b | 87b8 0100 | 0048 8d78 | 3049 3bbf | c801 0000 | 0f87 3f07 
+  0x00000220d71bf278: 0000 4989 | bfb8 0100 | 0048 c700 | 0100 0000 | 488b ca49 | ba00 0000 | 0008 0000 | 0049 2bca 
+  0x00000220d71bf298: 8948 0848 | 33c9 8948 | 0c48 33c9 | 4889 4810 | 4889 4818 | 4889 4820 | 4889 4828 
+
+  0x00000220d71bf2b4: ;   {metadata(method data for {method} {0x00000220f0702008} 'throwParameterIsNullNPE' '(Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf2b4: 48ba d84f | b6f0 2002 | 0000 4883 | 8210 0100 
+
+  0x00000220d71bf2c4: ;   {oop("surfaceProps"{0x0000000705d1a0f0})}
+  0x00000220d71bf2c4: 0001 48ba | f0a0 d105 | 0700 0000 | 4889 8424 | b800 0000 | 0f1f 8000 
+
+  0x00000220d71bf2dc: ;   {static_call}
+  0x00000220d71bf2dc: 0000 00e8 
+
+  0x00000220d71bf2e0: ; ImmutableOopMap {[184]=Oop [192]=Oop [200]=Oop }
+                      ;*invokestatic createParameterIsNullExceptionMessage {reexecute=0 rethrow=0 return_oop=0}
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@5 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bf2e0: 9cfd 3107 
+
+  0x00000220d71bf2e4: ;   {other}
+  0x00000220d71bf2e4: 0f1f 8400 | 5404 0000 | 4c8b 8424 | b800 0000 
+
+  0x00000220d71bf2f4: ;   {metadata(method data for {method} {0x00000220f0702008} 'throwParameterIsNullNPE' '(Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf2f4: 48ba d84f | b6f0 2002 | 0000 4883 | 8220 0100 | 0001 4c8b | c048 8b94 | 24b8 0000 | 0066 0f1f 
+  0x00000220d71bf314: ;   {optimized virtual_call}
+  0x00000220d71bf314: 4400 00e8 
+
+  0x00000220d71bf318: ; ImmutableOopMap {[184]=Oop [192]=Oop [200]=Oop }
+                      ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@8 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bf318: 64f7 3107 
+
+  0x00000220d71bf31c: ;   {other}
+  0x00000220d71bf31c: 0f1f 8400 | 8c04 0001 
+
+  0x00000220d71bf324: ;   {metadata(method data for {method} {0x00000220f0702008} 'throwParameterIsNullNPE' '(Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf324: 48ba d84f | b6f0 2002 | 0000 4883 | 8230 0100 
+
+  0x00000220d71bf334: ;   {metadata(method data for {method} {0x00000220f07030f0} 'sanitizeStackTrace' '(Ljava/lang/Throwable;)Ljava/lang/Throwable;' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf334: 0001 48ba | d859 b6f0 | 2002 0000 | 8bb2 cc00 | 0000 83c6 | 0289 b2cc | 0000 0081 | e6fe ff1f 
+  0x00000220d71bf354: 0085 f60f | 8469 0600 
+
+  0x00000220d71bf35c: ;   {oop(a 'java/lang/Class'{0x00000007053081c0} = 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf35c: 0048 bac0 | 8130 0507 | 0000 0048 
+
+  0x00000220d71bf368: ;   {metadata(method data for {method} {0x00000220f07030f0} 'sanitizeStackTrace' '(Ljava/lang/Throwable;)Ljava/lang/Throwable;' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf368: 8bf2 48bf | d859 b6f0 | 2002 0000 | 4883 8710 | 0100 0001 
+
+  0x00000220d71bf37c: ;   {metadata(method data for {method} {0x00000220f0017e68} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000220d71bf37c: 48be 2089 | 51f0 2002 | 0000 8bbe | cc00 0000 | 83c7 0289 | becc 0000 | 0081 e7fe | ff1f 0085 
+  0x00000220d71bf39c: ff0f 8444 | 0600 008b | 522c 48c1 | e203 4885 
+
+  0x00000220d71bf3ac: ;   {metadata(method data for {method} {0x00000220f0017e68} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000220d71bf3ac: d248 be20 | 8951 f020 | 0200 0048 | c7c7 1001 | 0000 7407 | 48c7 c720 | 0100 0048 | 8b1c 3e48 
+  0x00000220d71bf3cc: 8d5b 0148 | 891c 3e0f | 8418 0000 
+
+  0x00000220d71bf3d8: ;   {metadata(method data for {method} {0x00000220f0017e68} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000220d71bf3d8: 0048 be20 | 8951 f020 | 0200 00ff | 8630 0100 | 0048 8bf2 | e936 0000 
+
+  0x00000220d71bf3f0: ;   {oop(a 'java/lang/Class'{0x00000007053081c0} = 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf3f0: 0048 bac0 | 8130 0507 | 0000 0048 
+
+  0x00000220d71bf3fc: ;   {metadata(method data for {method} {0x00000220f0017e68} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000220d71bf3fc: 8bf2 48bf | 2089 51f0 | 2002 0000 | 4883 8748 | 0100 0001 | 0f1f 8000 
+
+  0x00000220d71bf414: ;   {optimized virtual_call}
+  0x00000220d71bf414: 0000 00e8 
+
+  0x00000220d71bf418: ; ImmutableOopMap {[184]=Oop [192]=Oop [200]=Oop }
+                      ;*invokevirtual initClassName {reexecute=0 rethrow=0 return_oop=0}
+                      ; - java.lang.Class::getName@14
+                      ; - kotlin.jvm.internal.Intrinsics::sanitizeStackTrace@3 (line 253)
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@11 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bf418: 64f6 3107 
+
+  0x00000220d71bf41c: ;   {other}
+  0x00000220d71bf41c: 0f1f 8400 | 8c05 0002 | 488b f048 | 8b84 24b8 | 0000 00e9 | be03 0000 
+
+  0x00000220d71bf434: ;   {metadata('org/jetbrains/skia/Surface')}
+  0x00000220d71bf434: 48ba 3865 | 3000 0800 | 0000 498b | 87b8 0100 | 0048 8d78 | 2049 3bbf | c801 0000 | 0f87 b705 
+  0x00000220d71bf454: 0000 4989 | bfb8 0100 | 0048 c700 | 0100 0000 | 488b ca49 | ba00 0000 | 0008 0000 | 0049 2bca 
+  0x00000220d71bf474: 8948 0848 | 33c9 8948 | 0c48 33c9 | 4889 4810 | 4889 4818 | 4889 8424 | e800 0000 | 488b 9424 
+  0x00000220d71bf494: c000 0000 
+
+  0x00000220d71bf498: ;   {metadata(method data for {method} {0x00000220f1c090b8} 'makeSurface' '(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface;' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220d71bf498: 48be 682d | fbf2 2002 | 0000 4883 | 8658 0100 | 0001 488b | 9424 c000 | 0000 0f1f 
+
+  0x00000220d71bf4b4: ;   {optimized virtual_call}
+  0x00000220d71bf4b4: 4400 00e8 
+
+  0x00000220d71bf4b8: ; ImmutableOopMap {[192]=Oop [200]=Oop [232]=Oop }
+                      ;*invokespecial getDevice {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@28 (line 101)
+  0x00000220d71bf4b8: 847c 9d08 
+
+  0x00000220d71bf4bc: ;   {other}
+  0x00000220d71bf4bc: 0f1f 8400 | 2c06 0003 | 4c8b c048 | 8bb4 24c8 | 0000 0048 | 3b06 488b 
+
+  0x00000220d71bf4d4: ;   {metadata(method data for {method} {0x00000220f1c090b8} 'makeSurface' '(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface;' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220d71bf4d4: de48 ba68 | 2dfb f220 | 0200 0048 | 8382 6801 
+
+  0x00000220d71bf4e4: ;   {metadata(method data for {method} {0x00000220f26ca228} 'packToIntArray$skiko' '()[I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bf4e4: 0000 0148 | bb78 f75b | f320 0200 | 008b 93cc | 0000 0083 | c202 8993 | cc00 0000 | 81e2 feff 
+  0x00000220d71bf504: 1f00 85d2 | 0f84 1105 | 0000 bb02 
+
+  0x00000220d71bf510: ;   {metadata({type array int})}
+  0x00000220d71bf510: 0000 0048 | ba38 0e04 | 0008 0000 | 004c 8bce | 4863 db48 | 8bfb 4881 | fbff ffff | 000f 870d 
+  0x00000220d71bf530: 0500 0048 | c7c6 1700 | 0000 488d | 349e 4883 | e6f8 498b | 87b8 0100 | 0048 8d34 | 3049 3bb7 
+  0x00000220d71bf550: c801 0000 | 0f87 e604 | 0000 4989 | b7b8 0100 | 0048 2bf0 | 48c7 0001 | 0000 0048 | 8bca 49ba 
+  0x00000220d71bf570: 0000 0000 | 0800 0000 | 492b ca89 | 4808 8958 | 0c48 83ee | 1048 85f6 | 0f84 1100 | 0000 4833 
+  0x00000220d71bf590: db48 c1ee | 0348 895c | f008 48ff | ce75 f649 
+
+  0x00000220d71bf5a0: ;   {metadata(method data for {method} {0x00000220f26ca228} 'packToIntArray$skiko' '()[I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bf5a0: 8bf1 48bf | 78f7 5bf3 | 2002 0000 | 4883 8710 | 0100 0001 
+
+  0x00000220d71bf5b4: ;   {metadata(method data for {method} {0x00000220f26c9c30} '_getFlags' '()I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bf5b4: 48bf 88b9 | 5bf3 2002 | 0000 8bb7 | cc00 0000 | 83c6 0289 | b7cc 0000 | 0081 e6fe | ff1f 0085 
+  0x00000220d71bf5d4: f60f 846f | 0400 0041 | 0fbe 790c 
+
+  0x00000220d71bf5e0: ;   {metadata(method data for {method} {0x00000220f26c9c30} '_getFlags' '()I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bf5e0: 85ff 48bf | 88b9 5bf3 | 2002 0000 | 48c7 c610 | 0100 0074 | 0748 c7c6 | 2001 0000 | 488b 0c37 
+  0x00000220d71bf600: 488d 4901 | 4889 0c37 | 0f84 1a00 
+
+  0x00000220d71bf60c: ;   {metadata(method data for {method} {0x00000220f26c9c30} '_getFlags' '()I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bf60c: 0000 48bf | 88b9 5bf3 | 2002 0000 | ff87 3001 | 0000 bf01 | 0000 00e9 | 0500 0000 | bf00 0000 
+  0x00000220d71bf62c: 0089 7810 
+
+  0x00000220d71bf630: ;   {metadata(method data for {method} {0x00000220f26ca228} 'packToIntArray$skiko' '()[I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bf630: 498b f148 | bf78 f75b | f320 0200 | 0048 8387 | 4801 0000 
+
+  0x00000220d71bf644: ;   {metadata(method data for {method} {0x00000220f26c9b60} '_getPixelGeometryOrdinal' '()I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bf644: 0148 bf10 | f95b f320 | 0200 008b | b7cc 0000 | 0083 c602 | 89b7 cc00 | 0000 81e6 | feff 1f00 
+  0x00000220d71bf664: 85f6 0f84 | ff03 0000 | 458b 4910 | 49c1 e103 
+
+  0x00000220d71bf674: ; implicit exception: dispatches to 0x00000220d71bfa8c
+  0x00000220d71bf674: 493b 0149 
+
+  0x00000220d71bf678: ;   {metadata(method data for {method} {0x00000220f26c9b60} '_getPixelGeometryOrdinal' '()I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bf678: 8bf9 48be | 10f9 5bf3 | 2002 0000 | 4883 8610 | 0100 0001 | 458b 490c | 4489 4814 | 8b8c 24e0 
+  0x00000220d71bf698: ;   {oop(a 'org/jetbrains/skia/impl/theScope'{0x000000070595aa08})}
+  0x00000220d71bf698: 0000 0049 | b908 aa95 | 0507 0000 
+
+  0x00000220d71bf6a4: ;   {metadata(method data for {method} {0x00000220f1c090b8} 'makeSurface' '(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface;' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220d71bf6a4: 0048 bf68 | 2dfb f220 | 0200 0048 | 8387 a001 
+
+  0x00000220d71bf6b4: ;   {metadata(method data for {method} {0x00000220f1a09158} 'toInterop' '([I)Ljava/lang/Object;' in 'org/jetbrains/skia/impl/InteropScope')}
+  0x00000220d71bf6b4: 0000 0149 | b9f8 ba5b | f320 0200 | 0041 8bb9 | cc00 0000 | 83c7 0241 | 89b9 cc00 | 0000 81e7 
+  0x00000220d71bf6d4: feff 1f00 | 85ff 0f84 | b103 0000 | 488b 9424 | c000 0000 
+
+  0x00000220d71bf6e8: ;   {metadata(method data for {method} {0x00000220f1c090b8} 'makeSurface' '(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface;' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220d71bf6e8: 49b9 682d | fbf2 2002 | 0000 4983 | 81d8 0100 | 0001 4c8b | 8c24 d000 | 0000 8bbc | 24d8 0000 
+  0x00000220d71bf708: 008b b424 | dc00 0000 | 4c8b d948 | 8bc8 4489 | 1c24 488b | 9424 c000 | 0000 0f1f 
+
+  0x00000220d71bf724: ;   {optimized virtual_call}
+  0x00000220d71bf724: 4400 00e8 
+
+  0x00000220d71bf728: ; ImmutableOopMap {[232]=Oop }
+                      ;*invokespecial makeDirectXSurface {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@47 (line 101)
+  0x00000220d71bf728: 140d 0308 
+
+  0x00000220d71bf72c: ;   {other}
+  0x00000220d71bf72c: 0f1f 8400 | 9c08 0004 | 4c8b 8424 | e800 0000 
+
+  0x00000220d71bf73c: ;   {metadata(method data for {method} {0x00000220f1c090b8} 'makeSurface' '(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface;' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220d71bf73c: 48ba 682d | fbf2 2002 | 0000 4883 | 82e8 0100 
+
+  0x00000220d71bf74c: ;   {metadata(method data for {method} {0x00000220f1c16eb0} '<init>' '(J)V' in 'org/jetbrains/skia/Surface')}
+  0x00000220d71bf74c: 0001 49b8 | 98fa 5bf3 | 2002 0000 | 418b 90cc | 0000 0083 | c202 4189 | 90cc 0000 | 0081 e2fe 
+  0x00000220d71bf76c: ff1f 0085 | d20f 843b | 0300 004c | 8b84 24e8 
+
+  0x00000220d71bf77c: ;   {metadata(method data for {method} {0x00000220f1c16eb0} '<init>' '(J)V' in 'org/jetbrains/skia/Surface')}
+  0x00000220d71bf77c: 0000 0048 | ba98 fa5b | f320 0200 | 0048 8382 | 1001 0000 | 014c 8bc0 | 488b 9424 | e800 0000 
+  0x00000220d71bf79c: ;   {optimized virtual_call}
+  0x00000220d71bf79c: 6666 90e8 
+
+  0x00000220d71bf7a0: ; ImmutableOopMap {[232]=Oop }
+                      ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skia.Surface::<init>@2 (line 989)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@50 (line 101)
+  0x00000220d71bf7a0: 3c5c 2b00 
+
+  0x00000220d71bf7a4: ;   {other}
+  0x00000220d71bf7a4: 0f1f 8400 | 1409 0005 | 410f be47 | 4085 c048 | 8b84 24e8 | 0000 000f | 8512 0300 | 00c7 4018 
+  0x00000220d71bf7c4: 0000 0000 | 410f be57 | 4085 d20f | 851d 0300 | 00c7 401c | 0000 0000 | 4881 c400 | 0100 005d 
+  0x00000220d71bf7e4: ;   {poll_return}
+  0x00000220d71bf7e4: 493b a748 | 0400 000f | 8720 0300 
+
+  0x00000220d71bf7f0: ;   {metadata(method data for {method} {0x00000220f07030f0} 'sanitizeStackTrace' '(Ljava/lang/Throwable;)Ljava/lang/Throwable;' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf7f0: 00c3 48ba | d859 b6f0 | 2002 0000 | 4883 8248 | 0100 0001 | 488b d04c | 8bc6 0f1f 
+
+  0x00000220d71bf80c: ;   {static_call}
+  0x00000220d71bf80c: 4400 00e8 
+
+  0x00000220d71bf810: ; ImmutableOopMap {[192]=Oop [200]=Oop }
+                      ;*invokestatic sanitizeStackTrace {reexecute=0 rethrow=0 return_oop=0}
+                      ; - kotlin.jvm.internal.Intrinsics::sanitizeStackTrace@6 (line 253)
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@11 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bf810: 6cf8 3107 
+
+  0x00000220d71bf814: ;   {other}
+  0x00000220d71bf814: 0f1f 8400 | 8409 0006 | 8b8c 24e0 | 0000 0048 | 8bb4 24c8 | 0000 008b | bc24 dc00 | 0000 448b 
+  0x00000220d71bf834: 8c24 d800 | 0000 4c8b | 8424 d000 | 0000 488b | 9424 c000 | 0000 4885 
+
+  0x00000220d71bf84c: ;   {metadata(method data for {method} {0x00000220f0702008} 'throwParameterIsNullNPE' '(Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf84c: c075 1749 | bbd8 4fb6 | f020 0200 | 0041 808b | 3901 0000 | 01e9 cf00 
+
+  0x00000220d71bf864: ;   {metadata('java/lang/NullPointerException')}
+  0x00000220d71bf864: 0000 49bd | c8cf 0500 | 0800 0000 | 448b 5808 | 49ba 0000 | 0000 0800 | 0000 4d03 | da4d 3b6b 
+  0x00000220d71bf884: 500f 858e 
+
+  0x00000220d71bf888: ;   {metadata(method data for {method} {0x00000220f0702008} 'throwParameterIsNullNPE' '(Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf888: 0000 0049 | bbd8 4fb6 | f020 0200 | 0044 8b68 | 0849 ba00 | 0000 0008 | 0000 004d | 03ea 4d3b 
+  0x00000220d71bf8a8: ab50 0100 | 0075 0d49 | 8383 5801 | 0000 01e9 | 7900 0000 | 4d3b ab60 | 0100 0075 | 0d49 8383 
+  0x00000220d71bf8c8: 6801 0000 | 01e9 6300 | 0000 4983 | bb50 0100 | 0000 7517 | 4d89 ab50 | 0100 0049 | c783 5801 
+  0x00000220d71bf8e8: 0000 0100 | 0000 e942 | 0000 0049 | 83bb 6001 | 0000 0075 | 174d 89ab | 6001 0000 | 49c7 8368 
+  0x00000220d71bf908: 0100 0001 | 0000 00e9 | 2100 0000 | e91c 0000 
+
+  0x00000220d71bf918: ;   {metadata(method data for {method} {0x00000220f0702008} 'throwParameterIsNullNPE' '(Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf918: 0049 bbd8 | 4fb6 f020 | 0200 0049 | 83ab 4001 | 0000 01e9 | f701 0000 | e900 0000 | 0048 3b00 
+  0x00000220d71bf938: e915 0200 
+
+  0x00000220d71bf93c: ;   {metadata({method} {0x00000220f1c090b8} 'makeSurface' '(JIILorg/jetbrains/skia/SurfaceProps;I)Lorg/jetbrains/skia/Surface;' in 'org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220d71bf93c: 0049 bab0 | 90c0 f120 | 0200 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000220d71bf954: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bf954: e827 133e 
+
+  0x00000220d71bf958: ; ImmutableOopMap {rdx=Oop rsi=Oop [200]=Oop }
+                      ;*synchronization entry
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@-1
+  0x00000220d71bf958: 07e9 37f8 
+
+  0x00000220d71bf95c: ;   {metadata({method} {0x00000220f0701e00} 'checkNotNullParameter' '(Ljava/lang/Object;Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf95c: ffff 49ba | f81d 70f0 | 2002 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000220d71bf974: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bf974: ffe8 0613 
+
+  0x00000220d71bf978: ; ImmutableOopMap {rdx=Oop rsi=Oop [200]=Oop }
+                      ;*synchronization entry
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@-1 (line 130)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bf978: 3e07 e94f 
+
+  0x00000220d71bf97c: ;   {metadata({method} {0x00000220f0702008} 'throwParameterIsNullNPE' '(Ljava/lang/String;)V' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf97c: f8ff ff49 | ba00 2070 | f020 0200 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000220d71bf994: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bf994: ffff e8e5 
+
+  0x00000220d71bf998: ; ImmutableOopMap {[192]=Oop [200]=Oop }
+                      ;*synchronization entry
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@-1 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bf998: 123e 07e9 | b5f8 ffff 
+
+  0x00000220d71bf9a0: ;   {metadata(nullptr)}
+  0x00000220d71bf9a0: 48ba 0000 | 0000 0000 | 0000 b800 
+
+  0x00000220d71bf9ac: ;   {runtime_call load_klass_patching Runtime1 stub}
+  0x00000220d71bf9ac: 0f05 0ae8 
+
+  0x00000220d71bf9b0: ; ImmutableOopMap {[192]=Oop [200]=Oop }
+                      ;*new {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@0 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bf9b0: 4c02 3e07 | e99f f8ff | ff48 8bd2 
+
+  0x00000220d71bf9bc: ;   {runtime_call fast_new_instance Runtime1 stub}
+  0x00000220d71bf9bc: e8bf ca3d 
+
+  0x00000220d71bf9c0: ; ImmutableOopMap {[192]=Oop [200]=Oop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=0}
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@0 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bf9c0: 07e9 eef8 
+
+  0x00000220d71bf9c4: ;   {metadata({method} {0x00000220f07030f0} 'sanitizeStackTrace' '(Ljava/lang/Throwable;)Ljava/lang/Throwable;' in 'kotlin/jvm/internal/Intrinsics')}
+  0x00000220d71bf9c4: ffff 49ba | e830 70f0 | 2002 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000220d71bf9dc: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bf9dc: ffe8 9e12 
+
+  0x00000220d71bf9e0: ; ImmutableOopMap {[184]=Oop [192]=Oop [200]=Oop }
+                      ;*synchronization entry
+                      ; - kotlin.jvm.internal.Intrinsics::sanitizeStackTrace@-1 (line 253)
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@11 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bf9e0: 3e07 e976 
+
+  0x00000220d71bf9e4: ;   {metadata({method} {0x00000220f0017e68} 'getName' '()Ljava/lang/String;' in 'java/lang/Class')}
+  0x00000220d71bf9e4: f9ff ff49 | ba60 7e01 | f020 0200 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000220d71bf9fc: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bf9fc: ffff e87d 
+
+  0x00000220d71bfa00: ; ImmutableOopMap {rdx=Oop [184]=Oop [192]=Oop [200]=Oop }
+                      ;*synchronization entry
+                      ; - java.lang.Class::getName@-1
+                      ; - kotlin.jvm.internal.Intrinsics::sanitizeStackTrace@3 (line 253)
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@11 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bfa00: 123e 07e9 | 9bf9 ffff 
+
+  0x00000220d71bfa08: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000220d71bfa08: e873 c13d 
+
+  0x00000220d71bfa0c: ; ImmutableOopMap {[184]=Oop [192]=Oop [200]=Oop }
+                      ;*getfield name {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.lang.Class::getName@1
+                      ; - kotlin.jvm.internal.Intrinsics::sanitizeStackTrace@3 (line 253)
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@11 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bfa0c: 0748 8bd2 
+
+  0x00000220d71bfa10: ;   {runtime_call fast_new_instance Runtime1 stub}
+  0x00000220d71bfa10: e86b ca3d 
+
+  0x00000220d71bfa14: ; ImmutableOopMap {[192]=Oop [200]=Oop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@22 (line 101)
+  0x00000220d71bfa14: 07e9 6efa 
+
+  0x00000220d71bfa18: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000220d71bfa18: ffff e861 
+
+  0x00000220d71bfa1c: ; ImmutableOopMap {rsi=Oop [192]=Oop [200]=Oop [232]=Oop }
+                      ;*invokevirtual packToIntArray$skiko {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@39 (line 101)
+                      ;   {metadata({method} {0x00000220f26ca228} 'packToIntArray$skiko' '()[I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bfa1c: c13d 0749 | ba20 a26c | f220 0200 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000220d71bfa34: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bfa34: ffff e845 
+
+  0x00000220d71bfa38: ; ImmutableOopMap {rsi=Oop [192]=Oop [200]=Oop [232]=Oop }
+                      ;*synchronization entry
+                      ; - org.jetbrains.skia.SurfaceProps::packToIntArray$skiko@-1 (line 48)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@39 (line 101)
+  0x00000220d71bfa38: 123e 07e9 | cefa ffff 
+
+  0x00000220d71bfa40: ;   {runtime_call new_type_array Runtime1 stub}
+  0x00000220d71bfa40: e83b d03d 
+
+  0x00000220d71bfa44: ; ImmutableOopMap {r9=Oop [192]=Oop [200]=Oop [232]=Oop }
+                      ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skia.SurfaceProps::packToIntArray$skiko@1 (line 48)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@39 (line 101)
+  0x00000220d71bfa44: 07e9 55fb 
+
+  0x00000220d71bfa48: ;   {metadata({method} {0x00000220f26c9c30} '_getFlags' '()I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bfa48: ffff 49ba | 289c 6cf2 | 2002 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000220d71bfa60: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bfa60: ffe8 1a12 
+
+  0x00000220d71bfa64: ; ImmutableOopMap {r9=Oop rax=Oop [192]=Oop [200]=Oop [232]=Oop }
+                      ;*synchronization entry
+                      ; - org.jetbrains.skia.SurfaceProps::_getFlags@-1 (line 14)
+                      ; - org.jetbrains.skia.SurfaceProps::packToIntArray$skiko@7 (line 48)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@39 (line 101)
+  0x00000220d71bfa64: 3e07 e970 
+
+  0x00000220d71bfa68: ;   {metadata({method} {0x00000220f26c9b60} '_getPixelGeometryOrdinal' '()I' in 'org/jetbrains/skia/SurfaceProps')}
+  0x00000220d71bfa68: fbff ff49 | ba58 9b6c | f220 0200 | 004c 8954 | 2408 48c7 | 0424 ffff 
+
+  0x00000220d71bfa80: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bfa80: ffff e8f9 
+
+  0x00000220d71bfa84: ; ImmutableOopMap {r9=Oop rax=Oop [192]=Oop [200]=Oop [232]=Oop }
+                      ;*synchronization entry
+                      ; - org.jetbrains.skia.SurfaceProps::_getPixelGeometryOrdinal@-1 (line 10)
+                      ; - org.jetbrains.skia.SurfaceProps::packToIntArray$skiko@14 (line 48)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@39 (line 101)
+  0x00000220d71bfa84: 113e 07e9 | e0fb ffff 
+
+  0x00000220d71bfa8c: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000220d71bfa8c: e8ef c03d 
+
+  0x00000220d71bfa90: ; ImmutableOopMap {rax=Oop r9=Oop [192]=Oop [232]=Oop }
+                      ;*invokevirtual ordinal {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skia.SurfaceProps::_getPixelGeometryOrdinal@4 (line 10)
+                      ; - org.jetbrains.skia.SurfaceProps::packToIntArray$skiko@14 (line 48)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@39 (line 101)
+                      ;   {metadata({method} {0x00000220f1a09158} 'toInterop' '([I)Ljava/lang/Object;' in 'org/jetbrains/skia/impl/InteropScope')}
+  0x00000220d71bfa90: 0749 ba50 | 91a0 f120 | 0200 004c | 8954 2408 | 48c7 0424 | ffff ffff 
+
+  0x00000220d71bfaa8: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bfaa8: e8d3 113e 
+
+  0x00000220d71bfaac: ; ImmutableOopMap {rax=Oop [192]=Oop [232]=Oop }
+                      ;*synchronization entry
+                      ; - org.jetbrains.skia.impl.InteropScope::toInterop@-1 (line 70)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@42 (line 101)
+  0x00000220d71bfaac: 07e9 2efc 
+
+  0x00000220d71bfab0: ;   {metadata({method} {0x00000220f1c16eb0} '<init>' '(J)V' in 'org/jetbrains/skia/Surface')}
+  0x00000220d71bfab0: ffff 49ba | a86e c1f1 | 2002 0000 | 4c89 5424 | 0848 c704 | 24ff ffff 
+
+  0x00000220d71bfac8: ;   {runtime_call counter_overflow Runtime1 stub}
+  0x00000220d71bfac8: ffe8 b211 
+
+  0x00000220d71bfacc: ; ImmutableOopMap {[232]=Oop }
+                      ;*synchronization entry
+                      ; - org.jetbrains.skia.Surface::<init>@-1 (line 989)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@50 (line 101)
+  0x00000220d71bfacc: 3e07 e9a4 | fcff ff8b | 5018 48c1 | e203 4883 | fa00 0f84 | ddfc ffff | 4889 1424 
+
+  0x00000220d71bfae8: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000220d71bfae8: e893 173e | 07e9 cffc | ffff 8b50 | 1c48 c1e2 | 0348 83fa | 000f 84d2 | fcff ff48 
+
+  0x00000220d71bfb04: ;   {runtime_call g1_pre_barrier_slow}
+  0x00000220d71bfb04: 8914 24e8 | 7417 3e07 | e9c4 fcff 
+
+  0x00000220d71bfb10: ;   {internal_word}
+  0x00000220d71bfb10: ff49 bae4 | f71b d720 | 0200 004d | 8997 6004 
+
+  0x00000220d71bfb20: ;   {runtime_call SafepointBlob}
+  0x00000220d71bfb20: 0000 e9d9 | 5b32 0748 
+
+  0x00000220d71bfb28: ;   {runtime_call throw_class_cast_exception Runtime1 stub}
+  0x00000220d71bfb28: 8904 24e8 
+
+  0x00000220d71bfb2c: ; ImmutableOopMap {rsi=Oop rdx=Oop [200]=Oop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@14 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bfb2c: 50e4 3d07 
+
+  0x00000220d71bfb30: ;   {runtime_call throw_null_pointer_exception Runtime1 stub}
+  0x00000220d71bfb30: e84b c03d 
+
+  0x00000220d71bfb34: ; ImmutableOopMap {rsi=Oop rdx=Oop rax=Oop [200]=Oop }
+                      ;*athrow {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) kotlin.jvm.internal.Intrinsics::throwParameterIsNullNPE@17 (line 140)
+                      ; - kotlin.jvm.internal.Intrinsics::checkNotNullParameter@5 (line 131)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::makeSurface@5
+  0x00000220d71bfb34: 0749 8b87 | f804 0000 | 49c7 87f8 | 0400 0000 | 0000 0049 | c787 0005 | 0000 0000 | 0000 4881 
+  0x00000220d71bfb54: c400 0100 
+
+  0x00000220d71bfb58: ;   {runtime_call unwind_exception Runtime1 stub}
+  0x00000220d71bfb58: 005d e921 | b13d 07f4 
+[Stub Code]
+  0x00000220d71bfb60: ;   {no_reloc}
+  0x00000220d71bfb60: 48bb 0000 | 0000 0000 
+
+  0x00000220d71bfb68: ;   {runtime_call nmethod}
+  0x00000220d71bfb68: 0000 e9fb 
+
+  0x00000220d71bfb6c: ;   {static_stub}
+  0x00000220d71bfb6c: ffff ff48 | bb00 0000 | 0000 0000 
+
+  0x00000220d71bfb78: ;   {runtime_call nmethod}
+  0x00000220d71bfb78: 00e9 fbff 
+
+  0x00000220d71bfb7c: ;   {static_stub}
+  0x00000220d71bfb7c: ffff 48bb | 0000 0000 | 0000 0000 
+
+  0x00000220d71bfb88: ;   {runtime_call nmethod}
+  0x00000220d71bfb88: e9fb ffff 
+
+  0x00000220d71bfb8c: ;   {static_stub}
+  0x00000220d71bfb8c: ff48 bb00 | 0000 0000 
+
+  0x00000220d71bfb94: ;   {runtime_call nmethod}
+  0x00000220d71bfb94: 0000 00e9 | fbff ffff 
+
+  0x00000220d71bfb9c: ;   {static_stub}
+  0x00000220d71bfb9c: 48bb 0000 | 0000 0000 
+
+  0x00000220d71bfba4: ;   {runtime_call nmethod}
+  0x00000220d71bfba4: 0000 e9fb 
+
+  0x00000220d71bfba8: ;   {static_stub}
+  0x00000220d71bfba8: ffff ff48 | bb00 0000 | 0000 0000 
+
+  0x00000220d71bfbb4: ;   {runtime_call nmethod}
+  0x00000220d71bfbb4: 00e9 fbff 
+
+  0x00000220d71bfbb8: ;   {static_stub}
+  0x00000220d71bfbb8: ffff 48bb | 0000 0000 | 0000 0000 
+
+  0x00000220d71bfbc4: ;   {runtime_call nmethod}
+  0x00000220d71bfbc4: e9fb ffff 
+
+  0x00000220d71bfbc8: ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x00000220d71bfbc8: ffe8 b2dd 
+
+  0x00000220d71bfbcc: ;   {external_word}
+  0x00000220d71bfbcc: 3d07 48b9 | 40de e087 | fc7f 0000 | 4883 e4f0 
+
+  0x00000220d71bfbdc: ;   {runtime_call}
+  0x00000220d71bfbdc: 48b8 b079 | af87 fc7f | 0000 ffd0 
+
+  0x00000220d71bfbe8: ;   {section_word}
+  0x00000220d71bfbe8: f449 bae9 | fb1b d720 | 0200 0041 
+
+  0x00000220d71bfbf4: ;   {runtime_call DeoptimizationBlob}
+  0x00000220d71bfbf4: 52e9 a64d | 3207 f4f4 | f4f4 f4f4 
+[/MachCode]
+
+
+Compiled method (c2) 1721011 117034   !   4       org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas (220 bytes)
+ total in heap  [0x00000220dfe1c390,0x00000220dfe1e2d0] = 8000
+ relocation     [0x00000220dfe1c4f0,0x00000220dfe1c650] = 352
+ constants      [0x00000220dfe1c660,0x00000220dfe1c680] = 32
+ main code      [0x00000220dfe1c680,0x00000220dfe1d5f0] = 3952
+ stub code      [0x00000220dfe1d5f0,0x00000220dfe1d690] = 160
+ oops           [0x00000220dfe1d690,0x00000220dfe1d6a0] = 16
+ metadata       [0x00000220dfe1d6a0,0x00000220dfe1d860] = 448
+ scopes data    [0x00000220dfe1d860,0x00000220dfe1ddd8] = 1400
+ scopes pcs     [0x00000220dfe1ddd8,0x00000220dfe1e0b8] = 736
+ dependencies   [0x00000220dfe1e0b8,0x00000220dfe1e140] = 136
+ handler table  [0x00000220dfe1e140,0x00000220dfe1e248] = 264
+ nul chk table  [0x00000220dfe1e248,0x00000220dfe1e2d0] = 136
+
+
+[Constant Pool]
+             Address          hex4                    hex8      
+  0x00000220dfe1c660:   0x3f800000      0xf4f4f4f43f800000      
+  0x00000220dfe1c664:   0xf4f4f4f4                              
+  0x00000220dfe1c668:   0xf4f4f4f4      0xf4f4f4f4f4f4f4f4      
+  0x00000220dfe1c66c:   0xf4f4f4f4                              
+  0x00000220dfe1c670:   0xf4f4f4f4      0xf4f4f4f4f4f4f4f4      
+  0x00000220dfe1c674:   0xf4f4f4f4                              
+  0x00000220dfe1c678:   0xf4f4f4f4      0xf4f4f4f4f4f4f4f4      
+  0x00000220dfe1c67c:   0xf4f4f4f4                              
+
+[MachCode]
+[Entry Point]
+  # {method} {0x00000220f1c10f68} 'initCanvas' '()V' in 'org/jetbrains/skiko/context/Direct3DContextHandler'
+  #           [sp+0x80]  (sp of caller)
+  0x00000220dfe1c680: ;   {no_reloc}
+  0x00000220dfe1c680: 448b 5208 | 49bb 0000 | 0000 0800 | 0000 4d03 | d349 3bc2 
+
+  0x00000220dfe1c694: ;   {runtime_call ic_miss_stub}
+  0x00000220dfe1c694: 0f85 e620 | 6cfe 6690 | 0f1f 4000 
+[Verified Entry Point]
+  0x00000220dfe1c6a0: 8984 2400 | 80ff ff55 | 4883 ec70 | 4181 7f20 | 1a00 0000 | 0f85 290f | 0000 4c8b | da44 8b52 
+  0x00000220dfe1c6c0: 1445 85d2 | 0f84 9a09 | 0000 448b | 4a0c 478b | 44cc 6443 | 8b4c c408 
+
+  0x00000220dfe1c6d8: ;   {metadata('sun/awt/Win32GraphicsConfig')}
+  0x00000220dfe1c6d8: 81f9 b860 | 1c00 0f85 | e008 0000 | 49c1 e003 | 458b 4010 
+
+  0x00000220dfe1c6ec: ; implicit exception: dispatches to 0x00000220dfe1d2f4
+  0x00000220dfe1c6ec: c481 7a10 
+
+  0x00000220dfe1c6f0: ;   {section_word}
+  0x00000220dfe1c6f0: 4cc4 20c5 | f82e 0d65 | ffff ff7a | 060f 8479 | 0900 008b | 720c c4c1 | 6a2a 54f4 | 1cc5 ea59 
+  0x00000220dfe1c710: c1c5 7a2c | c041 81f8 | 0000 0080 | 0f84 ac0e | 0000 4183 | f801 0f8c | 6e02 0000 | c4c1 6a2a 
+  0x00000220dfe1c730: 54f4 20c5 | ea59 c1c5 | fa2c c881 | f900 0000 | 800f 8473 | 0e00 0083 | f901 0f8c | 5502 0000 
+  0x00000220dfe1c750: 8b5a 2844 | 3bc3 0f85 | 6d02 0000 | 448b 4a2c | 413b c90f | 85f3 0900 | 008b 5a30 
+
+  0x00000220dfe1c76c: ; implicit exception: dispatches to 0x00000220dfe1d380
+  0x00000220dfe1c76c: 418b 7cdc | 0c85 ff0f | 86c2 0800 | 0045 8b4c | dc10 4585 | c90f 8405 | 0a00 0049 | b900 900d 
+  0x00000220dfe1c78c: e420 0200 | 0045 8b84 | f48c 0100 | 0047 8b44 | c418 478b 
+
+  0x00000220dfe1c7a0: ;   {metadata('org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220dfe1c7a0: 54c4 0841 | 81fa 204b | 3000 0f85 | c00a 0000 | 4b8d 14c4 | 4c8b 4228 | 4d85 c00f | 8413 0900 
+  0x00000220dfe1c7c0: 0089 5c24 | 284c 894c | 2420 498b 
+
+  0x00000220dfe1c7cc: ;   {optimized virtual_call}
+  0x00000220dfe1c7cc: eb66 90e8 
+
+  0x00000220dfe1c7d0: ; ImmutableOopMap {rbp=Oop [40]=NarrowOop }
+                      ;*invokespecial getBufferIndex {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::getBufferIndex@5 (line 123)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@197 (line 79)
+  0x00000220dfe1c7d0: 6c49 24ff 
+
+  0x00000220dfe1c7d4: ;   {other}
+  0x00000220dfe1c7d4: 0f1f 8400 | 4404 0000 | 8b74 2428 
+
+  0x00000220dfe1c7e0: ; implicit exception: dispatches to 0x00000220dfe1d368
+  0x00000220dfe1c7e0: 458b 54f4 | 0c8b d841 | 3bc2 0f83 | bd07 0000 | 4180 7f40 | 000f 85c1 | 0400 004c | 8bdd 4d8d 
+  0x00000220dfe1c800: 14f4 458b | 549a 1044 | 8955 1c4d | 8bc2 49c1 | e003 4d33 | c349 c1e8 | 154d 85c0 | 0f84 7a04 
+  0x00000220dfe1c820: 0000 4585 | d20f 847a | 0400 0049 | c1eb 0948 | b900 900d | e420 0200 | 0049 03cb | 8039 020f 
+  0x00000220dfe1c840: 8526 0500 
+
+  0x00000220dfe1c844: ;   {oop(a 'java/lang/Class'{0x0000000705906ef8} = 'org/jetbrains/skia/impl/Stats')}
+  0x00000220dfe1c844: 0049 bbf8 | 6e90 0507 | 0000 0045 | 0fb6 9b80 | 0000 0045 | 85db 0f85 | ac08 0000 | 4889 6c24 
+  0x00000220dfe1c864: 284b 8b54 | d410 4b8d | 2cd4 4489 
+
+  0x00000220dfe1c870: ;   {static_call}
+  0x00000220dfe1c870: 5424 30e8 
+
+  0x00000220dfe1c874: ; ImmutableOopMap {rbp=Oop [40]=Oop [48]=NarrowOop }
+                      ;*invokestatic _nGetCanvas {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skia.SurfaceKt::access$_nGetCanvas@1 (line 1)
+                      ; - org.jetbrains.skia.Surface::getCanvas@11 (line 657)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@213 (line 80)
+  0x00000220dfe1c874: e84f 24ff 
+
+  0x00000220dfe1c878: ;   {other}
+  0x00000220dfe1c878: 0f1f 8400 | e804 0001 | 4c8b d848 | 85c0 0f84 | 9c08 0000 | 498b 87b8 | 0100 004c | 8bd0 4983 
+  0x00000220dfe1c898: c220 4d3b | 97c8 0100 | 000f 83b8 | 0500 004d | 8997 b801 | 0000 410f | 0d8a c000 | 0000 48c7 
+  0x00000220dfe1c8b8: 0001 0000 
+
+  0x00000220dfe1c8bc: ;   {metadata('org/jetbrains/skia/Canvas')}
+  0x00000220dfe1c8bc: 00c7 4008 | 084d 2900 | 4489 600c | 4c89 6010 | 4c89 6018 | 4c89 5c24 | 3848 8944 | 2440 49b9 
+  0x00000220dfe1c8dc: 1023 d5e7 | fc7f 0000 | 488b d04c | 8b44 2438 | 33ff 4889 
+
+  0x00000220dfe1c8f0: ;   {optimized virtual_call}
+  0x00000220dfe1c8f0: 4424 38e8 
+
+  0x00000220dfe1c8f4: ; ImmutableOopMap {rbp=Oop [40]=Oop [48]=NarrowOop [56]=Oop [64]=Oop }
+                      ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skia.Canvas::<init>@16 (line 8)
+                      ; - org.jetbrains.skia.Surface::getCanvas@41 (line 658)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@213 (line 80)
+  0x00000220dfe1c8f4: 08bf 11ff 
+
+  0x00000220dfe1c8f8: ;   {other}
+  0x00000220dfe1c8f8: 0f1f 8400 | 6805 0002 | 4180 7f40 | 000f 8524 | 0400 0048 | 8b5c 2438 | 448b 5424 | 3044 8953 
+  0x00000220dfe1c918: 1848 8bfb | 48c1 ef03 | 4c8b d54c | 8bdb 4d33 | d349 c1ea | 154d 85d2 | 741a 49c1 | eb09 48b9 
+  0x00000220dfe1c938: 0090 0de4 | 2002 0000 | 4903 cb80 | 3902 0f85 | c504 0000 | 4180 7f40 | 000f 859c | 0300 0048 
+  0x00000220dfe1c958: 8b74 2428 | 897e 204c | 8bd3 4c8b | de4d 33d3 | 49c1 ea15 | 4d85 d274 | 1649 c1eb | 094c 8b44 
+  0x00000220dfe1c978: 2420 4d03 | c341 8038 | 020f 8538 | 0400 0048 | 83c4 705d 
+
+  0x00000220dfe1c98c: ;   {poll_return}
+  0x00000220dfe1c98c: 493b a748 | 0400 000f | 870b 0c00 | 00c3 41b8 | 0100 0000 | e987 fdff | ffb9 0100 | 0000 e9a1 
+  0x00000220dfe1c9ac: fdff ff90 | 448b c34c | 8bdd 488b | 5424 4848 | 8b5c 2450 | 8b4c 2444 | e9a1 0100 | 0048 8bea 
+  0x00000220dfe1c9cc: 894a 2c89 | 4c24 3044 | 8942 2844 | 8944 242c | 4f8d 1cd4 | 4c89 5c24 | 2044 8954 
+
+  0x00000220dfe1c9e8: ;   {optimized virtual_call}
+  0x00000220dfe1c9e8: 2428 90e8 
+
+  0x00000220dfe1c9ec: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop }
+                      ;*invokevirtual disposeCanvas {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@70 (line 56)
+  0x00000220dfe1c9ec: 10f7 59f8 
+
+  0x00000220dfe1c9f0: ;   {other}
+  0x00000220dfe1c9f0: 0f1f 8400 | 6006 0003 
+
+  0x00000220dfe1c9f8: ;   {oop(a 'org/jetbrains/skia/impl/Stats'{0x0000000705906fc0})}
+  0x00000220dfe1c9f8: 48ba c06f | 9005 0700 
+
+  0x00000220dfe1ca00: ;   {optimized virtual_call}
+  0x00000220dfe1ca00: 0000 90e8 
+
+  0x00000220dfe1ca04: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop }
+                      ;*invokevirtual onNativeCall {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skia.DirectContext::flush@3 (line 47)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@74 (line 57)
+  0x00000220dfe1ca04: 3894 e1fe 
+
+  0x00000220dfe1ca08: ;   {other}
+  0x00000220dfe1ca08: 0f1f 8400 | 7806 0004 | 448b 5c24 | 284b 8b54 
+
+  0x00000220dfe1ca18: ;   {static_call}
+  0x00000220dfe1ca18: dc10 90e8 
+
+  0x00000220dfe1ca1c: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop }
+                      ;*invokestatic DirectContext_nFlushDefault {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skia.DirectContextKt::access$DirectContext_nFlushDefault@1 (line 1)
+                      ; - org.jetbrains.skia.DirectContext::flush@10 (line 48)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@74 (line 57)
+  0x00000220dfe1ca1c: c0d8 6cff 
+
+  0x00000220dfe1ca20: ;   {other}
+  0x00000220dfe1ca20: 0f1f 8400 | 9006 0005 | 4c8b c545 | 8b58 0c47 | 8b94 dc8c | 0100 0043 | 8b6c d418 
+
+  0x00000220dfe1ca3c: ; implicit exception: dispatches to 0x00000220dfe1d51c
+  0x00000220dfe1ca3c: 458b 5cec 
+
+  0x00000220dfe1ca40: ;   {metadata('org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220dfe1ca40: 0841 81fb | 204b 3000 | 0f85 0a08 | 0000 4c89 | 4424 3849 | 8d14 ec44 | 8b44 242c | 448b 4c24 
+  0x00000220dfe1ca60: 3048 8b6c 
+
+  0x00000220dfe1ca64: ;   {optimized virtual_call}
+  0x00000220dfe1ca64: 2438 90e8 
+
+  0x00000220dfe1ca68: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop [56]=Oop }
+                      ;*invokevirtual changeSize {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@85 (line 59)
+  0x00000220dfe1ca68: 947d aaf8 
+
+  0x00000220dfe1ca6c: ;   {other}
+  0x00000220dfe1ca6c: 0f1f 8400 | dc06 0006 | 8944 2440 | 498b 87b8 | 0100 004c | 8bd0 4983 | c218 4d3b | 97c8 0100 
+  0x00000220dfe1ca8c: 000f 83fc | 0400 004d | 8997 b801 | 0000 410f | 0d8a c000 | 0000 48c7 | 0001 0000 
+
+  0x00000220dfe1caa8: ;   {metadata('org/jetbrains/skia/SurfaceProps')}
+  0x00000220dfe1caa8: 00c7 4008 | 38e8 4a00 | 4489 600c | 4c89 6010 | 4c8b c04c | 8bdd 458b | 530c 438b | acd4 7001 
+  0x00000220dfe1cac8: 0000 4c89 | 4424 484c | 8bd5 49c1 | e203 4c89 
+
+  0x00000220dfe1cad8: ;   {oop("pixelGeometry"{0x000000070591e158})}
+  0x00000220dfe1cad8: 5424 5049 | b858 e191 | 0507 0000 | 0049 8bd2 
+
+  0x00000220dfe1cae8: ;   {static_call}
+  0x00000220dfe1cae8: 6666 90e8 
+
+  0x00000220dfe1caec: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=NarrowOop [56]=Oop [72]=Oop [80]=Oop }
+                      ;*invokestatic checkNotNullParameter {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skia.SurfaceProps::<init>@3
+                      ; - org.jetbrains.skia.SurfaceProps::<init>@21 (line 3)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@105 (line 61)
+  0x00000220dfe1caec: 3017 5eff 
+
+  0x00000220dfe1caf0: ;   {other}
+  0x00000220dfe1caf0: 0f1f 8400 | 6007 0007 | 4180 7f40 | 000f 8502 | 0400 0048 | 8b5c 2448 | 896b 1044 | 8863 0c4c 
+  0x00000220dfe1cb10: 8b54 2450 | 4c8b db4d | 33d3 49c1 | ea15 4d85 | d274 1e85 | ed74 1a49 | c1eb 0948 | b900 900d 
+  0x00000220dfe1cb30: e420 0200 | 0049 03cb | 8039 020f | 8500 0400 | 004c 8b5c | 2438 418b | 4b24 85c9 | 7f0f 49b9 
+  0x00000220dfe1cb50: 0090 0de4 | 2002 0000 | e904 0100 | 0048 ba00 | 900d e420 | 0200 0045 | 33c0 458b | 5330 418b 
+  0x00000220dfe1cb70: 7b0c 458b | 8cfc 8c01 | 0000 438b | 6ccc 1841 | 8b7c ec08 
+
+  0x00000220dfe1cb84: ;   {metadata('org/jetbrains/skiko/redrawer/Direct3DRedrawer')}
+  0x00000220dfe1cb84: 81ff 204b | 3000 0f85 | 0007 0000 | 4489 5424 | 5844 8944 | 2434 894c | 2444 4889 | 5c24 5048 
+  0x00000220dfe1cba4: 8954 2448 | 4c89 5c24 | 3844 8b5c | 2428 4f8b | 44dc 1049 | 8d14 ec44 | 8b4c 242c | 8b7c 2430 
+  0x00000220dfe1cbc4: 488b f38b | 4c24 3448 | 8b6c 2438 
+
+  0x00000220dfe1cbd0: ;   {optimized virtual_call}
+  0x00000220dfe1cbd0: 6666 90e8 
+
+  0x00000220dfe1cbd4: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop [80]=Oop [88]=NarrowOop }
+                      ;*invokevirtual makeSurface {reexecute=0 rethrow=0 return_oop=1}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@150 (line 63)
+  0x00000220dfe1cbd4: 6825 3af7 
+
+  0x00000220dfe1cbd8: ;   {other}
+  0x00000220dfe1cbd8: 0f1f 8400 | 4808 0008 | 488b d844 | 8b54 2458 
+
+  0x00000220dfe1cbe8: ; implicit exception: dispatches to 0x00000220dfe1d494
+  0x00000220dfe1cbe8: 478b 5cd4 | 0c8b 7c24 | 3441 3bfb | 0f83 c205 | 0000 49c1 | e203 498d | 74ba 1041 | 807f 4000 
+  0x00000220dfe1cc08: 0f85 7302 | 0000 4c8b | c34d 8bd0 | 8d5f 014d | 8bd8 49c1 | eb03 4489 | 1e4c 8bde | 4d33 d349 
+  0x00000220dfe1cc28: c1ea 154d | 85d2 741f | 4d85 c074 | 1a49 c1eb | 0948 b900 | 900d e420 | 0200 0049 | 03cb 8039 
+  0x00000220dfe1cc48: 020f 8568 | 0200 003b | 5c24 440f | 8c57 fdff | ff4c 8bdd | 4c8b 4c24 | 4844 8b54 | 2440 4585 
+  0x00000220dfe1cc68: d20f 85d3 | 0500 0041 | 8b73 0c41 | 8b5b 3085 | f60f 8512 | fbff ffba | f6ff ffff | 4c89 5c24 
+  0x00000220dfe1cc88: 2089 5c24 
+
+  0x00000220dfe1cc8c: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1cc8c: 2866 90e8 
+
+  0x00000220dfe1cc90: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*invokevirtual getRedrawer$skiko {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@194 (line 79)
+  0x00000220dfe1cc90: 6c79 6cfe 
+
+  0x00000220dfe1cc94: ;   {other}
+  0x00000220dfe1cc94: 0f1f 8400 | 0409 0009 | 4585 d20f | 85a0 fbff | ffba 45ff | ffff 4489 
+
+  0x00000220dfe1ccac: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1ccac: 5424 24e8 
+
+  0x00000220dfe1ccb0: ; ImmutableOopMap {rbp=Oop [36]=NarrowOop }
+                      ;*ifnonnull {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) kotlin.jvm.internal.Intrinsics::checkNotNull@1 (line 24)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@210 (line 80)
+  0x00000220dfe1ccb0: 4c79 6cfe 
+
+  0x00000220dfe1ccb4: ;   {other}
+  0x00000220dfe1ccb4: 0f1f 8400 | 2409 000a | 448b 5d1c | 4585 db0f | 8432 fbff | ff4d 8b57 | 2849 8bcb | 48c1 e103 
+  0x00000220dfe1ccd4: 4d85 d20f | 8407 0300 | 004d 8b5f | 384b 894c | 13f8 4983 | c2f8 4d89 | 5728 e908 | fbff ff48 
+  0x00000220dfe1ccf4: 8b74 2428 | 448b 5620 | 4585 d20f | 8457 fcff | ff4d 8b5f | 2849 8bca | 48c1 e103 | 4d85 db0f 
+  0x00000220dfe1cd14: 84e8 0200 | 004d 8b57 | 384b 894c | 1af8 4983 | c3f8 4d89 | 5f28 e92d | fcff ff48 | 8b5c 2438 
+  0x00000220dfe1cd34: 448b 5b18 | 4585 db0f | 84cf fbff | ff4d 8b57 | 2849 8bcb | 48c1 e103 | 4d85 d20f | 84c9 0200 
+  0x00000220dfe1cd54: 004d 8b5f | 384b 894c | 13f8 4983 | c2f8 4d89 | 5728 e9a5 | fbff ff4d | 8b57 484d | 8b5f 58f0 
+  0x00000220dfe1cd74: 8344 24c0 | 0080 3900 | 742f 4488 | 214d 85d2 | 740f 4b89 | 4c13 f849 | 83c2 f84d | 8957 48eb 
+  0x00000220dfe1cd94: 1849 8bd7 | 49ba 50ee | 7e87 fc7f | 0000 41ff 
+
+  0x00000220dfe1cda4: ;   {other}
+  0x00000220dfe1cda4: d20f 1f84 | 0000 0000 | 0044 8b55 | 1c45 85d2 | 0f85 8bfa | ffff e9e6 | feff ff4d | 8b57 484d 
+  0x00000220dfe1cdc4: 8b5f 58f0 | 8344 24c0 | 0041 8038 | 000f 84b0 | fbff ff45 | 8820 4d85 | d275 2049 | 8bc8 498b 
+  0x00000220dfe1cde4: d749 ba50 | ee7e 87fc | 7f00 0041 
+
+  0x00000220dfe1cdf0: ;   {other}
+  0x00000220dfe1cdf0: ffd2 0f1f | 8400 0000 | 0000 e988 | fbff ff4f | 8944 13f8 | 4983 c2f8 | 4d89 5748 | e976 fbff 
+  0x00000220dfe1ce10: ff4d 8b57 | 484d 8b5f | 58f0 8344 | 24c0 0080 | 3900 0f84 | 24fb ffff | 4488 214d | 85d2 751d 
+  0x00000220dfe1ce30: 498b d749 | ba50 ee7e | 87fc 7f00 | 0041 ffd2 
+
+  0x00000220dfe1ce40: ;   {other}
+  0x00000220dfe1ce40: 0f1f 8400 | 0000 0000 | e9ff faff | ff4b 894c | 13f8 4983 | c2f8 4d89 | 5748 e9ed | faff ff4c 
+  0x00000220dfe1ce60: 895c 2438 
+
+  0x00000220dfe1ce64: ;   {metadata('org/jetbrains/skia/Canvas')}
+  0x00000220dfe1ce64: 48ba 084d | 2900 0800 
+
+  0x00000220dfe1ce6c: ;   {runtime_call _new_instance_Java}
+  0x00000220dfe1ce6c: 0000 90e8 
+
+  0x00000220dfe1ce70: ; ImmutableOopMap {rbp=Oop [40]=Oop [48]=NarrowOop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=1}
+                      ; - org.jetbrains.skia.Surface::getCanvas@34 (line 658)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@213 (line 80)
+  0x00000220dfe1ce70: 8c8c 78fe 
+
+  0x00000220dfe1ce74: ;   {other}
+  0x00000220dfe1ce74: 0f1f 8400 | e40a 000b | e954 faff | ff44 8b1e | 4585 db0f | 8481 fdff | ff4d 8b57 | 2849 8bcb 
+  0x00000220dfe1ce94: 48c1 e103 | 4d85 d20f | 8467 0300 | 004d 8b5f | 384b 894c | 13f8 4983 | c2f8 4d89 | 5728 e957 
+  0x00000220dfe1ceb4: fdff ff4d | 8b57 584d | 8b5f 48f0 | 8344 24c0 | 0080 3900 | 0f84 81fd | ffff 4488 | 214d 85db 
+  0x00000220dfe1ced4: 751d 498b | d749 ba50 | ee7e 87fc | 7f00 0041 
+
+  0x00000220dfe1cee4: ;   {other}
+  0x00000220dfe1cee4: ffd2 0f1f | 8400 0000 | 0000 e95c | fdff ff4b | 894c 1af8 | 4983 c3f8 | 4d89 5f48 | e94a fdff 
+  0x00000220dfe1cf04: ff48 8b5c | 2448 448b | 5b10 4585 | db0f 84f1 | fbff ff4d | 8b57 2849 | 8bcb 48c1 | e103 4d85 
+  0x00000220dfe1cf24: d20f 84fa | 0200 004d | 8b5f 384b | 894c 13f8 | 4983 c2f8 | 4d89 5728 | e9c7 fbff | ff4d 8b57 
+  0x00000220dfe1cf44: 484d 8b5f | 58f0 8344 | 24c0 0080 | 3900 0f84 | e9fb ffff | 4488 214d | 85d2 751d | 498b d749 
+  0x00000220dfe1cf64: ba50 ee7e | 87fc 7f00 | 0041 ffd2 
+
+  0x00000220dfe1cf70: ;   {other}
+  0x00000220dfe1cf70: 0f1f 8400 | 0000 0000 | e9c4 fbff | ff4b 894c | 13f8 4983 | c2f8 4d89 | 5748 e9b2 
+
+  0x00000220dfe1cf8c: ;   {metadata('org/jetbrains/skia/SurfaceProps')}
+  0x00000220dfe1cf8c: fbff ff48 | ba38 e84a | 0008 0000 
+
+  0x00000220dfe1cf98: ;   {runtime_call _new_instance_Java}
+  0x00000220dfe1cf98: 0066 90e8 
+
+  0x00000220dfe1cf9c: ; ImmutableOopMap {rbp=Oop [32]=Oop [40]=NarrowOop [56]=Oop }
+                      ;*new {reexecute=0 rethrow=0 return_oop=1}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@91 (line 61)
+  0x00000220dfe1cf9c: 608b 78fe 
+
+  0x00000220dfe1cfa0: ;   {other}
+  0x00000220dfe1cfa0: 0f1f 8400 | 100c 000c | e90b fbff | ffba e4ff | ffff 8944 
+
+  0x00000220dfe1cfb4: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1cfb4: 242c 90e8 
+
+  0x00000220dfe1cfb8: ; ImmutableOopMap {rbp=Oop [40]=NarrowOop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@200 (line 79)
+  0x00000220dfe1cfb8: 4476 6cfe 
+
+  0x00000220dfe1cfbc: ;   {other}
+  0x00000220dfe1cfbc: 0f1f 8400 | 2c0c 000d | bade ffff | ff49 8beb | 4489 5424 | 2044 8944 
+
+  0x00000220dfe1cfd4: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1cfd4: 2424 90e8 
+
+  0x00000220dfe1cfd8: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [36]=NarrowOop }
+                      ;*invokevirtual getDefaultTransform {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getContentScale@4 (line 248)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@15 (line 47)
+  0x00000220dfe1cfd8: 2476 6cfe 
+
+  0x00000220dfe1cfdc: ;   {other}
+  0x00000220dfe1cfdc: 0f1f 8400 | 4c0c 000e | 498b d749 | ba70 ee7e | 87fc 7f00 | 0041 ffd2 
+
+  0x00000220dfe1cff4: ;   {other}
+  0x00000220dfe1cff4: 0f1f 8400 | 0000 0000 | e9fa f7ff | ff49 8bd7 | 49ba 70ee | 7e87 fc7f | 0000 41ff 
+
+  0x00000220dfe1d010: ;   {other}
+  0x00000220dfe1d010: d20f 1f84 | 0000 0000 | 00e9 3ef9 | ffff 498b | d749 ba70 | ee7e 87fc | 7f00 0041 
+
+  0x00000220dfe1d02c: ;   {other}
+  0x00000220dfe1d02c: ffd2 0f1f | 8400 0000 | 0000 e9d5 | f8ff ffba | 45ff ffff | 498b eb44 | 8954 2420 | 4489 4424 
+  0x00000220dfe1d04c: 2489 4c24 | 2889 7c24 
+
+  0x00000220dfe1d054: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d054: 2c66 90e8 
+
+  0x00000220dfe1d058: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*if_icmpge {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skiko.context.Direct3DContextHandler::isSurfacesNull@16 (line 109)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@63 (line 55)
+  0x00000220dfe1d058: a475 6cfe 
+
+  0x00000220dfe1d05c: ;   {other}
+  0x00000220dfe1d05c: 0f1f 8400 | cc0c 000f | ba45 ffff | ff44 8954 
+
+  0x00000220dfe1d06c: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d06c: 2420 90e8 
+
+  0x00000220dfe1d070: ; ImmutableOopMap {[32]=NarrowOop }
+                      ;*ifnonnull {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@5 (line 46)
+  0x00000220dfe1d070: 8c75 6cfe 
+
+  0x00000220dfe1d074: ;   {other}
+  0x00000220dfe1d074: 0f1f 8400 | e40c 0010 
+
+  0x00000220dfe1d07c: ;   {section_word}
+  0x00000220dfe1d07c: c5f8 2e0d | dcf5 ffff | bdff ffff | ff0f 8a0e | 0000 000f | 8208 0000 | 0040 0f95 | c540 0fb6 
+  0x00000220dfe1d09c: edc4 817a | 5a44 c424 | c4c1 f97e | c0c5 fa5a | c1ba 45ff | ffff 4c89 | 5c24 2044 | 8954 2428 
+  0x00000220dfe1d0bc: c5fb 1144 | 2438 4c89 
+
+  0x00000220dfe1d0c4: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d0c4: 4424 40e8 
+
+  0x00000220dfe1d0c8: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*ifne {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) java.awt.geom.AffineTransform::setToScale@33
+                      ; - java.awt.geom.AffineTransform::getScaleInstance@13
+                      ; - sun.awt.Win32GraphicsConfig::getDefaultTransform@20
+                      ; - org.jetbrains.skiko.SkiaLayer::getContentScale@4 (line 248)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@15 (line 47)
+  0x00000220dfe1d0c8: 3475 6cfe 
+
+  0x00000220dfe1d0cc: ;   {other}
+  0x00000220dfe1d0cc: 0f1f 8400 | 3c0d 0011 | 4533 d24d | 3bc2 bdff | ffff ff7c | 0840 0f95 | c540 0fb6 | ed4c 895c 
+  0x00000220dfe1d0ec: 2428 895c | 2430 4889 | 5424 38ba | 45ff ffff 
+
+  0x00000220dfe1d0fc: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d0fc: 6666 90e8 
+
+  0x00000220dfe1d100: ; ImmutableOopMap {[40]=Oop [48]=NarrowOop [56]=Oop }
+                      ;*ifne {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skiko.redrawer.Direct3DRedrawer::getDevice@6 (line 26)
+                      ; - org.jetbrains.skiko.redrawer.Direct3DRedrawer::getBufferIndex@2 (line 123)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@197 (line 79)
+  0x00000220dfe1d100: fc74 6cfe 
+
+  0x00000220dfe1d104: ;   {other}
+  0x00000220dfe1d104: 0f1f 8400 | 740d 0012 | ba45 ffff | ff44 8954 | 2420 4489 
+
+  0x00000220dfe1d118: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d118: 5c24 24e8 
+
+  0x00000220dfe1d11c: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skia.impl.Stats::onNativeCall@3 (line 10)
+                      ; - org.jetbrains.skia.Surface::getCanvas@4 (line 656)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@213 (line 80)
+  0x00000220dfe1d11c: e074 6cfe 
+
+  0x00000220dfe1d120: ;   {other}
+  0x00000220dfe1d120: 0f1f 8400 | 900d 0013 | 4533 d249 | 3bc2 bdff | ffff ff7c | 0840 0f95 | c540 0fb6 | edba 45ff 
+  0x00000220dfe1d140: ffff 4c8b | 5424 284c | 8954 2420 
+
+  0x00000220dfe1d14c: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d14c: 6666 90e8 
+
+  0x00000220dfe1d150: ; ImmutableOopMap {[32]=Oop [48]=NarrowOop }
+                      ;*ifne {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skia.Surface::getCanvas@23 (line 658)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@213 (line 80)
+  0x00000220dfe1d150: ac74 6cfe 
+
+  0x00000220dfe1d154: ;   {other}
+  0x00000220dfe1d154: 0f1f 8400 | c40d 0014 | ba45 ffff | ff44 8954 | 2420 4c89 | 5c24 3044 | 8944 242c | 894c 2438 
+  0x00000220dfe1d174: 894c 243c | 4489 4c24 
+
+  0x00000220dfe1d17c: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d17c: 4066 90e8 
+
+  0x00000220dfe1d180: ; ImmutableOopMap {[32]=NarrowOop [48]=Oop }
+                      ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skiko.context.Direct3DContextHandler::isSizeChanged@13 (line 37)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@56 (line 55)
+  0x00000220dfe1d180: 7c74 6cfe 
+
+  0x00000220dfe1d184: ;   {other}
+  0x00000220dfe1d184: 0f1f 8400 | f40d 0015 | ba45 ffff | ff49 8beb | 4489 5424 | 2044 8944 | 2424 894c | 2428 895c 
+  0x00000220dfe1d1a4: 242c 897c | 2430 4489 
+
+  0x00000220dfe1d1ac: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d1ac: 4c24 34e8 
+
+  0x00000220dfe1d1b0: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [44]=NarrowOop [52]=NarrowOop }
+                      ;*ifnonnull {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skiko.context.Direct3DContextHandler::isSurfacesNull@33 (line 14)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@63 (line 55)
+  0x00000220dfe1d1b0: 4c74 6cfe 
+
+  0x00000220dfe1d1b4: ;   {other}
+  0x00000220dfe1d1b4: 0f1f 8400 | 240e 0016 | bae4 ffff | ff44 8b44 | 2428 4489 | 4424 2044 | 8b5c 242c | 4489 5c24 
+  0x00000220dfe1d1d4: 2444 8b44 | 2430 4489 | 4424 2844 | 8b5c 2440 | 4489 5c24 | 3844 8b5c | 2444 4489 | 5c24 3c48 
+  0x00000220dfe1d1f4: 8944 2440 
+
+  0x00000220dfe1d1f8: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d1f8: 6666 90e8 
+
+  0x00000220dfe1d1fc: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [64]=Oop [80]=Oop [88]=NarrowOop }
+                      ;*aastore {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@153 (line 63)
+  0x00000220dfe1d1fc: 0074 6cfe 
+
+  0x00000220dfe1d200: ;   {other}
+  0x00000220dfe1d200: 0f1f 8400 | 700e 0017 | 498b d749 | ba70 ee7e | 87fc 7f00 | 0041 ffd2 
+
+  0x00000220dfe1d218: ;   {other}
+  0x00000220dfe1d218: 0f1f 8400 | 0000 0000 | e9e9 f9ff | ff49 8bd7 | 49ba 70ee | 7e87 fc7f | 0000 41ff 
+
+  0x00000220dfe1d234: ;   {other}
+  0x00000220dfe1d234: d20f 1f84 | 0000 0000 | 00e9 c6f8 | ffff ba45 | ffff ff49 
+
+  0x00000220dfe1d248: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d248: 8beb 90e8 
+
+  0x00000220dfe1d24c: ; ImmutableOopMap {rbp=Oop }
+                      ;*ifeq {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@178 (line 75)
+  0x00000220dfe1d24c: b073 6cfe 
+
+  0x00000220dfe1d250: ;   {other}
+  0x00000220dfe1d250: 0f1f 8400 | c00e 0018 | bade ffff | ff4c 8944 
+
+  0x00000220dfe1d260: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d260: 2420 90e8 
+
+  0x00000220dfe1d264: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=NarrowOop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getRedrawer$skiko@7 (line 307)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@79 (line 59)
+  0x00000220dfe1d264: 9873 6cfe 
+
+  0x00000220dfe1d268: ;   {other}
+  0x00000220dfe1d268: 0f1f 8400 | d80e 0019 | bade ffff | ff4c 895c | 2420 895c | 2428 4489 
+
+  0x00000220dfe1d280: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d280: 4424 2ce8 
+
+  0x00000220dfe1d284: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop [44]=NarrowOop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getRedrawer$skiko@7 (line 307)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@194 (line 79)
+  0x00000220dfe1d284: 7873 6cfe 
+
+  0x00000220dfe1d288: ;   {other}
+  0x00000220dfe1d288: 0f1f 8400 | f80e 001a | bade ffff | ff4c 895c | 2420 4489 | 5424 3844 | 8944 243c | 4889 5c24 
+  0x00000220dfe1d2a8: 4889 4c24 
+
+  0x00000220dfe1d2ac: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d2ac: 4466 90e8 
+
+  0x00000220dfe1d2b0: ; ImmutableOopMap {rbp=NarrowOop [32]=Oop [40]=NarrowOop [56]=NarrowOop [72]=Oop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getRedrawer$skiko@7 (line 307)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@133 (line 63)
+  0x00000220dfe1d2b0: 4c73 6cfe 
+
+  0x00000220dfe1d2b4: ;   {other}
+  0x00000220dfe1d2b4: 0f1f 8400 | 240f 001b | baf6 ffff | ff49 8beb | 4489 5424 
+
+  0x00000220dfe1d2c8: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d2c8: 2066 90e8 
+
+  0x00000220dfe1d2cc: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*invokevirtual getContentScale {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@15 (line 47)
+  0x00000220dfe1d2cc: 3073 6cfe 
+
+  0x00000220dfe1d2d0: ;   {other}
+  0x00000220dfe1d2d0: 0f1f 8400 | 400f 001c | baf6 ffff | ff49 8beb | 4489 5424 
+
+  0x00000220dfe1d2e4: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d2e4: 2066 90e8 
+
+  0x00000220dfe1d2e8: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*invokevirtual getDefaultTransform {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getContentScale@4 (line 248)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@15 (line 47)
+  0x00000220dfe1d2e8: 1473 6cfe 
+
+  0x00000220dfe1d2ec: ;   {other}
+  0x00000220dfe1d2ec: 0f1f 8400 | 5c0f 001d | baf6 ffff | ff49 8beb | 4489 5424 
+
+  0x00000220dfe1d300: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d300: 2066 90e8 
+
+  0x00000220dfe1d304: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*invokevirtual getDefaultScaleX {reexecute=0 rethrow=0 return_oop=0}
+                      ; - sun.awt.Win32GraphicsConfig::getDefaultTransform@4
+                      ; - org.jetbrains.skiko.SkiaLayer::getContentScale@4 (line 248)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@15 (line 47)
+  0x00000220dfe1d304: f872 6cfe 
+
+  0x00000220dfe1d308: ;   {other}
+  0x00000220dfe1d308: 0f1f 8400 | 780f 001e | baf6 ffff | ff49 8beb | 4489 5424 | 20c5 fa11 
+
+  0x00000220dfe1d320: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d320: 4c24 24e8 
+
+  0x00000220dfe1d324: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*invokevirtual getWidth {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@23 (line 52)
+  0x00000220dfe1d324: d872 6cfe 
+
+  0x00000220dfe1d328: ;   {other}
+  0x00000220dfe1d328: 0f1f 8400 | 980f 001f | baf6 ffff | ff4c 895c | 2420 895c 
+
+  0x00000220dfe1d33c: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d33c: 2428 90e8 
+
+  0x00000220dfe1d340: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*invokevirtual getRedrawer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getRedrawer$skiko@4 (line 307)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@194 (line 79)
+  0x00000220dfe1d340: bc72 6cfe 
+
+  0x00000220dfe1d344: ;   {other}
+  0x00000220dfe1d344: 0f1f 8400 | b40f 0020 | baf4 ffff | ff4c 895c | 2420 895c 
+
+  0x00000220dfe1d358: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d358: 2428 90e8 
+
+  0x00000220dfe1d35c: ; ImmutableOopMap {[32]=Oop [40]=NarrowOop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getRedrawer$skiko@7 (line 307)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@194 (line 79)
+  0x00000220dfe1d35c: a072 6cfe 
+
+  0x00000220dfe1d360: ;   {other}
+  0x00000220dfe1d360: 0f1f 8400 | d00f 0021 | baf6 ffff | ff89 4424 
+
+  0x00000220dfe1d370: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d370: 2866 90e8 
+
+  0x00000220dfe1d374: ; ImmutableOopMap {rbp=Oop }
+                      ;*aaload {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@200 (line 79)
+  0x00000220dfe1d374: 8872 6cfe 
+
+  0x00000220dfe1d378: ;   {other}
+  0x00000220dfe1d378: 0f1f 8400 | e80f 0022 | baf6 ffff | ff49 8beb | 4489 5424 | 2044 8944 | 2424 894c 
+
+  0x00000220dfe1d394: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d394: 2428 90e8 
+
+  0x00000220dfe1d398: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::isSurfacesNull@10 (line 109)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@63 (line 55)
+  0x00000220dfe1d398: 6472 6cfe 
+
+  0x00000220dfe1d39c: ;   {other}
+  0x00000220dfe1d39c: 0f1f 8400 | 0c10 0023 | baf6 ffff | ff49 8beb | 448b 4c24 | 2844 894c | 2420 448b | 5c24 2c44 
+  0x00000220dfe1d3bc: 895c 2424 | 448b 4c24 | 3044 894c | 2428 4489 | 5424 3044 | 8944 2434 | 448b 5424 | 4044 8954 
+  0x00000220dfe1d3dc: 2438 4889 | 5c24 4089 
+
+  0x00000220dfe1d3e4: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d3e4: 4c24 3ce8 
+
+  0x00000220dfe1d3e8: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [48]=NarrowOop [64]=Oop }
+                      ;*invokevirtual getRedrawer$skiko {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@133 (line 63)
+  0x00000220dfe1d3e8: 1472 6cfe 
+
+  0x00000220dfe1d3ec: ;   {other}
+  0x00000220dfe1d3ec: 0f1f 8400 | 5c10 0024 | baf6 ffff | ff49 8beb | 448b 4c24 | 2844 894c | 2420 448b | 5c24 2c44 
+  0x00000220dfe1d40c: 895c 2424 | 448b 4c24 | 3044 894c | 2428 4489 | 5424 3044 | 8944 2434 | 448b 5424 | 4044 8954 
+  0x00000220dfe1d42c: 2438 4889 | 5c24 4089 
+
+  0x00000220dfe1d434: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d434: 4c24 3ce8 
+
+  0x00000220dfe1d438: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [48]=NarrowOop [64]=Oop }
+                      ;*invokevirtual getRedrawer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getRedrawer$skiko@4 (line 307)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@133 (line 63)
+  0x00000220dfe1d438: c471 6cfe 
+
+  0x00000220dfe1d43c: ;   {other}
+  0x00000220dfe1d43c: 0f1f 8400 | ac10 0025 | baf4 ffff | ff49 8beb | 448b 4c24 | 2844 894c | 2420 448b | 5c24 2c44 
+  0x00000220dfe1d45c: 895c 2424 | 448b 4c24 | 3044 894c | 2428 4489 | 5424 3044 | 8944 2434 | 448b 5424 | 4044 8954 
+  0x00000220dfe1d47c: 2438 4889 | 5c24 4089 
+
+  0x00000220dfe1d484: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d484: 4c24 3ce8 
+
+  0x00000220dfe1d488: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [48]=NarrowOop [64]=Oop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getRedrawer$skiko@7 (line 307)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@133 (line 63)
+  0x00000220dfe1d488: 7471 6cfe 
+
+  0x00000220dfe1d48c: ;   {other}
+  0x00000220dfe1d48c: 0f1f 8400 | fc10 0026 | baf6 ffff | ff44 8b54 | 2428 4489 | 5424 2044 | 8b5c 242c | 4489 5c24 
+  0x00000220dfe1d4ac: 2444 8b54 | 2430 4489 | 5424 2844 | 8b5c 2434 | 4489 5c24 | 3044 8b54 | 2440 4489 | 5424 3448 
+  0x00000220dfe1d4cc: 8944 2448 
+
+  0x00000220dfe1d4d0: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d4d0: 6666 90e8 
+
+  0x00000220dfe1d4d4: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [72]=Oop [80]=Oop }
+                      ;*aastore {reexecute=1 rethrow=0 return_oop=0}
+                      ; - (reexecute) org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@153 (line 63)
+  0x00000220dfe1d4d4: 2871 6cfe 
+
+  0x00000220dfe1d4d8: ;   {other}
+  0x00000220dfe1d4d8: 0f1f 8400 | 4811 0027 | baf6 ffff | ff44 8b5c | 2428 4489 
+
+  0x00000220dfe1d4ec: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d4ec: 5c24 20e8 
+
+  0x00000220dfe1d4f0: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*invokevirtual getRedrawer$skiko {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@79 (line 59)
+  0x00000220dfe1d4f0: 0c71 6cfe 
+
+  0x00000220dfe1d4f4: ;   {other}
+  0x00000220dfe1d4f4: 0f1f 8400 | 6411 0028 | baf6 ffff | ff49 8be8 | 448b 5424 | 2844 8954 
+
+  0x00000220dfe1d50c: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d50c: 2420 90e8 
+
+  0x00000220dfe1d510: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*invokevirtual getRedrawer {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getRedrawer$skiko@4 (line 307)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@79 (line 59)
+  0x00000220dfe1d510: ec70 6cfe 
+
+  0x00000220dfe1d514: ;   {other}
+  0x00000220dfe1d514: 0f1f 8400 | 8411 0029 | baf4 ffff | ff49 8be8 | 448b 5c24 | 2844 895c 
+
+  0x00000220dfe1d52c: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d52c: 2420 90e8 
+
+  0x00000220dfe1d530: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop }
+                      ;*checkcast {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.SkiaLayer::getRedrawer$skiko@7 (line 307)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::getDirectXRedrawer@4 (line 17)
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@79 (line 59)
+  0x00000220dfe1d530: cc70 6cfe 
+
+  0x00000220dfe1d534: ;   {other}
+  0x00000220dfe1d534: 0f1f 8400 | a411 002a | baf6 ffff | ff49 8beb | 448b 5c24 | 2844 895c | 2420 448b | 5424 2c44 
+  0x00000220dfe1d554: 8954 2424 | 448b 5c24 | 3044 895c | 2428 4c89 
+
+  0x00000220dfe1d564: ;   {runtime_call UncommonTrapBlob}
+  0x00000220dfe1d564: 4424 38e8 
+
+  0x00000220dfe1d568: ; ImmutableOopMap {rbp=Oop [32]=NarrowOop [56]=Oop }
+                      ;*invokevirtual getPixelGeometry {reexecute=0 rethrow=0 return_oop=0}
+                      ; - org.jetbrains.skiko.context.Direct3DContextHandler::initCanvas@100 (line 61)
+  0x00000220dfe1d568: 9470 6cfe 
+
+  0x00000220dfe1d56c: ;   {other}
+  0x00000220dfe1d56c: 0f1f 8400 | dc11 002b | eb15 eb1a | 488b d0eb | 1d48 8bd0 | eb18 eb00 | 488b d0eb | 11eb 0048 
+  0x00000220dfe1d58c: 8bd0 eb0a | eb00 488b | d0eb 0348 | 8bd0 4883 
+
+  0x00000220dfe1d59c: ;   {runtime_call _rethrow_Java}
+  0x00000220dfe1d59c: c470 5de9 | 5c66 78fe 
+
+  0x00000220dfe1d5a4: ;   {internal_word}
+  0x00000220dfe1d5a4: 49ba 8cc9 | e1df 2002 | 0000 4d89 | 9760 0400 
+
+  0x00000220dfe1d5b4: ;   {runtime_call SafepointBlob}
+  0x00000220dfe1d5b4: 00e9 4681 | 6cfe 4883 | ec08 c5fb 
+
+  0x00000220dfe1d5c0: ;   {runtime_call StubRoutines (initial stubs)}
+  0x00000220dfe1d5c0: 1104 24e8 | 423b 67fe | 59e9 79f1 | ffff 4883 | ec08 c5fb 
+
+  0x00000220dfe1d5d4: ;   {runtime_call StubRoutines (initial stubs)}
+  0x00000220dfe1d5d4: 1104 24e8 | 2e3b 67fe | 4158 e93f 
+
+  0x00000220dfe1d5e0: ;   {runtime_call StubRoutines (final stubs)}
+  0x00000220dfe1d5e0: f1ff ffe8 | 78c5 6afe | e9cd f0ff | fff4 f4f4 
+[Stub Code]
+  0x00000220dfe1d5f0: ;   {no_reloc}
+  0x00000220dfe1d5f0: 48bb 0000 | 0000 0000 
+
+  0x00000220dfe1d5f8: ;   {runtime_call nmethod}
+  0x00000220dfe1d5f8: 0000 e9fb 
+
+  0x00000220dfe1d5fc: ;   {static_stub}
+  0x00000220dfe1d5fc: ffff ff48 | bb00 0000 | 0000 0000 
+
+  0x00000220dfe1d608: ;   {runtime_call nmethod}
+  0x00000220dfe1d608: 00e9 fbff 
+
+  0x00000220dfe1d60c: ;   {static_stub}
+  0x00000220dfe1d60c: ffff 48bb | 0000 0000 | 0000 0000 
+
+  0x00000220dfe1d618: ;   {runtime_call nmethod}
+  0x00000220dfe1d618: e9fb ffff 
+
+  0x00000220dfe1d61c: ;   {static_stub}
+  0x00000220dfe1d61c: ff48 bb00 | 0000 0000 
+
+  0x00000220dfe1d624: ;   {runtime_call nmethod}
+  0x00000220dfe1d624: 0000 00e9 | fbff ffff 
+
+  0x00000220dfe1d62c: ;   {static_stub}
+  0x00000220dfe1d62c: 48bb b090 | c0f1 2002 
+
+  0x00000220dfe1d634: ;   {runtime_call I2C/C2I adapters}
+  0x00000220dfe1d634: 0000 e9ba 
+
+  0x00000220dfe1d638: ;   {static_stub}
+  0x00000220dfe1d638: 1996 fe48 | bb00 0000 | 0000 0000 
+
+  0x00000220dfe1d644: ;   {runtime_call nmethod}
+  0x00000220dfe1d644: 00e9 fbff 
+
+  0x00000220dfe1d648: ;   {static_stub}
+  0x00000220dfe1d648: ffff 48bb | 0000 0000 | 0000 0000 
+
+  0x00000220dfe1d654: ;   {runtime_call nmethod}
+  0x00000220dfe1d654: e9fb ffff 
+
+  0x00000220dfe1d658: ;   {static_stub}
+  0x00000220dfe1d658: ff48 bb18 | 12c1 f120 
+
+  0x00000220dfe1d660: ;   {runtime_call I2C/C2I adapters}
+  0x00000220dfe1d660: 0200 00e9 | fb5d 6cfe 
+
+  0x00000220dfe1d668: ;   {static_stub}
+  0x00000220dfe1d668: 48bb b891 | c0f1 2002 
+
+  0x00000220dfe1d670: ;   {runtime_call I2C/C2I adapters}
+  0x00000220dfe1d670: 0000 e9f4 
+
+  0x00000220dfe1d674: ;   {runtime_call ExceptionBlob}
+  0x00000220dfe1d674: 7d6a fee9 | 844b 78fe 
+[Deopt Handler Code]
+  0x00000220dfe1d67c: e800 0000 | 0048 832c 
+
+  0x00000220dfe1d684: ;   {runtime_call DeoptimizationBlob}
+  0x00000220dfe1d684: 2405 e915 | 736c fef4 | f4f4 f4f4 
+[/MachCode]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000220fc105d30, length=47, elements={
+0x00000220d2817150, 0x00000220ef4bfa10, 0x00000220ef4c2570, 0x00000220ef4abbc0,
+0x00000220ef4ac220, 0x00000220ef4aec80, 0x00000220ef4d6eb0, 0x00000220ef4d8fe0,
+0x00000220ef4da9f0, 0x00000220ef5a0cb0, 0x00000220efd6d540, 0x00000220effcb780,
+0x00000220f44a5ca0, 0x00000220f4537f10, 0x00000220f4538570, 0x00000220f4538bd0,
+0x00000220f4553690, 0x00000220f4809a60, 0x00000220f48093d0, 0x00000220f480a0f0,
+0x00000220f48086b0, 0x00000220f480a780, 0x00000220f4808d40, 0x00000220f480ae10,
+0x00000220f4807990, 0x00000220f4808020, 0x00000220f510bec0, 0x00000220f5109df0,
+0x00000220f510a480, 0x00000220f510e620, 0x00000220f510b830, 0x00000220f510df90,
+0x00000220f510b1a0, 0x00000220f51106f0, 0x00000220f510f340, 0x00000220f4fb36b0,
+0x00000220fd1220d0, 0x00000220fd122df0, 0x00000220fd1241a0, 0x00000220fd124830,
+0x00000220f5e39e70, 0x00000220f5e369f0, 0x00000220f4fb3d40, 0x00000220f4fb71c0,
+0x00000220f4fb64a0, 0x00000220f4fb5e10, 0x00000220f4fb3020
+}
+
+Java Threads: ( => current thread )
+  0x00000220d2817150 JavaThread "main"                              [_thread_blocked, id=43524, stack(0x0000002d9ec00000,0x0000002d9ed00000) (1024K)]
+  0x00000220ef4bfa10 JavaThread "Reference Handler"          daemon [_thread_blocked, id=35684, stack(0x0000002d9f400000,0x0000002d9f500000) (1024K)]
+  0x00000220ef4c2570 JavaThread "Finalizer"                  daemon [_thread_blocked, id=44548, stack(0x0000002d9f500000,0x0000002d9f600000) (1024K)]
+  0x00000220ef4abbc0 JavaThread "Signal Dispatcher"          daemon [_thread_blocked, id=38372, stack(0x0000002d9f600000,0x0000002d9f700000) (1024K)]
+  0x00000220ef4ac220 JavaThread "Attach Listener"            daemon [_thread_blocked, id=41208, stack(0x0000002d9f700000,0x0000002d9f800000) (1024K)]
+  0x00000220ef4aec80 JavaThread "Service Thread"             daemon [_thread_blocked, id=21476, stack(0x0000002d9f800000,0x0000002d9f900000) (1024K)]
+  0x00000220ef4d6eb0 JavaThread "Monitor Deflation Thread"   daemon [_thread_blocked, id=38076, stack(0x0000002d9f900000,0x0000002d9fa00000) (1024K)]
+  0x00000220ef4d8fe0 JavaThread "C2 CompilerThread0"         daemon [_thread_blocked, id=24356, stack(0x0000002d9fa00000,0x0000002d9fb00000) (1024K)]
+  0x00000220ef4da9f0 JavaThread "C1 CompilerThread0"         daemon [_thread_blocked, id=43608, stack(0x0000002d9fb00000,0x0000002d9fc00000) (1024K)]
+  0x00000220ef5a0cb0 JavaThread "Common-Cleaner"             daemon [_thread_blocked, id=32624, stack(0x0000002d9fc00000,0x0000002d9fd00000) (1024K)]
+  0x00000220efd6d540 JavaThread "Orchestration Server"       daemon [_thread_in_native, id=15016, stack(0x0000002d9ff00000,0x0000002da0000000) (1024K)]
+  0x00000220effcb780 JavaThread "Orchestration Main"         daemon [_thread_blocked, id=17912, stack(0x0000002da0000000,0x0000002da0100000) (1024K)]
+  0x00000220f44a5ca0 JavaThread "Compose Hot Reload: Logger"        [_thread_blocked, id=35944, stack(0x0000002da0100000,0x0000002da0200000) (1024K)]
+  0x00000220f4537f10 JavaThread "DevTools: Stdout"           daemon [_thread_in_native, id=24260, stack(0x0000002da0200000,0x0000002da0300000) (1024K)]
+  0x00000220f4538570 JavaThread "DevTools: Stderr"           daemon [_thread_in_native, id=33932, stack(0x0000002da0300000,0x0000002da0400000) (1024K)]
+  0x00000220f4538bd0 JavaThread "Notification Thread"        daemon [_thread_blocked, id=39848, stack(0x0000002da0400000,0x0000002da0500000) (1024K)]
+  0x00000220f4553690 JavaThread "Compose Runtime Analyzer"   daemon [_thread_blocked, id=43508, stack(0x0000002da0500000,0x0000002da0600000) (1024K)]
+  0x00000220f4809a60 JavaThread "Java2D Disposer"            daemon [_thread_blocked, id=12300, stack(0x0000002da0d00000,0x0000002da0e00000) (1024K)]
+  0x00000220f48093d0 JavaThread "AWT-Shutdown"                      [_thread_blocked, id=44176, stack(0x0000002da0e00000,0x0000002da0f00000) (1024K)]
+  0x00000220f480a0f0 JavaThread "AWT-Windows"                daemon [_thread_in_native, id=14408, stack(0x0000002da0f00000,0x0000002da1000000) (1024K)]
+=>0x00000220f48086b0 JavaThread "AWT-EventQueue-0"                  [_thread_in_native, id=46428, stack(0x0000002da1000000,0x0000002da1100000) (1024K)]
+  0x00000220f480a780 JavaThread "Orchestration Client Reader" daemon [_thread_in_native, id=27220, stack(0x0000002da1700000,0x0000002da1800000) (1024K)]
+  0x00000220f4808d40 JavaThread "Orchestration Client Writer (/127.0.0.1:63218)" daemon [_thread_blocked, id=2492, stack(0x0000002da1800000,0x0000002da1900000) (1024K)]
+  0x00000220f480ae10 JavaThread "DefaultDispatcher-worker-1" daemon [_thread_blocked, id=13024, stack(0x0000002da1900000,0x0000002da1a00000) (1024K)]
+  0x00000220f4807990 JavaThread "DefaultDispatcher-worker-2" daemon [_thread_blocked, id=16048, stack(0x0000002da1a00000,0x0000002da1b00000) (1024K)]
+  0x00000220f4808020 JavaThread "DefaultDispatcher-worker-3" daemon [_thread_blocked, id=26516, stack(0x0000002da1b00000,0x0000002da1c00000) (1024K)]
+  0x00000220f510bec0 JavaThread "kotlinx.coroutines.DefaultExecutor" daemon [_thread_blocked, id=39200, stack(0x0000002da1c00000,0x0000002da1d00000) (1024K)]
+  0x00000220f5109df0 JavaThread "Reference Cleaner"          daemon [_thread_blocked, id=19612, stack(0x0000002da1d00000,0x0000002da1e00000) (1024K)]
+  0x00000220f510a480 JavaThread "TimerQueue"                 daemon [_thread_blocked, id=43548, stack(0x0000002da1e00000,0x0000002da1f00000) (1024K)]
+  0x00000220f510e620 JavaThread "DefaultDispatcher-worker-4" daemon [_thread_blocked, id=28924, stack(0x0000002da3000000,0x0000002da3100000) (1024K)]
+  0x00000220f510b830 JavaThread "DefaultDispatcher-worker-5" daemon [_thread_in_native, id=1776, stack(0x0000002da3100000,0x0000002da3200000) (1024K)]
+  0x00000220f510df90 JavaThread "DefaultDispatcher-worker-6" daemon [_thread_blocked, id=20144, stack(0x0000002da3200000,0x0000002da3300000) (1024K)]
+  0x00000220f510b1a0 JavaThread "DefaultDispatcher-worker-7" daemon [_thread_blocked, id=45380, stack(0x0000002da3300000,0x0000002da3400000) (1024K)]
+  0x00000220f51106f0 JavaThread "DefaultDispatcher-worker-8" daemon [_thread_blocked, id=40692, stack(0x0000002da3400000,0x0000002da3500000) (1024K)]
+  0x00000220f510f340 JavaThread "DefaultDispatcher-worker-9" daemon [_thread_blocked, id=8152, stack(0x0000002da3500000,0x0000002da3600000) (1024K)]
+  0x00000220f4fb36b0 JavaThread "DefaultDispatcher-worker-10" daemon [_thread_blocked, id=37756, stack(0x0000002d9fd00000,0x0000002d9fe00000) (1024K)]
+  0x00000220fd1220d0 JavaThread "DefaultDispatcher-worker-11" daemon [_thread_blocked, id=14572, stack(0x0000002d9ea00000,0x0000002d9eb00000) (1024K)]
+  0x00000220fd122df0 JavaThread "DefaultDispatcher-worker-12" daemon [_thread_blocked, id=31968, stack(0x0000002d9eb00000,0x0000002d9ec00000) (1024K)]
+  0x00000220fd1241a0 JavaThread "DefaultDispatcher-worker-13" daemon [_thread_blocked, id=36524, stack(0x0000002d9fe00000,0x0000002d9ff00000) (1024K)]
+  0x00000220fd124830 JavaThread "DefaultDispatcher-worker-14" daemon [_thread_blocked, id=11364, stack(0x0000002da2b00000,0x0000002da2c00000) (1024K)]
+  0x00000220f5e39e70 JavaThread "DefaultDispatcher-worker-15" daemon [_thread_blocked, id=16504, stack(0x0000002da2400000,0x0000002da2500000) (1024K)]
+  0x00000220f5e369f0 JavaThread "DefaultDispatcher-worker-16" daemon [_thread_blocked, id=40016, stack(0x0000002da2500000,0x0000002da2600000) (1024K)]
+  0x00000220f4fb3d40 JavaThread "pool-1-thread-11"           daemon [_thread_blocked, id=19852, stack(0x0000002da2c00000,0x0000002da2d00000) (1024K)]
+  0x00000220f4fb71c0 JavaThread "DefaultDispatcher-worker-17" daemon [_thread_blocked, id=33828, stack(0x0000002da2d00000,0x0000002da2e00000) (1024K)]
+  0x00000220f4fb64a0 JavaThread "DefaultDispatcher-worker-18" daemon [_thread_blocked, id=23528, stack(0x0000002da2e00000,0x0000002da2f00000) (1024K)]
+  0x00000220f4fb5e10 JavaThread "Orchestration Client Reader" daemon [_thread_in_native, id=8400, stack(0x0000002d9e900000,0x0000002d9ea00000) (1024K)]
+  0x00000220f4fb3020 JavaThread "Orchestration Client Writer (/127.0.0.1:64687)" daemon [_thread_blocked, id=23308, stack(0x0000002da2600000,0x0000002da2700000) (1024K)]
+Total: 47
+
+Other Threads:
+  0x00000220ef453330 VMThread "VM Thread"                           [id=24820, stack(0x0000002d9f300000,0x0000002d9f400000) (1024K)]
+  0x00000220ee4bbb10 WatcherThread "VM Periodic Task Thread"        [id=8348, stack(0x0000002d9f200000,0x0000002d9f300000) (1024K)]
+  0x00000220d287ea60 WorkerThread "GC Thread#0"                     [id=35560, stack(0x0000002d9ed00000,0x0000002d9ee00000) (1024K)]
+  0x00000220f469bbd0 WorkerThread "GC Thread#1"                     [id=5780, stack(0x0000002da0600000,0x0000002da0700000) (1024K)]
+  0x00000220f469bf70 WorkerThread "GC Thread#2"                     [id=12148, stack(0x0000002da0700000,0x0000002da0800000) (1024K)]
+  0x00000220f478aa60 WorkerThread "GC Thread#3"                     [id=30628, stack(0x0000002da0800000,0x0000002da0900000) (1024K)]
+  0x00000220f478b210 WorkerThread "GC Thread#4"                     [id=26272, stack(0x0000002da0900000,0x0000002da0a00000) (1024K)]
+  0x00000220f45d5110 WorkerThread "GC Thread#5"                     [id=5668, stack(0x0000002da0a00000,0x0000002da0b00000) (1024K)]
+  0x00000220f470a020 WorkerThread "GC Thread#6"                     [id=20928, stack(0x0000002da0b00000,0x0000002da0c00000) (1024K)]
+  0x00000220f46a79c0 WorkerThread "GC Thread#7"                     [id=24276, stack(0x0000002da0c00000,0x0000002da0d00000) (1024K)]
+  0x00000220f4bfe590 WorkerThread "GC Thread#8"                     [id=32996, stack(0x0000002da1200000,0x0000002da1300000) (1024K)]
+  0x00000220f4bff7b0 WorkerThread "GC Thread#9"                     [id=30396, stack(0x0000002da1300000,0x0000002da1400000) (1024K)]
+  0x00000220f4d2d880 WorkerThread "GC Thread#10"                    [id=16472, stack(0x0000002da1f00000,0x0000002da2000000) (1024K)]
+  0x00000220f4d2c660 WorkerThread "GC Thread#11"                    [id=35848, stack(0x0000002da2000000,0x0000002da2100000) (1024K)]
+  0x00000220f4d2d4e0 WorkerThread "GC Thread#12"                    [id=16456, stack(0x0000002da2100000,0x0000002da2200000) (1024K)]
+  0x00000220f4d2ca00 WorkerThread "GC Thread#13"                    [id=15440, stack(0x0000002da2200000,0x0000002da2300000) (1024K)]
+  0x00000220f524dab0 WorkerThread "GC Thread#14"                    [id=46764, stack(0x0000002da2300000,0x0000002da2400000) (1024K)]
+  0x00000220d288f460 ConcurrentGCThread "G1 Main Marker"            [id=46820, stack(0x0000002d9ee00000,0x0000002d9ef00000) (1024K)]
+  0x00000220d288fe70 WorkerThread "G1 Conc#0"                       [id=43840, stack(0x0000002d9ef00000,0x0000002d9f000000) (1024K)]
+  0x00000220f4bfe930 WorkerThread "G1 Conc#1"                       [id=39400, stack(0x0000002da1400000,0x0000002da1500000) (1024K)]
+  0x00000220f4bff410 WorkerThread "G1 Conc#2"                       [id=27880, stack(0x0000002da1500000,0x0000002da1600000) (1024K)]
+  0x00000220f4bfde50 WorkerThread "G1 Conc#3"                       [id=10544, stack(0x0000002da1600000,0x0000002da1700000) (1024K)]
+  0x00000220ee390b70 ConcurrentGCThread "G1 Refine#0"               [id=44068, stack(0x0000002d9f000000,0x0000002d9f100000) (1024K)]
+  0x00000220ee391490 ConcurrentGCThread "G1 Service"                [id=32208, stack(0x0000002d9f100000,0x0000002d9f200000) (1024K)]
+Total: 24
+
+Threads with active compile tasks:
+Total: 0
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000704e00000, size: 4018 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) not mapped
+Compressed class space mapped at: 0x0000000800000000-0x0000000840000000, reserved size: 1073741824
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 0, Narrow klass range: 0x40000000
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+ CPUs: 20 total, 20 available
+ Memory: 16068M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (Zero based)
+ Heap Region Size: 2M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 252M
+ Heap Max Capacity: 4018M
+ Pre-touch: Disabled
+ Parallel Workers: 15
+ Concurrent Workers: 4
+ Concurrent Refinement Workers: 15
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 108544K, used 44735K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 5 young (10240K), 0 survivors (0K)
+ Metaspace       used 61459K, committed 62080K, reserved 1114112K
+  class space    used 6026K, committed 6336K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+|   0|0x0000000704e00000, 0x0000000705000000, 0x0000000705000000|100%|HS|  |TAMS 0x0000000704e00000| PB 0x0000000704e00000| Untracked 
+|   1|0x0000000705000000, 0x00000007051fffe0, 0x0000000705200000| 99%| O|  |TAMS 0x0000000705000000| PB 0x0000000705000000| Untracked 
+|   2|0x0000000705200000, 0x00000007053ffff8, 0x0000000705400000| 99%| O|  |TAMS 0x0000000705200000| PB 0x0000000705200000| Untracked 
+|   3|0x0000000705400000, 0x00000007055fffc8, 0x0000000705600000| 99%| O|  |TAMS 0x0000000705400000| PB 0x0000000705400000| Untracked 
+|   4|0x0000000705600000, 0x00000007057fb110, 0x0000000705800000| 99%| O|  |TAMS 0x0000000705600000| PB 0x0000000705600000| Untracked 
+|   5|0x0000000705800000, 0x00000007059fffe0, 0x0000000705a00000| 99%| O|  |TAMS 0x0000000705800000| PB 0x0000000705800000| Untracked 
+|   6|0x0000000705a00000, 0x0000000705bffff0, 0x0000000705c00000| 99%| O|  |TAMS 0x0000000705a00000| PB 0x0000000705a00000| Untracked 
+|   7|0x0000000705c00000, 0x0000000705dffff0, 0x0000000705e00000| 99%| O|  |TAMS 0x0000000705c00000| PB 0x0000000705c00000| Untracked 
+|   8|0x0000000705e00000, 0x0000000705ffb880, 0x0000000706000000| 99%| O|  |TAMS 0x0000000705e00000| PB 0x0000000705e00000| Untracked 
+|   9|0x0000000706000000, 0x00000007061fffc8, 0x0000000706200000| 99%| O|  |TAMS 0x0000000706000000| PB 0x0000000706000000| Untracked 
+|  10|0x0000000706200000, 0x0000000706400000, 0x0000000706400000|100%| O|  |TAMS 0x0000000706200000| PB 0x0000000706200000| Untracked 
+|  11|0x0000000706400000, 0x00000007065fdad8, 0x0000000706600000| 99%| O|  |TAMS 0x0000000706400000| PB 0x0000000706400000| Untracked 
+|  12|0x0000000706600000, 0x00000007067de0e0, 0x0000000706800000| 93%| O|  |TAMS 0x0000000706600000| PB 0x0000000706600000| Untracked 
+|  13|0x0000000706800000, 0x000000070686c7e8, 0x0000000706a00000| 21%| O|  |TAMS 0x0000000706800000| PB 0x0000000706800000| Untracked 
+|  14|0x0000000706a00000, 0x0000000706ac3ea8, 0x0000000706c00000| 38%| O|  |TAMS 0x0000000706a00000| PB 0x0000000706a00000| Untracked 
+|  15|0x0000000706c00000, 0x0000000706cad2f8, 0x0000000706e00000| 33%| O|  |TAMS 0x0000000706c00000| PB 0x0000000706c00000| Untracked 
+|  16|0x0000000706e00000, 0x0000000706e00000, 0x0000000707000000|  0%| F|  |TAMS 0x0000000706e00000| PB 0x0000000706e00000| Untracked 
+|  17|0x0000000707000000, 0x0000000707200000, 0x0000000707200000|100%|HS|  |TAMS 0x0000000707000000| PB 0x0000000707000000| Untracked 
+|  18|0x0000000707200000, 0x0000000707400000, 0x0000000707400000|100%|HC|  |TAMS 0x0000000707200000| PB 0x0000000707200000| Untracked 
+|  19|0x0000000707400000, 0x0000000707600000, 0x0000000707600000|100%|HC|  |TAMS 0x0000000707400000| PB 0x0000000707400000| Untracked 
+|  20|0x0000000707600000, 0x0000000707800000, 0x0000000707800000|100%|HC|  |TAMS 0x0000000707600000| PB 0x0000000707600000| Untracked 
+|  21|0x0000000707800000, 0x0000000707800000, 0x0000000707a00000|  0%| F|  |TAMS 0x0000000707800000| PB 0x0000000707800000| Untracked 
+|  22|0x0000000707a00000, 0x0000000707a00000, 0x0000000707c00000|  0%| F|  |TAMS 0x0000000707a00000| PB 0x0000000707a00000| Untracked 
+|  23|0x0000000707c00000, 0x0000000707c00000, 0x0000000707e00000|  0%| F|  |TAMS 0x0000000707c00000| PB 0x0000000707c00000| Untracked 
+|  24|0x0000000707e00000, 0x0000000707e00000, 0x0000000708000000|  0%| F|  |TAMS 0x0000000707e00000| PB 0x0000000707e00000| Untracked 
+|  25|0x0000000708000000, 0x0000000708000000, 0x0000000708200000|  0%| F|  |TAMS 0x0000000708000000| PB 0x0000000708000000| Untracked 
+|  26|0x0000000708200000, 0x0000000708200000, 0x0000000708400000|  0%| F|  |TAMS 0x0000000708200000| PB 0x0000000708200000| Untracked 
+|  27|0x0000000708400000, 0x0000000708400000, 0x0000000708600000|  0%| F|  |TAMS 0x0000000708400000| PB 0x0000000708400000| Untracked 
+|  28|0x0000000708600000, 0x0000000708600000, 0x0000000708800000|  0%| F|  |TAMS 0x0000000708600000| PB 0x0000000708600000| Untracked 
+|  29|0x0000000708800000, 0x0000000708800000, 0x0000000708a00000|  0%| F|  |TAMS 0x0000000708800000| PB 0x0000000708800000| Untracked 
+|  30|0x0000000708a00000, 0x0000000708a00000, 0x0000000708c00000|  0%| F|  |TAMS 0x0000000708a00000| PB 0x0000000708a00000| Untracked 
+|  31|0x0000000708c00000, 0x0000000708c00000, 0x0000000708e00000|  0%| F|  |TAMS 0x0000000708c00000| PB 0x0000000708c00000| Untracked 
+|  32|0x0000000708e00000, 0x0000000708e00000, 0x0000000709000000|  0%| F|  |TAMS 0x0000000708e00000| PB 0x0000000708e00000| Untracked 
+|  33|0x0000000709000000, 0x0000000709000000, 0x0000000709200000|  0%| F|  |TAMS 0x0000000709000000| PB 0x0000000709000000| Untracked 
+|  34|0x0000000709200000, 0x0000000709200000, 0x0000000709400000|  0%| F|  |TAMS 0x0000000709200000| PB 0x0000000709200000| Untracked 
+|  35|0x0000000709400000, 0x0000000709400000, 0x0000000709600000|  0%| F|  |TAMS 0x0000000709400000| PB 0x0000000709400000| Untracked 
+|  36|0x0000000709600000, 0x0000000709600000, 0x0000000709800000|  0%| F|  |TAMS 0x0000000709600000| PB 0x0000000709600000| Untracked 
+|  37|0x0000000709800000, 0x0000000709800000, 0x0000000709a00000|  0%| F|  |TAMS 0x0000000709800000| PB 0x0000000709800000| Untracked 
+|  38|0x0000000709a00000, 0x0000000709a00000, 0x0000000709c00000|  0%| F|  |TAMS 0x0000000709a00000| PB 0x0000000709a00000| Untracked 
+|  39|0x0000000709c00000, 0x0000000709c00000, 0x0000000709e00000|  0%| F|  |TAMS 0x0000000709c00000| PB 0x0000000709c00000| Untracked 
+|  40|0x0000000709e00000, 0x0000000709e00000, 0x000000070a000000|  0%| F|  |TAMS 0x0000000709e00000| PB 0x0000000709e00000| Untracked 
+|  41|0x000000070a000000, 0x000000070a000000, 0x000000070a200000|  0%| F|  |TAMS 0x000000070a000000| PB 0x000000070a000000| Untracked 
+|  42|0x000000070a200000, 0x000000070a200000, 0x000000070a400000|  0%| F|  |TAMS 0x000000070a200000| PB 0x000000070a200000| Untracked 
+|  43|0x000000070a400000, 0x000000070a400000, 0x000000070a600000|  0%| F|  |TAMS 0x000000070a400000| PB 0x000000070a400000| Untracked 
+|  44|0x000000070a600000, 0x000000070a600000, 0x000000070a800000|  0%| F|  |TAMS 0x000000070a600000| PB 0x000000070a600000| Untracked 
+|  45|0x000000070a800000, 0x000000070a800000, 0x000000070aa00000|  0%| F|  |TAMS 0x000000070a800000| PB 0x000000070a800000| Untracked 
+|  46|0x000000070aa00000, 0x000000070aa00000, 0x000000070ac00000|  0%| F|  |TAMS 0x000000070aa00000| PB 0x000000070aa00000| Untracked 
+|  47|0x000000070ac00000, 0x000000070ac00000, 0x000000070ae00000|  0%| F|  |TAMS 0x000000070ac00000| PB 0x000000070ac00000| Untracked 
+|  48|0x000000070ae00000, 0x000000070afa8730, 0x000000070b000000| 82%| E|  |TAMS 0x000000070ae00000| PB 0x000000070ae00000| Complete 
+|  49|0x000000070b000000, 0x000000070b200000, 0x000000070b200000|100%| E|CS|TAMS 0x000000070b000000| PB 0x000000070b000000| Complete 
+|  50|0x000000070b200000, 0x000000070b400000, 0x000000070b400000|100%| E|CS|TAMS 0x000000070b200000| PB 0x000000070b200000| Complete 
+|  51|0x000000070b400000, 0x000000070b600000, 0x000000070b600000|100%| E|CS|TAMS 0x000000070b400000| PB 0x000000070b400000| Complete 
+| 125|0x0000000714800000, 0x0000000714a00000, 0x0000000714a00000|100%| E|CS|TAMS 0x0000000714800000| PB 0x0000000714800000| Complete 
+
+Card table byte_map: [0x00000220e7900000,0x00000220e80e0000] _byte_map_base: 0x00000220e40d9000
+
+Marking Bits: (CMBitMap*) 0x00000220d287f070
+ Bits: [0x00000220e80e0000, 0x00000220ebfa8000)
+
+Polling page: 0x00000220d21c0000
+
+Metaspace:
+
+Usage:
+  Non-class:     54.13 MB used.
+      Class:      5.88 MB used.
+       Both:     60.02 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,      54.44 MB ( 85%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,       6.19 MB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,      60.62 MB (  6%) committed. 
+
+Chunk freelists:
+   Non-Class:  9.56 MB
+       Class:  9.64 MB
+        Both:  19.20 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 101.06 MB
+CDS: off
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+ - use_allocation_guard: 0.
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 6.
+num_arena_births: 914.
+num_arena_deaths: 4.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 970.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 12.
+num_chunks_taken_from_freelist: 2709.
+num_chunk_merges: 6.
+num_chunk_splits: 1876.
+num_chunks_enlarged: 1430.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=119168Kb used=10266Kb max_used=20300Kb free=108901Kb
+ bounds [0x00000220debe0000, 0x00000220dffd0000, 0x00000220e6040000]
+CodeHeap 'profiled nmethods': size=119104Kb used=15301Kb max_used=47584Kb free=103802Kb
+ bounds [0x00000220d7040000, 0x00000220d9ec0000, 0x00000220de490000]
+CodeHeap 'non-nmethods': size=7488Kb used=2991Kb max_used=4793Kb free=4497Kb
+ bounds [0x00000220de490000, 0x00000220de950000, 0x00000220debe0000]
+ total_blobs=10699 nmethods=8972 adapters=1629
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (20 events):
+Event: 1720.369 Thread 0x00000220ef4d8fe0 118213       4       sun.awt.windows.WComponentPeer::beginLayout (6 bytes)
+Event: 1720.370 Thread 0x00000220ef4d8fe0 nmethod 118213 0x00000220df67f590 code [0x00000220df67f720, 0x00000220df67f7b0]
+Event: 1720.423 Thread 0x00000220ef4da9f0 118214       3       org.jetbrains.skiko.SkiaLayer::tryRedrawImmediately (45 bytes)
+Event: 1720.424 Thread 0x00000220ef4d8fe0 118215       4       androidx.compose.runtime.snapshots.SnapshotKt::currentSnapshot (21 bytes)
+Event: 1720.424 Thread 0x00000220ef4da9f0 nmethod 118214 0x00000220d8a34890 code [0x00000220d8a34aa0, 0x00000220d8a350f0]
+Event: 1720.426 Thread 0x00000220ef4d8fe0 nmethod 118215 0x00000220df7b5590 code [0x00000220df7b5740, 0x00000220df7b5990]
+Event: 1720.428 Thread 0x00000220ef4d8fe0 118216       4       kotlin.collections.CollectionsKt__CollectionsKt::mutableListOf (47 bytes)
+Event: 1720.433 Thread 0x00000220ef4d8fe0 nmethod 118216 0x00000220debf7490 code [0x00000220debf7640, 0x00000220debf7af8]
+Event: 1720.445 Thread 0x00000220ef4da9f0 118217       3       sun.awt.SunToolkit::executeOnEventHandlerThread (14 bytes)
+Event: 1720.445 Thread 0x00000220ef4da9f0 nmethod 118217 0x00000220d74ae410 code [0x00000220d74ae620, 0x00000220d74aed70]
+Event: 1720.445 Thread 0x00000220ef4da9f0 118218       3       sun.awt.SunToolkit::executeOnEventHandlerThread (12 bytes)
+Event: 1720.445 Thread 0x00000220ef4da9f0 nmethod 118218 0x00000220d915d190 code [0x00000220d915d380, 0x00000220d915d998]
+Event: 1720.466 Thread 0x00000220ef4da9f0 118219       3       androidx.compose.ui.graphics.Canvas::clipRect-N_I0leg$default (45 bytes)
+Event: 1720.467 Thread 0x00000220ef4da9f0 nmethod 118219 0x00000220d8610690 code [0x00000220d8610860, 0x00000220d8610c20]
+Event: 1720.467 Thread 0x00000220ef4da9f0 118220       3       org.jetbrains.skiko.SkikoProperties::getWindowsWaitForVsyncOnRedrawImmediately (19 bytes)
+Event: 1720.467 Thread 0x00000220ef4da9f0 nmethod 118220 0x00000220d9a13a10 code [0x00000220d9a13be0, 0x00000220d9a13f00]
+Event: 1720.487 Thread 0x00000220ef4da9f0 118221       3       sun.awt.windows.WComponentPeer::dynamicallyLayoutContainer (57 bytes)
+Event: 1720.493 Thread 0x00000220ef4da9f0 nmethod 118221 0x00000220d76d4910 code [0x00000220d76d4b60, 0x00000220d76d54a8]
+Event: 1720.493 Thread 0x00000220ef4da9f0 118222       3       sun.awt.windows.WComponentPeer$1::<init> (15 bytes)
+Event: 1720.494 Thread 0x00000220ef4da9f0 nmethod 118222 0x00000220d8c70510 code [0x00000220d8c706c0, 0x00000220d8c708f0]
+
+GC Heap History (20 events):
+Event: 998.373 GC heap before
+{Heap before GC invocations=31 (full 2):
+ garbage-first heap   total 108544K, used 89414K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 27 young (55296K), 2 survivors (4096K)
+ Metaspace       used 59658K, committed 60288K, reserved 1114112K
+  class space    used 5934K, committed 6208K, reserved 1048576K
+}
+Event: 998.411 GC heap after
+{Heap after GC invocations=32 (full 2):
+ garbage-first heap   total 108544K, used 39964K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 3 young (6144K), 3 survivors (6144K)
+ Metaspace       used 59658K, committed 60288K, reserved 1114112K
+  class space    used 5934K, committed 6208K, reserved 1048576K
+}
+Event: 1022.203 GC heap before
+{Heap before GC invocations=32 (full 2):
+ garbage-first heap   total 108544K, used 78876K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 23 young (47104K), 3 survivors (6144K)
+ Metaspace       used 59960K, committed 60608K, reserved 1114112K
+  class space    used 5936K, committed 6208K, reserved 1048576K
+}
+Event: 1022.817 GC heap after
+{Heap after GC invocations=33 (full 3):
+ garbage-first heap   total 108544K, used 36359K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 59960K, committed 60608K, reserved 1114112K
+  class space    used 5936K, committed 6208K, reserved 1048576K
+}
+Event: 1297.100 GC heap before
+{Heap before GC invocations=33 (full 3):
+ garbage-first heap   total 108544K, used 58887K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 13 young (26624K), 0 survivors (0K)
+ Metaspace       used 60278K, committed 60864K, reserved 1114112K
+  class space    used 5966K, committed 6208K, reserved 1048576K
+}
+Event: 1297.129 GC heap after
+{Heap after GC invocations=34 (full 3):
+ garbage-first heap   total 108544K, used 38887K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 60278K, committed 60864K, reserved 1114112K
+  class space    used 5966K, committed 6208K, reserved 1048576K
+}
+Event: 1421.563 GC heap before
+{Heap before GC invocations=35 (full 3):
+ garbage-first heap   total 108544K, used 81895K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 24 young (49152K), 2 survivors (4096K)
+ Metaspace       used 60765K, committed 61312K, reserved 1114112K
+  class space    used 5983K, committed 6208K, reserved 1048576K
+}
+Event: 1421.595 GC heap after
+{Heap after GC invocations=36 (full 3):
+ garbage-first heap   total 108544K, used 41400K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 3 young (6144K), 3 survivors (6144K)
+ Metaspace       used 60765K, committed 61312K, reserved 1114112K
+  class space    used 5983K, committed 6208K, reserved 1048576K
+}
+Event: 1473.887 GC heap before
+{Heap before GC invocations=37 (full 3):
+ garbage-first heap   total 108544K, used 76216K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 21 young (43008K), 3 survivors (6144K)
+ Metaspace       used 60936K, committed 61568K, reserved 1114112K
+  class space    used 5992K, committed 6272K, reserved 1048576K
+}
+Event: 1474.286 GC heap after
+{Heap after GC invocations=38 (full 4):
+ garbage-first heap   total 108544K, used 38732K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 60936K, committed 61568K, reserved 1114112K
+  class space    used 5992K, committed 6272K, reserved 1048576K
+}
+Event: 1574.694 GC heap before
+{Heap before GC invocations=38 (full 4):
+ garbage-first heap   total 108544K, used 91980K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 26 young (53248K), 0 survivors (0K)
+ Metaspace       used 61082K, committed 61760K, reserved 1114112K
+  class space    used 6011K, committed 6336K, reserved 1048576K
+}
+Event: 1574.736 GC heap after
+{Heap after GC invocations=39 (full 4):
+ garbage-first heap   total 108544K, used 39478K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 1 young (2048K), 1 survivors (2048K)
+ Metaspace       used 61082K, committed 61760K, reserved 1114112K
+  class space    used 6011K, committed 6336K, reserved 1048576K
+}
+Event: 1605.189 GC heap before
+{Heap before GC invocations=39 (full 4):
+ garbage-first heap   total 108544K, used 92726K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 27 young (55296K), 1 survivors (2048K)
+ Metaspace       used 61301K, committed 62016K, reserved 1114112K
+  class space    used 6025K, committed 6336K, reserved 1048576K
+}
+Event: 1605.209 GC heap after
+{Heap after GC invocations=40 (full 4):
+ garbage-first heap   total 108544K, used 40809K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 61301K, committed 62016K, reserved 1114112K
+  class space    used 6025K, committed 6336K, reserved 1048576K
+}
+Event: 1712.618 GC heap before
+{Heap before GC invocations=40 (full 4):
+ garbage-first heap   total 108544K, used 89961K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 26 young (53248K), 2 survivors (4096K)
+ Metaspace       used 61409K, committed 62080K, reserved 1114112K
+  class space    used 6026K, committed 6336K, reserved 1048576K
+}
+Event: 1712.659 GC heap after
+{Heap after GC invocations=41 (full 4):
+ garbage-first heap   total 108544K, used 42575K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 2 young (4096K), 2 survivors (4096K)
+ Metaspace       used 61409K, committed 62080K, reserved 1114112K
+  class space    used 6026K, committed 6336K, reserved 1048576K
+}
+Event: 1712.800 GC heap before
+{Heap before GC invocations=41 (full 4):
+ garbage-first heap   total 108544K, used 42575K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 3 young (6144K), 2 survivors (4096K)
+ Metaspace       used 61423K, committed 62080K, reserved 1114112K
+  class space    used 6026K, committed 6336K, reserved 1048576K
+}
+Event: 1712.819 GC heap after
+{Heap after GC invocations=42 (full 4):
+ garbage-first heap   total 108544K, used 43054K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 3 young (6144K), 3 survivors (6144K)
+ Metaspace       used 61423K, committed 62080K, reserved 1114112K
+  class space    used 6026K, committed 6336K, reserved 1048576K
+}
+Event: 1714.409 GC heap before
+{Heap before GC invocations=43 (full 4):
+ garbage-first heap   total 108544K, used 47150K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 6 young (12288K), 3 survivors (6144K)
+ Metaspace       used 61444K, committed 62080K, reserved 1114112K
+  class space    used 6026K, committed 6336K, reserved 1048576K
+}
+Event: 1714.521 GC heap after
+{Heap after GC invocations=44 (full 5):
+ garbage-first heap   total 108544K, used 36543K [0x0000000704e00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 61444K, committed 62080K, reserved 1114112K
+  class space    used 6026K, committed 6336K, reserved 1048576K
+}
+
+Dll operation events (3 events):
+Event: 0.015 Loaded shared library C:\Program Files\Android\Android Studio\jbr\bin\java.dll
+Event: 0.019 Loaded shared library C:\Program Files\Android\Android Studio\jbr\bin\zip.dll
+Event: 0.905 Loaded shared library C:\Program Files\Android\Android Studio\jbr\bin\verify.dll
+
+Deoptimization events (20 events):
+Event: 1713.757 Thread 0x00000220f48086b0 Uncommon trap: trap_request=0xffffff6f fr.pc=0x00000220df0cc56c relative=0x000000000000260c
+Event: 1713.757 Thread 0x00000220f48086b0 Uncommon trap: reason=loop_limit_check action=none pc=0x00000220df0cc56c method=androidx.compose.ui.graphics.layer.GraphicsLayer.recordWithTracking(Lkotlin/jvm/functions/Function1;)V @ 247 c2
+Event: 1713.757 Thread 0x00000220f48086b0 DEOPT PACKING pc=0x00000220df0cc56c sp=0x0000002da10fe930
+Event: 1713.757 Thread 0x00000220f48086b0 DEOPT UNPACKING pc=0x00000220de4e46a2 sp=0x0000002da10fe8f0 mode 2
+Event: 1717.379 Thread 0x00000220f48086b0 Uncommon trap: trap_request=0xffffff6e fr.pc=0x00000220def4a7d4 relative=0x0000000000001e54
+Event: 1717.379 Thread 0x00000220f48086b0 Uncommon trap: reason=loop_limit_check action=maybe_recompile pc=0x00000220def4a7d4 method=androidx.compose.runtime.snapshots.MutableSnapshot.apply()Landroidx/compose/runtime/snapshots/SnapshotApplyResult; @ 750 c2
+Event: 1717.379 Thread 0x00000220f48086b0 DEOPT PACKING pc=0x00000220def4a7d4 sp=0x0000002da10fd430
+Event: 1717.380 Thread 0x00000220f48086b0 DEOPT UNPACKING pc=0x00000220de4e46a2 sp=0x0000002da10fd2c0 mode 2
+Event: 1717.402 Thread 0x00000220f48086b0 Uncommon trap: trap_request=0xffffff6f fr.pc=0x00000220df0cca64 relative=0x0000000000002b04
+Event: 1717.402 Thread 0x00000220f48086b0 Uncommon trap: reason=loop_limit_check action=none pc=0x00000220df0cca64 method=androidx.compose.ui.graphics.layer.GraphicsLayer.discardContentIfReleasedAndHaveNoParentLayerUsages()V @ 114 c2
+Event: 1717.402 Thread 0x00000220f48086b0 DEOPT PACKING pc=0x00000220df0cca64 sp=0x0000002da10fd470
+Event: 1717.402 Thread 0x00000220f48086b0 DEOPT UNPACKING pc=0x00000220de4e46a2 sp=0x0000002da10fd298 mode 2
+Event: 1717.421 Thread 0x00000220f48086b0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x00000220df5ab3f0 relative=0x00000000000002d0
+Event: 1717.421 Thread 0x00000220f48086b0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000220df5ab3f0 method=androidx.compose.ui.geometry.Rect.contains-k-4lQ0M(J)Z @ 78 c2
+Event: 1717.421 Thread 0x00000220f48086b0 DEOPT PACKING pc=0x00000220df5ab3f0 sp=0x0000002da10fe7e0
+Event: 1717.421 Thread 0x00000220f48086b0 DEOPT UNPACKING pc=0x00000220de4e46a2 sp=0x0000002da10fe608 mode 2
+Event: 1717.425 Thread 0x00000220f48086b0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x00000220dfeb1e8c relative=0x000000000000056c
+Event: 1717.425 Thread 0x00000220f48086b0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000220dfeb1e8c method=androidx.compose.runtime.CompositionImpl.cleanUpDerivedStateObservations()V @ 524 c2
+Event: 1717.425 Thread 0x00000220f48086b0 DEOPT PACKING pc=0x00000220dfeb1e8c sp=0x0000002da10fe6e0
+Event: 1717.425 Thread 0x00000220f48086b0 DEOPT UNPACKING pc=0x00000220de4e46a2 sp=0x0000002da10fe578 mode 2
+
+Classes loaded (20 events):
+Event: 57.336 Loading class java/util/ArrayList$ListItr
+Event: 57.340 Loading class java/util/ArrayList$ListItr done
+Event: 57.347 Loading class java/lang/instrument/ClassDefinition
+Event: 57.349 Loading class java/lang/instrument/ClassDefinition done
+Event: 58.658 Loading class java/util/WeakHashMap$KeyIterator
+Event: 58.659 Loading class java/util/WeakHashMap$HashIterator
+Event: 58.661 Loading class java/util/WeakHashMap$HashIterator done
+Event: 58.661 Loading class java/util/WeakHashMap$KeyIterator done
+Event: 58.731 Loading class sun/net/ConnectionResetException
+Event: 58.745 Loading class sun/net/ConnectionResetException done
+Event: 58.747 Loading class java/net/SocketTimeoutException
+Event: 58.748 Loading class java/net/SocketTimeoutException done
+Event: 293.800 Loading class sun/awt/windows/WComponentPeer$1
+Event: 293.817 Loading class sun/awt/windows/WComponentPeer$1 done
+Event: 293.938 Loading class sun/java2d/opengl/OGLSurfaceData
+Event: 293.948 Loading class sun/java2d/opengl/OGLSurfaceData done
+Event: 1455.061 Loading class javax/swing/CellRendererPane
+Event: 1455.108 Loading class javax/swing/CellRendererPane done
+Event: 1455.119 Loading class javax/swing/RepaintManager$3
+Event: 1455.167 Loading class javax/swing/RepaintManager$3 done
+
+Classes unloaded (2 events):
+Event: 405.279 Thread 0x00000220ef453330 Unloading class 0x000000080055b800 'jdk/internal/reflect/GeneratedSerializationConstructorAccessor20'
+Event: 405.279 Thread 0x00000220ef453330 Unloading class 0x000000080055ac00 'jdk/internal/reflect/GeneratedSerializationConstructorAccessor18'
+
+Classes redefined (20 events):
+Event: 1367.576 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$2$1, count=20
+Event: 1367.576 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1, count=19
+Event: 1367.577 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$-1192734296$1, count=19
+Event: 1367.577 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$-330430135$1, count=19
+Event: 1367.577 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$531874026$1, count=19
+Event: 1367.577 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$502628289$1, count=19
+Event: 1367.577 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt, count=19
+Event: 1367.577 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$2, count=21
+Event: 1418.114 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt, count=20
+Event: 1577.705 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt, count=12
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt, count=21
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$2, count=22
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$502628289$1, count=20
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$531874026$1, count=20
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$-330430135$1, count=20
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$-1192734296$1, count=20
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1, count=20
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$2$1, count=21
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$1$1, count=14
+Event: 1577.706 Thread 0x00000220ef453330 redefined class name=com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$1, count=14
+
+Internal exceptions (20 events):
+Event: 1578.405 Thread 0x00000220fd123480 Exception <a 'java/io/IOException'{0x000000070b3e26c8}> (0x000000070b3e26c8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1578.407 Thread 0x00000220fd122760 Exception <a 'java/io/IOException'{0x000000070b3dbfa0}> (0x000000070b3dbfa0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1582.825 Thread 0x00000220f48086b0 Implicit null exception at 0x00000220ded199a2 to 0x00000220ded19ed0
+Event: 1589.646 Thread 0x00000220fd126900 Exception <a 'java/io/IOException'{0x0000000709cfce68}> (0x0000000709cfce68) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1589.646 Thread 0x00000220fd127cb0 Exception <a 'java/io/IOException'{0x0000000709d010c8}> (0x0000000709d010c8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1598.807 Thread 0x00000220f4fb2300 Exception <a 'java/io/IOException'{0x00000007090fea28}> (0x00000007090fea28) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1598.809 Thread 0x00000220fd127cb0 Exception <a 'java/io/IOException'{0x00000007090fc2a0}> (0x00000007090fc2a0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1604.966 Thread 0x00000220f4fb0f50 Exception <a 'java/io/IOException'{0x00000007085db8c0}> (0x00000007085db8c0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1604.966 Thread 0x00000220f4fb08c0 Exception <a 'java/io/IOException'{0x00000007085dfc10}> (0x00000007085dfc10) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1612.308 Thread 0x00000220f4fb08c0 Exception <a 'java/io/IOException'{0x000000071483b3f0}> (0x000000071483b3f0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1612.311 Thread 0x00000220f4fb3d40 Exception <a 'java/io/IOException'{0x0000000714839508}> (0x0000000714839508) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1612.313 Thread 0x00000220f4fb15e0 Exception <a 'java/io/IOException'{0x000000071482b080}> (0x000000071482b080) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1618.379 Thread 0x00000220f4fb2990 Exception <a 'java/io/IOException'{0x0000000714970180}> (0x0000000714970180) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1618.379 Thread 0x00000220f4fb3020 Exception <a 'java/io/IOException'{0x0000000714972088}> (0x0000000714972088) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1649.773 Thread 0x00000220f4fb08c0 Exception <a 'java/io/IOException'{0x00000007149c2700}> (0x00000007149c2700) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1649.773 Thread 0x00000220f4fb3020 Exception <a 'java/io/IOException'{0x00000007149c5c40}> (0x00000007149c5c40) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1670.176 Thread 0x00000220f4fb3020 Exception <a 'java/io/IOException'{0x000000070b412ac0}> (0x000000070b412ac0) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1670.176 Thread 0x00000220f4fb43d0 Exception <a 'java/io/IOException'{0x000000070b415ff8}> (0x000000070b415ff8) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1708.943 Thread 0x00000220f4fb5780 Exception <a 'java/io/IOException'{0x00000007090f9530}> (0x00000007090f9530) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+Event: 1708.944 Thread 0x00000220f4fb6b30 Exception <a 'java/io/IOException'{0x00000007090f7508}> (0x00000007090f7508) 
+thrown [s\src\hotspot\share\prims\jni.cpp, line 535]
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (20 events):
+Event: 1712.617 Executing VM operation: G1CollectForAllocation (G1 Evacuation Pause)
+Event: 1712.659 Executing VM operation: G1CollectForAllocation (G1 Evacuation Pause) done
+Event: 1712.800 Executing VM operation: G1TryInitiateConcMark (CodeCache GC Threshold)
+Event: 1712.820 Executing VM operation: G1TryInitiateConcMark (CodeCache GC Threshold) done
+Event: 1712.905 Executing VM operation: G1PauseRemark
+Event: 1713.055 Executing VM operation: G1PauseRemark done
+Event: 1713.061 Executing VM operation: G1PauseCleanup
+Event: 1713.062 Executing VM operation: G1PauseCleanup done
+Event: 1714.065 Executing VM operation: Cleanup
+Event: 1714.065 Executing VM operation: Cleanup done
+Event: 1714.409 Executing VM operation: G1CollectFull (System.gc())
+Event: 1714.521 Executing VM operation: G1CollectFull (System.gc()) done
+Event: 1715.530 Executing VM operation: Cleanup
+Event: 1715.530 Executing VM operation: Cleanup done
+Event: 1716.531 Executing VM operation: Cleanup
+Event: 1716.531 Executing VM operation: Cleanup done
+Event: 1717.542 Executing VM operation: Cleanup
+Event: 1717.542 Executing VM operation: Cleanup done
+Event: 1720.549 Executing VM operation: Cleanup
+Event: 1720.549 Executing VM operation: Cleanup done
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (20 events):
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e17f10
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e18710
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e19910
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e19d10
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e1e490
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e37690
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e37f10
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e39c90
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e3c710
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e3d410
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e58990
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e59010
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e59510
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e59910
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e5ab10
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e5b910
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e75190
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e7b790
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e7bb90
+Event: 1714.475 Thread 0x00000220ef453330 flushing  nmethod 0x00000220d9e7d490
+
+Events (20 events):
+Event: 1701.789 Thread 0x00000220f4d092f0 Thread exited: 0x00000220f4d092f0
+Event: 1702.680 Thread 0x00000220ef4d8fe0 Thread added: 0x00000220f4d092f0
+Event: 1702.961 Thread 0x00000220f4d092f0 Thread exited: 0x00000220f4d092f0
+Event: 1704.034 Thread 0x00000220f4d0c2a0 Thread exited: 0x00000220f4d0c2a0
+Event: 1706.773 Thread 0x00000220f4fb36b0 Thread added: 0x00000220f4fb71c0
+Event: 1706.773 Thread 0x00000220f4fb36b0 Thread added: 0x00000220f4fb64a0
+Event: 1708.894 Thread 0x00000220efd6d540 Thread added: 0x00000220f4fb6b30
+Event: 1708.907 Thread 0x00000220effcb780 Thread added: 0x00000220f4fb5780
+Event: 1708.945 Thread 0x00000220f4fb6b30 Thread exited: 0x00000220f4fb6b30
+Event: 1708.945 Thread 0x00000220f4fb5780 Thread exited: 0x00000220f4fb5780
+Event: 1708.996 Thread 0x00000220f4fb08c0 Thread exited: 0x00000220f4fb08c0
+Event: 1708.997 Thread 0x00000220f4fb3020 Thread exited: 0x00000220f4fb3020
+Event: 1712.080 Thread 0x00000220efd6d540 Thread added: 0x00000220f4fb5e10
+Event: 1712.115 Thread 0x00000220effcb780 Thread added: 0x00000220f4fb3020
+Event: 1712.797 Thread 0x00000220ef4d8fe0 Thread added: 0x00000220f4d0f250
+Event: 1712.820 Thread 0x00000220ef4da9f0 Thread added: 0x00000220f4d0d710
+Event: 1713.092 Thread 0x00000220f4d0d710 Thread exited: 0x00000220f4d0d710
+Event: 1713.127 Thread 0x00000220ef4d8fe0 Thread added: 0x00000220f4d0d040
+Event: 1713.900 Thread 0x00000220f4d0d040 Thread exited: 0x00000220f4d0d040
+Event: 1714.524 Thread 0x00000220f4d0f250 Thread exited: 0x00000220f4d0f250
+
+
+Dynamic libraries:
+0x00007ff625d60000 - 0x00007ff625d6a000 	C:\Program Files\Android\Android Studio\jbr\bin\java.exe
+0x00007ffd88500000 - 0x00007ffd88767000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffd862e0000 - 0x00007ffd863a9000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffd85e90000 - 0x00007ffd86280000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffd85bc0000 - 0x00007ffd85d0b000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffd3d6e0000 - 0x00007ffd3d6f8000 	C:\Program Files\Android\Android Studio\jbr\bin\jli.dll
+0x00007ffd3d700000 - 0x00007ffd3d71b000 	C:\Program Files\Android\Android Studio\jbr\bin\VCRUNTIME140.dll
+0x00007ffd86940000 - 0x00007ffd86b05000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffd85b90000 - 0x00007ffd85bb7000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffd693c0000 - 0x00007ffd6965a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.4768_none_3e0c112ce331287c\COMCTL32.dll
+0x00007ffd88270000 - 0x00007ffd8829b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffd86b10000 - 0x00007ffd86bb9000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffd85910000 - 0x00007ffd85a48000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffd85a50000 - 0x00007ffd85af3000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffd879c0000 - 0x00007ffd879ef000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffd3d6d0000 - 0x00007ffd3d6dc000 	C:\Program Files\Android\Android Studio\jbr\bin\vcruntime140_1.dll
+0x00007ffd3d640000 - 0x00007ffd3d6cd000 	C:\Program Files\Android\Android Studio\jbr\bin\msvcp140.dll
+0x00007ffc874d0000 - 0x00007ffc8815b000 	C:\Program Files\Android\Android Studio\jbr\bin\server\jvm.dll
+0x00007ffd86e70000 - 0x00007ffd86f24000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffd882a0000 - 0x00007ffd88346000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffd86f30000 - 0x00007ffd87048000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffd87940000 - 0x00007ffd879b4000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffd85490000 - 0x00007ffd854ee000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffd7c050000 - 0x00007ffd7c05b000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffd7b560000 - 0x00007ffd7b595000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffd85470000 - 0x00007ffd85484000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffd84350000 - 0x00007ffd8436b000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffd3d630000 - 0x00007ffd3d63a000 	C:\Program Files\Android\Android Studio\jbr\bin\jimage.dll
+0x00007ffd82d30000 - 0x00007ffd82f71000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffd874f0000 - 0x00007ffd87875000 	C:\WINDOWS\System32\combase.dll
+0x00007ffd86850000 - 0x00007ffd86930000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffd6bac0000 - 0x00007ffd6bb03000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffd85630000 - 0x00007ffd856c9000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffd3d620000 - 0x00007ffd3d62e000 	C:\Program Files\Android\Android Studio\jbr\bin\instrument.dll
+0x00007ffd3d600000 - 0x00007ffd3d620000 	C:\Program Files\Android\Android Studio\jbr\bin\java.dll
+0x00007ffd3ab80000 - 0x00007ffd3ab98000 	C:\Program Files\Android\Android Studio\jbr\bin\zip.dll
+0x00007ffd87b10000 - 0x00007ffd8825d000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffd85790000 - 0x00007ffd85903000 	C:\WINDOWS\System32\wintypes.dll
+0x00007ffd831e0000 - 0x00007ffd83a3f000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ffd87050000 - 0x00007ffd87145000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ffd88350000 - 0x00007ffd883ba000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffd85550000 - 0x00007ffd85579000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ffd3d5f0000 - 0x00007ffd3d600000 	C:\Program Files\Android\Android Studio\jbr\bin\net.dll
+0x00007ffd7c0c0000 - 0x00007ffd7c1de000 	C:\WINDOWS\SYSTEM32\WINHTTP.dll
+0x00007ffd84940000 - 0x00007ffd849ab000 	C:\WINDOWS\system32\mswsock.dll
+0x00007ffd3ab60000 - 0x00007ffd3ab76000 	C:\Program Files\Android\Android Studio\jbr\bin\nio.dll
+0x00007ffd39bb0000 - 0x00007ffd39bb9000 	C:\Program Files\Android\Android Studio\jbr\bin\extnet.dll
+0x00007ffd84c00000 - 0x00007ffd84c1b000 	C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+0x00007ffd84310000 - 0x00007ffd8434b000 	C:\WINDOWS\system32\rsaenh.dll
+0x00007ffd849e0000 - 0x00007ffd84a0b000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x00007ffd85520000 - 0x00007ffd85546000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x00007ffd84c20000 - 0x00007ffd84c2c000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+0x00007ffd83dd0000 - 0x00007ffd83e03000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ffd86840000 - 0x00007ffd8684a000 	C:\WINDOWS\System32\NSI.dll
+0x00007ffd3ab50000 - 0x00007ffd3ab60000 	C:\Program Files\Android\Android Studio\jbr\bin\verify.dll
+0x00007ffcf4c70000 - 0x00007ffcf4e08000 	C:\Program Files\Android\Android Studio\jbr\bin\awt.dll
+0x00007ffd7ff40000 - 0x00007ffd7ff75000 	C:\WINDOWS\SYSTEM32\dwmapi.dll
+0x00007ffd2b9d0000 - 0x00007ffd2ba14000 	C:\Program Files\Android\Android Studio\jbr\bin\nvdaControllerClient64.dll
+0x00007ffd7f8a0000 - 0x00007ffd7f93e000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ffd7fc60000 - 0x00007ffd7fd0f000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007ffd87150000 - 0x00007ffd872b1000 	C:\WINDOWS\System32\MSCTF.dll
+0x00007ffd872e0000 - 0x00007ffd87480000 	C:\WINDOWS\System32\ole32.dll
+0x00007ffd7f880000 - 0x00007ffd7f896000 	C:\WINDOWS\system32\Wtsapi32.dll
+0x00007ffd85240000 - 0x00007ffd852aa000 	C:\WINDOWS\SYSTEM32\WINSTA.dll
+0x00007ffcfb6c0000 - 0x00007ffcfb7d8000 	C:\WINDOWS\system32\opengl32.dll
+0x00007ffd358c0000 - 0x00007ffd358ed000 	C:\WINDOWS\SYSTEM32\GLU32.dll
+0x00007ffd7fd80000 - 0x00007ffd7fdcd000 	C:\WINDOWS\SYSTEM32\dxcore.dll
+0x00007ffce7d50000 - 0x00007ffce8971000 	C:\Users\allad\.skiko\dbbc4000b2fac87041fc3b9d72cde150b7becb45c29d2086da4411b731013cc6\skiko-windows-x64.dll
+0x00007ffd7d180000 - 0x00007ffd7d28d000 	C:\WINDOWS\SYSTEM32\PROPSYS.dll
+0x00007ffd7eae0000 - 0x00007ffd7ed4b000 	C:\WINDOWS\SYSTEM32\dwrite.dll
+0x00007ffd509f0000 - 0x00007ffd50bce000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.4768_none_6ef704123dc3a24a\gdiplus.dll
+0x00007ffd3d790000 - 0x00007ffd3d817000 	C:\Program Files\Android\Android Studio\jbr\bin\freetype.dll
+0x00007ffd14a10000 - 0x00007ffd14aee000 	C:\Program Files\Android\Android Studio\jbr\bin\fontmanager.dll
+0x00007ffd87890000 - 0x00007ffd87938000 	C:\WINDOWS\System32\clbcatq.dll
+0x00007ffd7da80000 - 0x00007ffd7dcbe000 	C:\WINDOWS\SYSTEM32\WindowsCodecs.dll
+0x00007ffd53b00000 - 0x00007ffd53b5a000 	C:\WINDOWS\system32\dataexchange.dll
+0x00007ffd71990000 - 0x00007ffd71bc8000 	C:\WINDOWS\system32\twinapi.appcore.dll
+0x00007ffd7d890000 - 0x00007ffd7d897000 	C:\Program Files\Android\Android Studio\jbr\bin\jawt.dll
+0x00007ffd7fdd0000 - 0x00007ffd7ff0e000 	C:\WINDOWS\SYSTEM32\Dxgi.dll
+0x00007ffd7bbd0000 - 0x00007ffd7bc3a000 	C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+0x00007ffd851b0000 - 0x00007ffd85207000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007ffd36f70000 - 0x00007ffd36f93000 	C:\WINDOWS\SYSTEM32\D3D12.dll
+0x00007ffd0ef20000 - 0x00007ffd0f197000 	C:\WINDOWS\SYSTEM32\D3D12Core.dll
+0x00007ffd72150000 - 0x00007ffd722cc000 	C:\WINDOWS\SYSTEM32\drvstore.dll
+0x00007ffd3ade0000 - 0x00007ffd3ae08000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\igd12umd64.dll
+0x00007ffc74730000 - 0x00007ffc76af1000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\igd12um64xel.dll
+0x00007ffd85d10000 - 0x00007ffd85e87000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007ffd2b400000 - 0x00007ffd2b45e000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\igdext64.dll
+0x00007ffd36cb0000 - 0x00007ffd36d51000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\IntelControlLib.dll
+0x00007ffd77d50000 - 0x00007ffd78192000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\igdgmm64.dll
+0x00007ffd78240000 - 0x00007ffd78266000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\igc64.dll
+0x00007ffd72d30000 - 0x00007ffd77582000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\igc-default64.dll
+0x00007ffd225e0000 - 0x00007ffd2260e000 	C:\WINDOWS\SYSTEM32\D3DSCache.dll
+0x00007ffce7a10000 - 0x00007ffce7d46000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\igd12dxva64.dll
+0x00007ffd863b0000 - 0x00007ffd86836000 	C:\WINDOWS\System32\SETUPAPI.dll
+0x00007ffd602e0000 - 0x00007ffd61676000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\igddxvacommon64.dll
+0x00007ffd5d500000 - 0x00007ffd5f22e000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\media_bin_64.dll
+0x00007ffd7bb40000 - 0x00007ffd7bb69000 	C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4\igdinfo64.dll
+0x00007ffd50fc0000 - 0x00007ffd50fc8000 	C:\WINDOWS\system32\wshunix.dll
+0x00007ffd7f260000 - 0x00007ffd7f48a000 	C:\WINDOWS\SYSTEM32\dcomp.dll
+0x00007ffd7e850000 - 0x00007ffd7e869000 	C:\WINDOWS\SYSTEM32\Microsoft.Internal.WarpPal.dll
+0x00007ffd7dcd0000 - 0x00007ffd7e14f000 	C:\WINDOWS\SYSTEM32\d3dcompiler_47.dll
+0x00007ffd5d2d0000 - 0x00007ffd5d421000 	C:\WINDOWS\SYSTEM32\textinputframework.dll
+0x00007ffd7f490000 - 0x00007ffd7f5b5000 	C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+0x00007ffd7a750000 - 0x00007ffd7aa33000 	C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+0x00007ffd83e70000 - 0x00007ffd83f96000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x000000005bc30000 - 0x000000005bc56000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x00007ffd7c060000 - 0x00007ffd7c06b000 	C:\Windows\System32\rasadhlp.dll
+0x00007ffd7c630000 - 0x00007ffd7c6b6000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007ffd56f60000 - 0x00007ffd56fe6000 	C:\WINDOWS\system32\Ninput.dll
+0x00007ffcf8000000 - 0x00007ffcf8177000 	C:\WINDOWS\SYSTEM32\dxilconv.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Android\Android Studio\jbr\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.4768_none_3e0c112ce331287c;C:\Program Files\Android\Android Studio\jbr\bin\server;C:\Users\allad\.skiko\dbbc4000b2fac87041fc3b9d72cde150b7becb45c29d2086da4411b731013cc6;C:\WINDOWS\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.4768_none_6ef704123dc3a24a;C:\WINDOWS\System32\DriverStore\FileRepository\iigd_dch.inf_amd64_6b18346d41a281d4;C:\Program Files\Bonjour
+
+VM Arguments:
+jvm_args: -Dcompose.reload.argfile=C:\laragon\www\AfricSchool\composeApp\build\run\desktopMain\desktopMain.argfile -Dcompose.reload.build.continuous=true -Dcompose.reload.buildSystem=Gradle -Dcompose.reload.devToolsClasspath=C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-devtools\1.0.0-alpha11\7271425ca174e47a07c9c9e548f740368134ca61\hot-reload-devtools-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-runtime-api-jvm\1.0.0-alpha11\e784fec47791cba1a21f056aed2408a90bb72576\hot-reload-runtime-api-jvm-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-runtime-jvm\1.0.0-alpha11\f62217e3b4ce58047ec1412be4ef66c2ae91edb4\hot-reload-runtime-jvm-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.desktop\desktop-jvm\1.8.1\7a5516c08efe9fef2e6aa38a10e5fc17fb556148\desktop-jvm-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material3\material3-desktop\1.8.1\763803ef38c846a60dadabe187bd402c5a52222e\material3-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.components\components-resources-desktop\1.8.1\10110d785f486bc13235f40e1d0b91a48b5f3ee6\library-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.sellmair\evas-compose-jvm\1.3.0\1214dcce9040d1b9f856b02b443cf8c2ebe1573a\evas-compose-jvm-1.3.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-desktop\1.8.1\ef0aa2ceffba36f64a1ba916c1d0116fd3c383c6\material-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-ripple-desktop\1.8.1\5364a917218879742c9f08f55791adb3a7c26c8a\material-ripple-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.foundation\foundation-desktop\1.8.1\43f4d514df27ef16c4fbe77807c2a7e12e18b6fd\foundation-desktop-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-icons-core-desktop\1.7.3\414b3096050fe647b0638832eace80f-Dcompose.reload.devToolsEnabled=true -Dcompose.reload.devToolsHeadless=false -Dcompose.reload.devToolsTransparencyEnabled=true -Dcompose.reload.dirtyResolveDepthLimit=5 -Dcompose.reload.launchMode=GradleBlocking -Dcompose.reload.mainClass=com.fabien.africschool.MainKt -Dcompose.reload.pidFile=C:\laragon\www\AfricSchool\composeApp\build\run\desktopMain\desktopMain.pid -Dcompose.reload.virtualMethodResolveEnabled=true -Dgradle.build.project=:composeApp -Dgradle.build.root=C:\laragon\www\AfricSchool -Dgradle.build.task=hotReloadDesktopMain -Dorg.gradle.java.home=C:\Program Files\Android\Android Studio\jbr -XX:+IgnoreUnrecognizedVMOptions -XX:+AllowEnhancedClassRedefinition -javaagent:C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-agent\1.0.0-alpha11\c4ee8ce7bac236244150134658fff9a6f21443ad\hot-reload-agent-1.0.0-alpha11.jar -Dfile.encoding=UTF-8 -Duser.country=FR -Duser.language=fr -Duser.variant 
+java_command: com.fabien.africschool.MainKt
+java_class_path (initial): C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-agent\1.0.0-alpha11\c4ee8ce7bac236244150134658fff9a6f21443ad\hot-reload-agent-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-orchestration\1.0.0-alpha11\e260a9d74bf80c3afeb17e82b53e3b20f0963085\hot-reload-orchestration-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-analysis\1.0.0-alpha11\5db9c3ab22190a5edcb508013d46fbe79d2a1d08\hot-reload-analysis-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-core\1.0.0-alpha11\8e14c2cbf8906d1c0f5cd6231b31704537fa6523\hot-reload-core-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\2.0.17\d9e58ac9c7779ba3bf8142aff6c830617a7fe60f\slf4j-api-2.0.17.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.javassist\javassist\3.30.2-GA\284580b5e42dfa1b8267058566435d9e93fae7f7\javassist-3.30.2-GA.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\2.1.21\97a0975aa19d925e109537af60eb46902920015c\kotlin-stdlib-2.1.21.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-tree\9.8\18419ca5b77a2f81097c741e7872e6ab8d2f40d\asm-tree-9.8.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.8\dc19ecb3f7889b7860697215cae99c0f9b6f6b4b\asm-9.8.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar;C:\laragon\www\AfricSchool\composeApp\build\run\desktopMain\classpath\hot;C:\laragon\www\AfricSchool\composeApp\build\run\desktopMain\classpath\classes;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.components\components-resources-desktop\1.8.2\10110d785f486bc13235f40e1d0b91a48b5f3ee6\library-desktop-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.slack.circuit\circuit-foundation-jvm\0.29.1\b635e9fd91280c199a3571869c621fd3b006532f\circuit-foundation-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material3.adaptive\adaptive-desktop\1.1.2\5564e1df5814527e3b54535a9471c5005dccf8fa\adaptive-desktop-1.1.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.desktop\desktop-jvm\1.8.2\61be96a019ac35e8751b08b33856344a24586648\desktop-jvm-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.materialkolor\material-kolor-jvm\3.0.0\f368c570734a17626b5afd3432d08dfd7a74396a\material-kolor-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material3\material3-desktop\1.9.0-alpha03\31a833f23f609db2927495bbbe9256b9557d80e9\material3-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.slack.circuit\circuit-sharedelements-jvm\0.29.1\169aac883463542dcb8fd2a6336ab0e3060d7905\circuit-shared-elements-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-desktop\1.8.2\7aae6f749a060718d931957a27d495f26b2d4f37\material-desktop-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-ripple-desktop\1.8.2\5c9c96a95930f802de1b611fb610db4a0eff49cf\material-ripple-desktop-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.foundation\foundation-desktop\1.8.2\a251fa6042a2647206fb47795485a1ad07a69dd6\foundation-desktop-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-icons-extended-desktop\1.7.3\c7c5465dd754043076875b32bce0dd7f5a354fe8\material-icons-extended-desktop-1.7.3.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.animation\animation-desktop\1.8.2\84109f752086843a85325f8aeffa2302b312c948\animation-desktop-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.foundation\foundation-layout-desktop\1.8.2\726fa1c81f73f76e89383ada6d9b61fc71bcf07c\foundation-layout-desktop-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.insert-koin\koin-compose-viewmodel-jvm\4.0.3\3d3d6b5f8a9b486d12f294f2aee94755404d071b\koin-compose-viewmodel-jvm-4.0.3.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.androidx.lifecycle\lifecycle-viewmodel-compose-desktop\2.8.3\ec231eb8e04e4e6b06cc18265468a5589c191c6d\lifecycle-viewmodel-compose-desktop-2.8.3.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.slack.circuit\circuit-backstack-jvm\0.29.1\63eeb3cc1084197d1140a3bff3101f6c2cbc9423\backstack-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.slack.circuit\circuit-runtime-ui-jvm\0.29.1\59dc17434b990027eac72de02c92ed67ea16349\circuit-runtime-ui-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.material\material-icons-core-desktop\1.7.3\414b3096050fe647b0638832eace80f22c06b85c\material-icons-core-desktop-1.7.3.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.animation\animation-core-desktop\1.8.2\ff4a236b5e86b2e12449ae75755048d1a2a99102\animation-core-desktop-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.ui\ui-desktop\1.9.0-alpha03\f64a01412825addd5a7437fae71e53f932e41e56\ui-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.insert-koin\koin-core-viewmodel-jvm\4.0.3\13a8ef50ed8a827de227d1526f7b201aeb02254c\koin-core-viewmodel-jvm-4.0.3.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-client-logging-jvm\3.2.1\fae291437036d6b1483fbb92a3cca384ca01651c\ktor-client-logging-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-client-content-negotiation-jvm\3.2.1\81690c54085be2c4954716aac659b6a95a87afa1\ktor-client-content-negotiation-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\de.jensklingenberg.ktorfit\ktorfit-lib-jvm\2.6.1\744db6ee908e22b07cca5314cecc3acf0908dc2a\ktorfit-lib-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-client-cio-jvm\3.2.1\8cee99ab4c3747f2b23766c0ba8538f56d7b2390\ktor-client-cio-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\de.jensklingenberg.ktorfit\ktorfit-lib-light-jvm\2.6.1\d7b1220c1abffa2a497fe64f5905e62cd3ba5660\ktorfit-lib-core-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-client-core-jvm\3.2.1\141f47de347254684e9ba31dbefcead190459855\ktor-client-core-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-slf4j\1.10.2\1271f9d4a929150bb87ab8d1dc1e86d4bcf039f3\kotlinx-coroutines-slf4j-1.10.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-serialization-kotlinx-json-jvm\3.2.1\a05adbefa163f1f56cf7ff83ea7face8cdba5b15\ktor-serialization-kotlinx-json-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.arrow-kt\arrow-fx-coroutines-jvm\2.1.0\d54bb8974324d6e90602b44dfe453402baab85d\arrow-fx-coroutines-jvm-2.1.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-runtime-api-jvm\1.0.0-alpha11\e784fec47791cba1a21f056aed2408a90bb72576\hot-reload-runtime-api-jvm-1.0.0-alpha11.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.slack.circuit\circuit-retained-jvm\0.29.1\191d6ad5336a4220ae74bec90c9d733621fd7aaf\circuit-retained-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.ui\ui-text-desktop\1.9.0-alpha03\449d7764116767c1c04f11f85e96e3b36e833ac7\ui-text-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.runtime\runtime-saveable-desktop\1.9.0-alpha03\44878c7a5b539670f77b01bbc57f2749757dd671\runtime-saveable-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.ui\ui-backhandler-desktop\1.9.0-alpha03\11772bd299279d42526d10de88a9bd0e9e63525c\ui-backhandler-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.androidx.lifecycle\lifecycle-runtime-compose-desktop\2.9.1\a378afb7b897043e595e3127f6967df20707dff2\lifecycle-runtime-compose-desktop-2.9.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.androidx.savedstate\savedstate-compose-desktop\1.3.0\9c68ee94b7cb31ec02ec4782718c8101e9e4ad8\savedstate-compose-desktop-1.3.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-viewmodel-savedstate-desktop\2.9.1\4ef52c1d303111e4c283a4d08a5f8a4060616002\lifecycle-viewmodel-savedstate-desktop-2.9.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-runtime-desktop\2.9.1\c010649ff159d1ff67088df715dee3f05cacbf72\lifecycle-runtime-desktop-2.9.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.savedstate\savedstate-desktop\1.3.0\93a03d7f3c778788d849a6421bf93dc48de1d8db\savedstate-desktop-1.3.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common-jvm\2.9.1\ab739bccdb3541983385af169565c7c035d897e7\lifecycle-common-jvm-2.9.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-viewmodel-desktop\2.9.1\18c77caf844dda6e3580fc67a931f395d300001c\lifecycle-viewmodel-desktop-2.9.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.insert-koin\koin-compose-jvm\4.0.3\f1c0d0db29ad3cecfa6c857643a6581b37a1f284\koin-compose-jvm-4.0.3.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.hot-reload\hot-reload-runtime-jvm\1.0.0-alpha11\7595b4fbdc8c1e1ce433c60256188dfda47a6c9e\hot-reload-runtime-jvm-1.0.0-alpha11-dev.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.slack.circuit\circuit-codegen-annotations-jvm\0.29.1\9b5e01021bd56efb299737c4f872a8acd2258957\circuit-codegen-annotations-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.slack.circuit\circuit-runtime-presenter-jvm\0.29.1\2c2f6980cdbe16ec528dacbbb7f3e9ea7cbe7f3a\circuit-runtime-presenter-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.slack.circuit\circuit-runtime-jvm\0.29.1\7e039026764650299d91b85ccd3694bef26397b2\circuit-runtime-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.slack.circuit\circuit-runtime-screen-jvm\0.29.1\7ec4bbed537f9602c78427bd2497de0387e27652\circuit-runtime-screen-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.ui\ui-tooling-preview-desktop\1.8.2\7e1d509da90394d063aef5b444bf218024b13250\ui-tooling-preview-desktop-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.ui\ui-graphics-desktop\1.9.0-alpha03\53e729616b33baf4fc3cc0f59e60a5026dad8a24\ui-graphics-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.ui\ui-unit-desktop\1.9.0-alpha03\34ef29922a246f5df1db11775169e46274ef1dc9\ui-unit-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.ui\ui-geometry-desktop\1.9.0-alpha03\769fe9c5c0b228b956bcfcb71cd376633ad00de4\ui-geometry-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.runtime\runtime-desktop\1.9.0-alpha03\72d3847e03038644ce93e3bfe4d72245108b8e17\runtime-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-serialization-kotlinx-jvm\3.2.1\4ced4c1136c6c2040c9bde00d7f7da06a1517ff\ktor-serialization-kotlinx-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-websocket-serialization-jvm\3.2.1\7232b56fab151c716a95a29bf75fe4291be8c0d5\ktor-websocket-serialization-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-serialization-jvm\3.2.1\3f5ff61461831aacbfbc56c6742b6350d26f3f94\ktor-serialization-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-http-cio-jvm\3.2.1\79ca18ac89a8e102e5aae1c32a1e1e27ea1fbf0d\ktor-http-cio-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-websockets-jvm\3.2.1\c0fe8d5a565bf46913aa626f16b7f5708bf2fa8c\ktor-websockets-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-network-tls-jvm\3.2.1\2b21594cf8ca6cc126f938c04d89ee1ad6402bf\ktor-network-tls-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.skiko\skiko-awt-runtime-windows-x64\0.9.4.2\fac06bd2c94db6c4eeb9f44e64290a38e9246da0\skiko-awt-runtime-windows-x64-0.9.4.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.skiko\skiko-awt\0.9.18\e230c80c3b849d660a5267210f7bae912165d514\skiko-awt-0.9.18.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-http-jvm\3.2.1\830b36cbddc5d509ba22292c8ab8168218dec5f2\ktor-http-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-events-jvm\3.2.1\d25cbe4335e2227eec86c9e24acb4cc707f03d2d\ktor-events-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-sse-jvm\3.2.1\56a9e690762fdd941f3652aecf06e33479184766\ktor-sse-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-network-jvm\3.2.1\f3205763b340bcf8e8a9269d533b13b738212841\ktor-network-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-utils-jvm\3.2.1\b7567c411afbd479b0a99256d7b6ec89239edbd0\ktor-utils-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.ktor\ktor-io-jvm\3.2.1\12943127ed9698e1972f80869c9a1611d3f8c02e\ktor-io-jvm-3.2.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-core-jvm\1.10.2\4a9f78ef49483748e2c129f3d124b8fa249dafbf\kotlinx-coroutines-core-jvm-1.10.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-coroutines-swing\1.10.2\ccb5a2e7c83fa76da0ba4677f05678d3bd3eed57\kotlinx-coroutines-swing-1.10.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.insert-koin\koin-annotations-jvm\2.0.0\80c43d0871402b9ae8a2f44c1809640d713c6b0c\koin-annotations-jvm-2.0.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.components\components-ui-tooling-preview-desktop\1.8.2\e684b52112f39c196cc4a311a193f55258719170\library-desktop-1.8.2.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.insert-koin\koin-core-jvm\4.0.3\a846d2959adbdc88ff6b94110d32561f65bb4777\koin-core-jvm-4.0.3.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-serialization-json-io-jvm\1.8.1\de4e31bfc7ddf8585418f8d4fca649feca574cdf\kotlinx-serialization-json-io-jvm-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-serialization-core-jvm\1.8.1\510cb839cce9a3e708052d480a6fbf4a7274dfcd\kotlinx-serialization-core-jvm-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-serialization-json-jvm\1.8.1\4de3bace4b175753df5484d2acd74c14bfeb5be9\kotlinx-serialization-json-jvm-1.8.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.arrow-kt\arrow-core-jvm\2.1.0\2c678f987889efab6bd397c3b5cf5018820586b1\arrow-core-jvm-2.1.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.github.aakira\napier-jvm\2.7.1\3f3f815adcb46cf8106e9c2329bef656b4307815\napier-jvm-2.7.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk8\2.2.0\ed572b04cd66acce7837ad753e4fe64d9c536025\kotlin-stdlib-jdk8-2.2.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.materialkolor\material-color-utilities-jvm\3.0.0\c0dbcb2e7a54f09de2ad1c26970ac697233b6ff4\material-color-utilities-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\com.github.ajalt.colormath\colormath-jvm\3.6.1\19f3cd8b791bf1d866f2e48f2e2c82c377a81bb3\colormath-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\co.touchlab\stately-concurrent-collections-jvm\2.1.0\5c03b644537d7926a8f77e5735a8bebb55dafdcd\stately-concurrent-collections-jvm-2.1.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\co.touchlab\stately-concurrency-jvm\2.1.0\6285428408c4d7e4a6d9a09511de877103effd81\stately-concurrency-jvm-2.1.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-collections-immutable-jvm\0.4.0\82499bf608b0fc3ae6737a5eac1a1f1325279bbf\kotlinx-collections-immutable-jvm-0.4.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.arrow-kt\arrow-autoclose-jvm\2.1.0\d0731be7c057a300b37b6e484c6f391290dee8f2\arrow-autoclose-jvm-2.1.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.arrow-kt\arrow-atomic-jvm\2.1.0\84fae25e2ab966c6f16127e245079df5b6a8e543\arrow-atomic-jvm-2.1.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\io.arrow-kt\arrow-annotations-jvm\2.1.0\7819855a89c9838da96cf81a4fa81b13ad6bd987\arrow-annotations-jvm-2.1.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.androidx.window\window-core-desktop\1.3.1\39ecc169c3b1c661ceb5bc758dfd84da4cd48036\window-core-desktop-1.3.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\2.2.0\bfd42edfc4f88de5a02131108ab800fb32d53d03\kotlin-stdlib-jdk7-2.2.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.compose.ui\ui-util-desktop\1.9.0-alpha03\cbddcea5c9797096b3043e10ea219c2b4005801d\ui-util-desktop-1.9.0-alpha03.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-datetime-jvm\0.6.0\a6362032556c0fa4a06be6105a21e944f120fd2d\kotlinx-datetime-jvm-0.6.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\dev.drewhamilton.poko\poko-annotations-jvm\0.19.0\9a04a067dfd5f081c6ceaa09e4e71ab66e5eb301\poko-annotations-jvm-0.19.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\co.touchlab\stately-strict-jvm\2.1.0\3ae8369209065455f4630793bf6aca0fb88c8b6b\stately-strict-jvm-2.1.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.androidx.core\core-bundle-desktop\1.0.1\154b84cb449aae31fff9d5fa71f6e98ac24c3606\core-bundle-desktop-1.0.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\atomicfu-jvm\0.29.0\fad29f53ad0c239ba525b637a152bfcaa8631f0f\atomicfu-jvm-0.29.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\de.jensklingenberg.ktorfit\ktorfit-annotations-jvm\2.6.1\835011cadc26a6de7e28e02c7d9e800ed395306a\ktorfit-annotations-jvm.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.arch.core\core-common\2.2.0\5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3\core-common-2.2.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.graphics\graphics-shapes-desktop\1.0.1\597f57df1cdd79e249f485b8c2b6d43bdfef9283\graphics-shapes-desktop-1.0.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.collection\collection-jvm\1.5.0\7ba2c69414d46ebc2dd76598bdd0a75c54281a57\collection-jvm-1.5.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.annotation\annotation-jvm\1.9.1\b17951747e38bf3986a24431b9ba0d039958aa5f\annotation-jvm-1.9.1.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\androidx.compose.runtime\runtime-annotation-jvm\1.9.0-beta01\3195cb969ccebf099b765ecbf41e563c73eaf356\runtime-annotation-jvm-1.9.0-beta01.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-io-core-jvm\0.7.0\1d9595ed390f6304ce90a049e6b2f1fab3b408c4\kotlinx-io-core-jvm-0.7.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlinx\kotlinx-io-bytestring-jvm\0.7.0\ffe5bd231da40d21870250703326113277dbf9c3\kotlinx-io-bytestring-jvm-0.7.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\2.2.0\fdfc65fbc42fda253a26f61dac3c0aca335fae96\kotlin-stdlib-2.2.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\23.0.0\8cc20c07506ec18e0834947b84a864bfc094484e\annotations-23.0.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jspecify\jspecify\1.0.0\7425a601c1c7ec76645a78d22b8c6a627edee507\jspecify-1.0.0.jar;C:\Users\allad\.gradle\caches\modules-2\files-2.1\org.jetbrains.runtime\jbr-api\1.5.0\4158e485a7a4ecfd521e03095d81e0225529e8d2\jbr-api-1.5.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool AllowEnhancedClassRedefinition           = true                                      {product} {command line}
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 4                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 15                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+     bool IgnoreUnrecognizedVMOptions              = true                                      {product} {command line}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4213178368                                {product} {ergonomic}
+   size_t MaxNewSize                               = 2527068160                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122027880                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4213178368                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-21
+PATH=C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\Python311\Scripts\;C:\Python311\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\laragon\bin\php\php-8.3.11-nts-Win32-vs16-x64;C:\ProgramData\ComposerSetup\bin;C:\tools\dive;C:\src\flutter\bin;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Go\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\src\terraform;C:\src\krew;C:\Users\allad\.krew\bin;C:\src\eks;C:\Program Files\OpenSSH-Win64;C:\Program Files\doctl\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Docker\Docker\resources\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Pub\Cache\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\PuTTY\;C:\Program Files\RedHat\Podman\;C:\Program Files (x86)\PowerShell\7\;C:\Program Files\Git\cmd;C:\Users\allad\AppData\Local\Android\Sdk\platform-tools;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\allad\AppData\Local\Android\Sdk\emulator;C:\Program Files\PowerShell\7\;C:\laragon\bin;C:\laragon\bin\apache\httpd-2.4.54-win64-VS16\bin;C:\laragon\bin\composer;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin\git\usr\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-8.0.30-winx64\bin;C:\laragon\bin\nginx\nginx-1.22.0;C:\laragon\bin\ngrok;C:\laragon\bin\nodejs\node-v18;C:\laragon\bin\notepad++;C:\laragon\bin\php\php-8.3.11-nts-Win32-vs16-x64;C:\laragon\bin\python\python-3.10;C:\laragon\bin\python\python-3.10\Scripts;C:\laragon\bin\redis\redis-x64-5.0.14.1;C:\laragon\bin\telnet;C:\laragon\usr\bin;C:\Users\allad\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\allad\AppData\Roaming\Composer\vendor\bin;C:\Users\allad\.cargo\bin;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\Python311\Scripts\;C:\Python311\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\tools\dive;C:\src\flutter\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\allad\scoop\shims;C:\Users\allad\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\GoLand 2023.2.2\bin;C:\Users\allad\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\allad\AppData\Local\Programs\Lens\resources\cli\bin;C:\src\krew;C:\Users\allad\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;;C:\Users\allad\AppData\Local\Microsoft\WindowsApps;C:\Users\allad\AppData\Roaming\npm;C:\Users\allad\.bun\bin;C:\Users\allad\AppData\Local\Microsoft\WinGet\Links;;C:\Users\allad\.deno\bin
+USERNAME=allad
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+TMP=C:\Users\allad\AppData\Local\Temp
+TEMP=C:\Users\allad\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+JNI global refs:
+JNI global refs: 157, weak refs: 40
+
+JNI global refs memory usage: 2099, weak refs: 1657
+
+Process memory usage:
+Resident Set Size: 119868K (0% of 16454388K total physical memory with 30764K free physical memory)
+
+OOME stack traces (most recent first):
+Classloader memory used:
+Loader jdk.internal.loader.ClassLoaders$AppClassLoader                                 : 38444K
+Loader bootstrap                                                                       : 22781K
+Loader jdk.internal.loader.ClassLoaders$PlatformClassLoader                            : 161K
+Loader jdk.internal.reflect.DelegatingClassLoader                                      : 74104B
+
+Classes loaded by more than one classloader:
+Class com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$2 : loaded 23 times (x 71B)
+Class com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$2$1: loaded 22 times (x 71B)
+Class com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt                     : loaded 22 times (x 67B)
+Class com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$-1192734296$1: loaded 21 times (x 70B)
+Class com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1   : loaded 21 times (x 71B)
+Class com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$-330430135$1: loaded 21 times (x 70B)
+Class com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$531874026$1: loaded 21 times (x 70B)
+Class com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt$lambda$502628289$1: loaded 21 times (x 70B)
+Class com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$1$1: loaded 15 times (x 71B)
+Class com.fabien.africschool.ui.theme.screens.onboard.OnBoardUiKt$OnBoardUi$1$1$1$1$1 : loaded 15 times (x 71B)
+Class com.fabien.africschool.ui.theme.screens.onboard.ComposableSingletons$OnBoardUiKt: loaded 13 times (x 67B)
+Class com.fabien.africschool.ui.theme.ThemesKt                                        : loaded 2 times (x 67B)
+Class com.fabien.africschool.ui.theme.ThemesKt$AppTheme$1                             : loaded 2 times (x 71B)
+Class com.fabien.africschool.ui.theme.Themes                                          : loaded 2 times (x 67B)
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.4768)
+OS uptime: 6 days 9:12 hours
+Hyper-V role detected
+
+CPU: total 20 (initial active 20) (10 cores per cpu, 2 threads per core) family 6 model 154 stepping 3 microcode 0x437, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv, serialize, rdtscp, rdpid, fsrm, f16c, cet_ibt, cet_ss
+Processor Information for processor 0
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 1
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 2
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 3
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 4
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 5
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 6
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 7
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 8
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 9
+  Max Mhz: 2300, Current Mhz: 1506, Mhz Limit: 2300
+Processor Information for processor 10
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 11
+  Max Mhz: 2300, Current Mhz: 1506, Mhz Limit: 2300
+Processor Information for processor 12
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 13
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 14
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 15
+  Max Mhz: 2300, Current Mhz: 1488, Mhz Limit: 2300
+Processor Information for processor 16
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 17
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 18
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+Processor Information for processor 19
+  Max Mhz: 2300, Current Mhz: 2300, Mhz Limit: 2300
+
+Memory: 4k page, system-wide physical 16068M (29M free)
+TotalPageFile size 53793M (AvailPageFile size 1893M)
+current process WorkingSet (physical memory assigned to process): 116M, peak: 351M
+current process commit charge ("private bytes"): 506M, peak: 625M
+
+vm_info: OpenJDK 64-Bit Server VM (21.0.6+-13391695-b895.109) for windows-amd64 JRE (21.0.6+-13391695-b895.109), built on 2025-04-22T21:19:17Z by "builder" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.

@@ -14,4 +14,7 @@ interface ApiService {
     suspend fun getUser(
         @Path("id") id: String,
     ): User
+
+    @GET("users/")
+    suspend fun getUsers(): List<User>
 }
